@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -18,7 +19,7 @@ box-sizing:border-box;
 body{
 background:#000;
 color:#fff;
-font-family:Helvetica Neue, Arial, sans-serif;
+font-family:Helvetica Neue,Arial,sans-serif;
 height:100vh;
 overflow:hidden;
 }
@@ -27,60 +28,75 @@ overflow:hidden;
 /* 공통 */
 
 .page{
+
 height:100vh;
 width:100%;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+
 }
 
 
-/* 첫 화면 */
+/* 인트로 */
 
 #home{
+
 display:flex;
 animation:fade 1.5s ease;
+
 }
 
+
 .logo{
+
 font-size:42px;
 letter-spacing:12px;
 font-weight:600;
+
 }
 
+
 .tagline{
+
 margin-top:35px;
 font-size:13px;
 letter-spacing:8px;
 opacity:.8;
+
 }
 
+
 button{
+
 margin-top:65px;
 background:none;
 border:none;
 color:white;
+cursor:pointer;
 font-size:12px;
 letter-spacing:6px;
-cursor:pointer;
 border-bottom:1px solid white;
 padding-bottom:8px;
+
 }
 
 
-/* 메뉴 화면 */
+
+/* 메뉴 */
 
 #menu{
+
 display:none;
 flex-direction:column;
 gap:35px;
 position:relative;
-animation:fade .8s ease;
+
 }
 
 
-#menu a{
+.menu-item{
 
 color:white;
 text-decoration:none;
@@ -91,10 +107,67 @@ transition:.3s;
 }
 
 
-#menu a:hover{
+.menu-item:hover{
 
 opacity:.5;
 letter-spacing:12px;
+
+}
+
+
+/* SHOP */
+
+#shop{
+
+display:none;
+flex-direction:column;
+position:relative;
+
+}
+
+
+.product{
+
+font-size:24px;
+letter-spacing:8px;
+
+}
+
+
+.image-box{
+
+width:260px;
+height:330px;
+border:1px solid #333;
+margin:40px auto;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:11px;
+letter-spacing:3px;
+opacity:.5;
+
+}
+
+
+.info{
+
+font-size:13px;
+letter-spacing:4px;
+line-height:2.5;
+
+}
+
+
+.buy{
+
+margin-top:30px;
+font-size:12px;
+letter-spacing:5px;
+border-bottom:1px solid white;
+padding-bottom:8px;
 
 }
 
@@ -107,19 +180,18 @@ position:absolute;
 top:40px;
 left:40px;
 font-size:22px;
-color:white;
 cursor:pointer;
-letter-spacing:0;
 
 }
 
 
-/* 아래 */
+
+/* 하단 */
 
 .year{
 
 position:absolute;
-bottom:35px;
+bottom:30px;
 width:100%;
 text-align:center;
 font-size:10px;
@@ -129,21 +201,27 @@ opacity:.5;
 }
 
 
+
 /* 애니메이션 */
 
 @keyframes fade{
 
 from{
+
 opacity:0;
 transform:translateY(20px);
+
 }
 
 to{
+
 opacity:1;
 transform:translateY(0);
+
 }
 
 }
+
 
 
 /* 모바일 */
@@ -151,17 +229,25 @@ transform:translateY(0);
 @media(max-width:600px){
 
 .logo{
+
 font-size:27px;
 letter-spacing:7px;
+
 }
+
 
 .tagline{
+
 font-size:10px;
 letter-spacing:5px;
+
 }
 
-#menu a{
-font-size:15px;
+
+.product{
+
+font-size:18px;
+
 }
 
 }
@@ -172,13 +258,14 @@ font-size:15px;
 </head>
 
 
-
 <body>
+
 
 
 <!-- 첫 화면 -->
 
 <div class="page" id="home">
+
 
 <div>
 
@@ -186,12 +273,13 @@ font-size:15px;
 EMERGENCY HAMMER
 </div>
 
+
 <div class="tagline">
 BREAK YOUR FIT.
 </div>
 
 
-<button onclick="enterSite()">
+<button onclick="openMenu()">
 ENTER
 </button>
 
@@ -203,31 +291,86 @@ ENTER
 
 
 
-<!-- 메뉴 화면 -->
+<!-- 메뉴 -->
 
 <div class="page" id="menu">
 
 
-<div class="back" onclick="goBack()">
+<div class="back" onclick="backHome()">
 ←
 </div>
 
 
-<a href="#">
+<a class="menu-item" onclick="openShop()">
 SHOP
 </a>
 
-<a href="#">
+
+<a class="menu-item" href="#">
 LOOKBOOK
 </a>
 
-<a href="#">
+
+<a class="menu-item" href="#">
 ABOUT
 </a>
 
-<a href="#">
+
+<a class="menu-item" href="#">
 INSTAGRAM
 </a>
+
+
+</div>
+
+
+
+
+
+<!-- 상품 페이지 -->
+
+
+<div class="page" id="shop">
+
+
+<div class="back" onclick="backMenu()">
+←
+</div>
+
+
+
+<div>
+
+
+<div class="product">
+GRAPHIC TEE 001
+</div>
+
+
+<div class="image-box">
+PRODUCT IMAGE
+</div>
+
+
+<div class="info">
+
+₩49,000<br>
+
+BLACK<br>
+
+SIZE<br>
+
+S / M / L / XL
+
+</div>
+
+
+<div class="buy">
+ADD TO CART
+</div>
+
+
+</div>
 
 
 </div>
@@ -245,7 +388,7 @@ EST. 2026
 <script>
 
 
-function enterSite(){
+function openMenu(){
 
 document.getElementById("home").style.display="none";
 
@@ -255,7 +398,7 @@ document.getElementById("menu").style.display="flex";
 
 
 
-function goBack(){
+function backHome(){
 
 document.getElementById("menu").style.display="none";
 
@@ -264,8 +407,29 @@ document.getElementById("home").style.display="flex";
 }
 
 
+
+function openShop(){
+
+document.getElementById("menu").style.display="none";
+
+document.getElementById("shop").style.display="flex";
+
+}
+
+
+
+function backMenu(){
+
+document.getElementById("shop").style.display="none";
+
+document.getElementById("menu").style.display="flex";
+
+}
+
+
 </script>
 
 
 </body>
+
 </html>
