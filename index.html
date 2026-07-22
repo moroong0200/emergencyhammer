@@ -31,39 +31,96 @@ overflow:hidden;
 
 .page{
 
-height:100vh;
 width:100%;
+height:100vh;
+
 display:none;
+
 align-items:center;
 justify-content:center;
+
 text-align:center;
+
+position:relative;
 
 }
 
 
 
 /* =================
-INTRO
+LOADING
 ================= */
 
 
-#home{
+#loading{
+
+position:fixed;
+
+width:100%;
+height:100vh;
+
+background:#000;
+
+z-index:9999;
 
 display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+flex-direction:column;
+
+animation:loadingFade 2.5s ease forwards;
+
+}
+
+
+.loading-logo{
+
+font-size:35px;
+
+letter-spacing:14px;
+
+font-weight:400;
+
+animation:logoAppear 1.5s ease;
 
 }
 
 
 
+.loading-text{
+
+margin-top:30px;
+
+font-size:10px;
+
+letter-spacing:8px;
+
+opacity:.5;
+
+}
+
+
+
+
+/* =================
+HOME
+================= */
+
+
 .logo{
 
 font-size:40px;
+
 letter-spacing:14px;
+
 font-weight:400;
 
 opacity:0;
 
-animation:logoAppear 1.8s ease forwards;
+animation:logoAppear 1.5s ease forwards;
 
 }
 
@@ -72,12 +129,15 @@ animation:logoAppear 1.8s ease forwards;
 .tagline{
 
 margin-top:40px;
+
 font-size:12px;
+
 letter-spacing:10px;
 
 opacity:0;
 
 animation:textAppear 1.5s ease forwards;
+
 animation-delay:.8s;
 
 }
@@ -89,6 +149,7 @@ animation-delay:.8s;
 margin-top:70px;
 
 font-size:11px;
+
 letter-spacing:8px;
 
 cursor:pointer;
@@ -100,6 +161,7 @@ padding-bottom:12px;
 opacity:0;
 
 animation:textAppear 1.5s ease forwards;
+
 animation-delay:1.5s;
 
 transition:.4s;
@@ -135,6 +197,9 @@ opacity:.5;
 
 
 
+
+
+
 /* =================
 MENU
 ================= */
@@ -145,8 +210,6 @@ MENU
 flex-direction:column;
 
 gap:35px;
-
-position:relative;
 
 }
 
@@ -162,33 +225,8 @@ cursor:pointer;
 
 transition:.5s;
 
-opacity:0;
-
-animation:menuAppear .8s ease forwards;
-
 }
 
-
-
-.menu-item:nth-child(2){
-
-animation-delay:.2s;
-
-}
-
-
-.menu-item:nth-child(3){
-
-animation-delay:.4s;
-
-}
-
-
-.menu-item:nth-child(4){
-
-animation-delay:.6s;
-
-}
 
 
 .menu-item:hover{
@@ -198,6 +236,9 @@ letter-spacing:12px;
 opacity:.5;
 
 }
+
+
+
 
 
 
@@ -224,8 +265,9 @@ cursor:pointer;
 
 
 
+
 /* =================
-SHOP CATEGORY
+SHOP
 ================= */
 
 
@@ -234,8 +276,6 @@ SHOP CATEGORY
 flex-direction:column;
 
 gap:40px;
-
-position:relative;
 
 }
 
@@ -282,38 +322,15 @@ opacity:.5;
 
 
 
+
 /* =================
 PRODUCT
 ================= */
 
 
-#product{
-
-position:relative;
-
-}
-
-
-
 .product-wrap{
 
 text-align:center;
-
-animation:fade .8s ease;
-
-}
-
-
-
-.collection{
-
-font-size:10px;
-
-letter-spacing:6px;
-
-opacity:.5;
-
-margin-bottom:35px;
 
 }
 
@@ -333,11 +350,11 @@ align-items:center;
 
 justify-content:center;
 
+margin:auto;
+
 font-size:10px;
 
-letter-spacing:4px;
-
-margin:auto;
+letter-spacing:5px;
 
 }
 
@@ -371,17 +388,17 @@ line-height:2;
 
 .buy{
 
-margin-top:35px;
+margin-top:25px;
 
 border:1px solid white;
 
-padding:15px 50px;
+padding:15px 45px;
+
+display:inline-block;
 
 font-size:10px;
 
 letter-spacing:5px;
-
-display:inline-block;
 
 cursor:pointer;
 
@@ -432,16 +449,13 @@ cursor:pointer;
 
 
 
-/* =================
-ANIMATION
-================= */
-
 
 @keyframes logoAppear{
 
 from{
 
 opacity:0;
+
 transform:translateY(20px);
 
 }
@@ -449,6 +463,7 @@ transform:translateY(20px);
 to{
 
 opacity:1;
+
 transform:translateY(0);
 
 }
@@ -475,51 +490,37 @@ opacity:1;
 
 
 
-@keyframes menuAppear{
+@keyframes loadingFade{
 
-from{
-
-opacity:0;
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-}
-
-to{
+0%{
 
 opacity:1;
 
 }
 
+80%{
+
+opacity:1;
+
 }
 
+100%{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+}
 
 
 
 @media(max-width:600px){
 
-
 .logo{
 
-font-size:26px;
+font-size:25px;
 
 letter-spacing:8px;
 
@@ -537,13 +538,40 @@ height:350px;
 }
 
 
+
 </style>
 
 </head>
 
 
 <body>
-  <!-- HOME -->
+ <!-- LOADING -->
+
+
+<div id="loading">
+
+
+<div class="loading-logo">
+
+EMERGENCY HAMMER
+
+</div>
+
+
+<div class="loading-text">
+
+EST. 2026
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- HOME -->
 
 
 <div class="page" id="home">
@@ -594,7 +622,6 @@ EST. 2026
 
 
 
-
 <!-- MENU -->
 
 
@@ -609,11 +636,13 @@ EST. 2026
 
 
 
+
 <div class="menu-item" onclick="openShopCategory()">
 
 01&nbsp;&nbsp; SHOP
 
 </div>
+
 
 
 
@@ -625,11 +654,14 @@ EST. 2026
 
 
 
+
 <div class="menu-item" onclick="openAbout()">
 
 03&nbsp;&nbsp; ABOUT
 
 </div>
+
+
 
 
 
@@ -647,6 +679,7 @@ style="color:white;text-decoration:none;">
 
 
 </div>
+
 
 
 
@@ -669,7 +702,6 @@ style="color:white;text-decoration:none;">
 ←
 
 </div>
-
 
 
 
@@ -699,6 +731,7 @@ SHOP
 
 
 
+
 <div class="year">
 
 SELECT CATEGORY
@@ -715,7 +748,8 @@ SELECT CATEGORY
 
 
 
-<!-- PRODUCT -->
+
+<!-- PRODUCT PAGE START -->
 
 
 <div class="page" id="product">
@@ -726,6 +760,7 @@ SELECT CATEGORY
 ←
 
 </div>
+
 
 
 
@@ -742,7 +777,7 @@ SELECT CATEGORY
 
 
 
-<div class="collection">
+<div class="category-title">
 
 TOP / 001
 
@@ -770,12 +805,14 @@ EMERGENCY TEE 001
 
 
 
+
 <div class="product-info">
 
 
 ₩49,000
 
 <br><br>
+
 
 BLACK
 
@@ -785,6 +822,7 @@ COTTON 100%
 
 <br><br>
 
+
 SIZE
 
 <br>
@@ -792,17 +830,27 @@ SIZE
 S&nbsp;&nbsp; M&nbsp;&nbsp; L&nbsp;&nbsp; XL
 
 
-
 </div>
 
 
 
-
-<div class="buy">
+<div class="buy" onclick="addCart()">
 
 ADD TO CART
 
 </div>
+
+
+<br>
+
+
+
+<div class="buy" onclick="buyNow()">
+
+BUY NOW
+
+</div>
+
 
 
 
@@ -821,6 +869,167 @@ ADD TO CART
 
 
 </div>
+ <!-- CART ICON -->
+
+
+<div id="cartIcon" onclick="openCart()">
+
+CART (0)
+
+</div>
+
+
+
+
+
+
+
+<!-- CART PAGE -->
+
+
+<div class="page" id="cart">
+
+
+<div class="back" onclick="backMenu()">
+
+←
+
+</div>
+
+
+
+<div class="product-wrap">
+
+
+<div class="category-title">
+
+CART
+
+</div>
+
+
+
+<div id="cartList">
+
+
+CART IS EMPTY
+
+
+</div>
+
+
+
+
+<div id="totalPrice">
+
+
+TOTAL ₩0
+
+
+</div>
+
+
+
+
+<div class="buy" onclick="checkout()">
+
+CHECK OUT
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ORDER PAGE -->
+
+
+<div class="page" id="order">
+
+
+<div class="back" onclick="openCart()">
+
+←
+
+</div>
+
+
+
+
+<div class="product-wrap">
+
+
+<div class="category-title">
+
+ORDER
+
+</div>
+
+
+
+
+<div class="product-info">
+
+
+NAME
+
+<br>
+
+________________
+
+<br><br>
+
+
+ADDRESS
+
+<br>
+
+________________
+
+<br><br>
+
+
+PHONE
+
+<br>
+
+________________
+
+
+</div>
+
+
+
+
+<div class="buy">
+
+PLACE ORDER
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
 <!-- LOOKBOOK -->
 
 
@@ -835,27 +1044,23 @@ ADD TO CART
 
 
 
-<div class="grid" id="lookGrid">
+
+<div class="product-wrap">
 
 
-<div></div>
-<div></div>
-<div></div>
+<div class="product-image">
 
-
-<div></div>
-<div></div>
-<div></div>
-
-
-<div></div>
-<div></div>
-<div></div>
-
+LOOKBOOK IMAGE 01
 
 </div>
 
 
+
+<div class="product-name">
+
+01 / 03
+
+</div>
 
 
 <div class="arrow" onclick="nextLookbook()">
@@ -865,11 +1070,6 @@ ADD TO CART
 </div>
 
 
-
-
-<div class="year" id="lookPage">
-
-01 / 03
 
 </div>
 
@@ -897,80 +1097,90 @@ ADD TO CART
 
 
 
-<div class="about-text">
+<div class="product-info">
 
 
-EMERGENCY HAMMER is a streetwear brand founded in 2026.
-
-
-<br><br>
-
-
-A brand created to balance intelligence and street culture,
-redefining modern silhouettes through unique perspectives.
-
+EMERGENCY HAMMER
 
 <br><br>
 
 
-We break ordinary limits and create pieces that express individuality.
+Founded in 2026.
 
+<br><br>
+
+
+A streetwear brand combining intelligence
+and street culture through modern silhouettes.
 
 <br><br>
 
 
 BREAK YOUR FIT.
 
-</div>
-
-
 
 </div>
 
 
-
-
-
-
-<script>
-
-
-
-let products=[];
+</div>
+ let products=[];
 
 let productIndex=0;
+
+
+let cart=[];
 
 
 
 const tops=[
 
 
-"EMERGENCY TEE 001",
+{
+name:"EMERGENCY TEE 001",
+price:49000
+},
 
 
-"HAMMER LOGO TEE 002",
+{
+name:"HAMMER LOGO TEE 002",
+price:52000
+},
 
 
-"BREAK FIT TEE 003"
+{
+name:"BREAK FIT TEE 003",
+price:55000
+}
 
 
 ];
+
 
 
 
 const bottoms=[
 
 
-"HAMMER PANTS 001",
+{
+name:"HAMMER PANTS 001",
+price:79000
+},
 
 
-"UTILITY PANTS 002",
+{
+name:"UTILITY PANTS 002",
+price:85000
+},
 
 
-"DENIM PANTS 003"
+{
+name:"DENIM PANTS 003",
+price:89000
+}
 
 
 ];
+
 
 
 
@@ -996,6 +1206,10 @@ page.style.display="none";
 
 
 
+
+/* HOME */
+
+
 function openMenu(){
 
 
@@ -1006,7 +1220,6 @@ document.getElementById("menu").style.display="flex";
 
 
 }
-
 
 
 
@@ -1028,6 +1241,10 @@ document.getElementById("home").style.display="flex";
 
 
 
+
+/* SHOP */
+
+
 function openShopCategory(){
 
 
@@ -1038,7 +1255,6 @@ document.getElementById("category").style.display="flex";
 
 
 }
-
 
 
 
@@ -1059,6 +1275,7 @@ showProduct();
 
 
 
+
 function openBottom(){
 
 
@@ -1075,6 +1292,8 @@ showProduct();
 
 
 
+
+
 function showProduct(){
 
 
@@ -1084,12 +1303,14 @@ hideAll();
 document.getElementById("product").style.display="flex";
 
 
+
 document.getElementById("productName").innerHTML=
 
-products[productIndex];
+products[productIndex].name;
 
 
 }
+
 
 
 
@@ -1101,7 +1322,6 @@ function nextProduct(){
 
 
 productIndex++;
-
 
 
 if(productIndex>=products.length){
@@ -1116,10 +1336,11 @@ productIndex=0;
 
 document.getElementById("productName").innerHTML=
 
-products[productIndex];
+products[productIndex].name;
 
 
 }
+
 
 
 
@@ -1130,7 +1351,6 @@ function prevProduct(){
 
 
 productIndex--;
-
 
 
 if(productIndex<0){
@@ -1145,7 +1365,7 @@ productIndex=products.length-1;
 
 document.getElementById("productName").innerHTML=
 
-products[productIndex];
+products[productIndex].name;
 
 
 }
@@ -1169,6 +1389,8 @@ document.getElementById("category").style.display="flex";
 
 
 
+
+
 function backMenu(){
 
 
@@ -1179,21 +1401,151 @@ document.getElementById("menu").style.display="flex";
 
 
 }
+
+
+
+
+
+
+
+/* CART */
+
+
+function addCart(){
+
+
+cart.push(products[productIndex]);
+
+
+updateCart();
+
+
+}
+
+
+
+function updateCart(){
+
+
+document.getElementById("cartIcon").innerHTML=
+
+"CART ("+cart.length+")";
+
+
+
+}
+
+
+
+
+
+
+function openCart(){
+
+
+hideAll();
+
+
+document.getElementById("cart").style.display="flex";
+
+
+
+let list="";
+
+
+let total=0;
+
+
+
+cart.forEach(function(item){
+
+
+list += item.name+"<br>₩"+item.price+"<br><br>";
+
+
+total += item.price;
+
+
+});
+
+
+
+if(cart.length===0){
+
+
+list="CART IS EMPTY";
+
+
+}
+
+
+
+document.getElementById("cartList").innerHTML=list;
+
+
+document.getElementById("totalPrice").innerHTML=
+
+"TOTAL ₩"+total;
+
+
+
+}
+
+
+
+
+
+
+function buyNow(){
+
+
+cart=[];
+
+
+cart.push(products[productIndex]);
+
+
+updateCart();
+
+
+checkout();
+
+
+}
+
+
+
+
+function checkout(){
+
+
+hideAll();
+
+
+document.getElementById("order").style.display="flex";
+
+
+}
 /* LOOKBOOK */
 
 
-let lookPage = 1;
-
+let lookPage=1;
 
 
 
 function openLookbook(){
 
 
+hideAll();
+
+
+document.getElementById("lookbook").style.display="flex";
+
+
 lookPage=1;
 
 
-changeLookbook();
+updateLookbook();
 
 
 }
@@ -1219,8 +1571,7 @@ lookPage=1;
 
 
 
-changeLookbook();
-
+updateLookbook();
 
 
 }
@@ -1231,58 +1582,33 @@ changeLookbook();
 
 
 
-function changeLookbook(){
+function updateLookbook(){
 
 
-hideAll();
-
-
-document.getElementById("lookbook").style.display="flex";
+let imageBox=document.querySelector("#lookbook .product-image");
 
 
 
-document.getElementById("lookPage").innerHTML =
-
-"0"+lookPage+" / 03";
-
-
-
-
-let boxes=document.querySelectorAll("#lookGrid div");
-
-
-
-boxes.forEach(function(box){
-
-
-box.style.opacity="0";
-
-
-});
+imageBox.style.opacity="0";
 
 
 
 setTimeout(function(){
 
 
-boxes.forEach(function(box){
+imageBox.innerHTML=
+
+"LOOKBOOK IMAGE "+lookPage;
 
 
-box.style.transition=".6s";
+imageBox.style.opacity="1";
 
 
-box.style.opacity="1";
-
-
-});
-
-
-},100);
+},300);
 
 
 
 }
-
 
 
 
@@ -1310,11 +1636,54 @@ document.getElementById("about").style.display="flex";
 
 
 
+
+/* LOADING */
+
+
+window.onload=function(){
+
+
+setTimeout(function(){
+
+
+document.getElementById("loading").style.display="none";
+
+
+document.getElementById("home").style.display="flex";
+
+
+},2500);
+
+
+}
+ <script>
+
+
+/* 페이지 기본 상태 */
+
+
+document.getElementById("home").style.display="none";
+
+document.getElementById("menu").style.display="none";
+
+document.getElementById("category").style.display="none";
+
+document.getElementById("product").style.display="none";
+
+document.getElementById("cart").style.display="none";
+
+document.getElementById("order").style.display="none";
+
+document.getElementById("lookbook").style.display="none";
+
+document.getElementById("about").style.display="none";
+
+
+
 </script>
 
 
 
 </body>
 
-
-</html>  
+</html> 
