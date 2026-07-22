@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 
@@ -22,19 +22,18 @@ body{
 
 background:#000;
 color:#fff;
-font-family:Helvetica Neue,Arial,sans-serif;
-height:100vh;
+font-family:Arial, Helvetica, sans-serif;
 overflow:hidden;
+height:100vh;
 
 }
 
 
 .page{
 
+display:none;
 width:100%;
 height:100vh;
-
-display:none;
 
 align-items:center;
 justify-content:center;
@@ -46,32 +45,25 @@ position:relative;
 }
 
 
-
-/* =================
-LOADING
-================= */
-
+/* LOADING */
 
 #loading{
 
 position:fixed;
-
 width:100%;
 height:100vh;
 
 background:#000;
 
-z-index:9999;
+z-index:999;
 
 display:flex;
+
+flex-direction:column;
 
 align-items:center;
 
 justify-content:center;
-
-flex-direction:column;
-
-animation:loadingFade 2.5s ease forwards;
 
 }
 
@@ -80,19 +72,14 @@ animation:loadingFade 2.5s ease forwards;
 
 font-size:35px;
 
-letter-spacing:14px;
-
-font-weight:400;
-
-animation:logoAppear 1.5s ease;
+letter-spacing:12px;
 
 }
 
 
+.loading-sub{
 
-.loading-text{
-
-margin-top:30px;
+margin-top:25px;
 
 font-size:10px;
 
@@ -105,9 +92,7 @@ opacity:.5;
 
 
 
-/* =================
-HOME
-================= */
+/* HOME */
 
 
 .logo{
@@ -116,14 +101,7 @@ font-size:40px;
 
 letter-spacing:14px;
 
-font-weight:400;
-
-opacity:0;
-
-animation:logoAppear 1.5s ease forwards;
-
 }
-
 
 
 .tagline{
@@ -133,12 +111,6 @@ margin-top:40px;
 font-size:12px;
 
 letter-spacing:10px;
-
-opacity:0;
-
-animation:textAppear 1.5s ease forwards;
-
-animation-delay:.8s;
 
 }
 
@@ -152,30 +124,13 @@ font-size:11px;
 
 letter-spacing:8px;
 
-cursor:pointer;
-
 border-bottom:1px solid white;
 
-padding-bottom:12px;
+padding-bottom:10px;
 
-opacity:0;
-
-animation:textAppear 1.5s ease forwards;
-
-animation-delay:1.5s;
-
-transition:.4s;
+cursor:pointer;
 
 }
-
-
-
-.enter:hover{
-
-letter-spacing:12px;
-
-}
-
 
 
 
@@ -185,31 +140,33 @@ position:absolute;
 
 bottom:30px;
 
-width:100%;
-
 font-size:10px;
 
 letter-spacing:5px;
 
 opacity:.5;
 
+width:100%;
+
 }
 
 
 
 
+/* COMMON */
 
 
-/* =================
-MENU
-================= */
+.back{
 
+position:absolute;
 
-#menu{
+top:40px;
 
-flex-direction:column;
+left:40px;
 
-gap:35px;
+font-size:25px;
+
+cursor:pointer;
 
 }
 
@@ -221,61 +178,38 @@ font-size:16px;
 
 letter-spacing:8px;
 
+margin:20px;
+
 cursor:pointer;
 
-transition:.5s;
+transition:.3s;
 
 }
-
 
 
 .menu-item:hover{
 
 letter-spacing:12px;
 
-opacity:.5;
+opacity:.6;
 
 }
 
 
 
 
+/* SHOP */
 
 
+.category-item{
 
-/* =================
-BACK
-================= */
+font-size:18px;
 
+letter-spacing:10px;
 
-.back{
-
-position:absolute;
-
-top:40px;
-
-left:40px;
-
-font-size:22px;
+margin:35px;
 
 cursor:pointer;
-
-}
-
-
-
-
-
-/* =================
-SHOP
-================= */
-
-
-#category{
-
-flex-direction:column;
-
-gap:40px;
 
 }
 
@@ -285,7 +219,7 @@ gap:40px;
 
 position:absolute;
 
-top:100px;
+top:90px;
 
 font-size:11px;
 
@@ -297,52 +231,17 @@ opacity:.5;
 
 
 
-.category-item{
 
-font-size:17px;
-
-letter-spacing:10px;
-
-cursor:pointer;
-
-transition:.5s;
-
-}
-
-
-
-.category-item:hover{
-
-letter-spacing:15px;
-
-opacity:.5;
-
-}
-
-
-
-
-
-/* =================
-PRODUCT
-================= */
-
-
-.product-wrap{
-
-text-align:center;
-
-}
-
+/* PRODUCT */
 
 
 .product-image{
 
-width:320px;
+width:300px;
 
-height:420px;
+height:400px;
 
-border:1px solid #222;
+border:1px solid #333;
 
 display:flex;
 
@@ -362,11 +261,11 @@ letter-spacing:5px;
 
 .product-name{
 
-margin-top:35px;
+margin-top:30px;
 
 font-size:18px;
 
-letter-spacing:8px;
+letter-spacing:7px;
 
 }
 
@@ -386,31 +285,21 @@ line-height:2;
 
 
 
-.buy{
-
-margin-top:25px;
+.button{
 
 border:1px solid white;
 
-padding:15px 45px;
+padding:15px 40px;
 
 display:inline-block;
+
+margin-top:20px;
 
 font-size:10px;
 
 letter-spacing:5px;
 
 cursor:pointer;
-
-}
-
-
-
-.buy:hover{
-
-background:white;
-
-color:black;
 
 }
 
@@ -432,7 +321,7 @@ cursor:pointer;
 
 
 
-.left-arrow{
+.left{
 
 position:absolute;
 
@@ -449,91 +338,24 @@ cursor:pointer;
 
 
 
-
-@keyframes logoAppear{
-
-from{
-
-opacity:0;
-
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
+/* CART */
 
 
+#cartIcon{
 
-@keyframes textAppear{
+position:absolute;
 
-from{
+right:40px;
 
-opacity:0;
+top:40px;
 
-}
+font-size:10px;
 
-to{
+letter-spacing:5px;
 
-opacity:1;
+cursor:pointer;
 
-}
-
-}
-
-
-
-@keyframes loadingFade{
-
-0%{
-
-opacity:1;
-
-}
-
-80%{
-
-opacity:1;
-
-}
-
-100%{
-
-opacity:0;
-
-visibility:hidden;
-
-}
-
-}
-
-
-
-@media(max-width:600px){
-
-.logo{
-
-font-size:25px;
-
-letter-spacing:8px;
-
-}
-
-
-.product-image{
-
-width:260px;
-
-height:350px;
-
-}
+z-index:10;
 
 }
 
@@ -547,24 +369,25 @@ height:350px;
 <body>
  <!-- LOADING -->
 
-
 <div id="loading">
 
-
 <div class="loading-logo">
-
 EMERGENCY HAMMER
-
 </div>
 
-
-<div class="loading-text">
-
+<div class="loading-sub">
 EST. 2026
+</div>
 
 </div>
 
 
+
+
+<!-- CART -->
+
+<div id="cartIcon" onclick="openCart()">
+CART (0)
 </div>
 
 
@@ -573,49 +396,34 @@ EST. 2026
 
 <!-- HOME -->
 
-
 <div class="page" id="home">
-
 
 <div>
 
-
 <div class="logo">
-
 EMERGENCY HAMMER
-
 </div>
-
 
 
 <div class="tagline">
-
 BREAK YOUR FIT.
-
 </div>
-
 
 
 <div class="enter" onclick="openMenu()">
-
 ENTER
-
 </div>
-
 
 
 <div class="year">
-
 EST. 2026
-
-</div>
-
-
-
 </div>
 
 
 </div>
+
+</div>
+
 
 
 
@@ -624,66 +432,49 @@ EST. 2026
 
 <!-- MENU -->
 
-
 <div class="page" id="menu">
 
 
 <div class="back" onclick="backHome()">
-
 ←
-
 </div>
 
 
+<div>
 
 
-<div class="menu-item" onclick="openShopCategory()">
-
-01&nbsp;&nbsp; SHOP
-
+<div class="menu-item" onclick="openShop()">
+01 SHOP
 </div>
-
-
 
 
 <div class="menu-item" onclick="openLookbook()">
-
-02&nbsp;&nbsp; LOOKBOOK
-
+02 LOOKBOOK
 </div>
-
-
 
 
 <div class="menu-item" onclick="openAbout()">
-
-03&nbsp;&nbsp; ABOUT
-
+03 ABOUT
 </div>
-
-
-
 
 
 <div class="menu-item">
 
-
 <a href="https://www.instagram.com/emergencyhammer_official"
 style="color:white;text-decoration:none;">
 
-
-04&nbsp;&nbsp; INSTAGRAM
-
+04 INSTAGRAM
 
 </a>
 
+</div>
+
 
 </div>
 
 
-
-
 </div>
+
 
 
 
@@ -693,52 +484,33 @@ style="color:white;text-decoration:none;">
 
 <!-- SHOP CATEGORY -->
 
-
-<div class="page" id="category">
+<div class="page" id="shop">
 
 
 <div class="back" onclick="backMenu()">
-
 ←
-
 </div>
 
+
+<div>
 
 
 <div class="category-title">
-
 SHOP
-
 </div>
 
 
-
-
-<div class="category-item" onclick="openTop()">
-
-01&nbsp;&nbsp; TOP
-
+<div class="category-item" onclick="openProducts('top')">
+01 TOP
 </div>
 
 
-
-
-<div class="category-item" onclick="openBottom()">
-
-02&nbsp;&nbsp; BOTTOM
-
+<div class="category-item" onclick="openProducts('bottom')">
+02 BOTTOM
 </div>
 
 
-
-
-<div class="year">
-
-SELECT CATEGORY
-
 </div>
-
-
 
 
 </div>
@@ -749,70 +521,51 @@ SELECT CATEGORY
 
 
 
-<!-- PRODUCT PAGE START -->
+
+<!-- PRODUCT -->
 
 
 <div class="page" id="product">
 
 
-<div class="back" onclick="backCategory()">
-
+<div class="back" onclick="backShop()">
 ←
-
 </div>
 
 
 
-
-<div class="left-arrow" onclick="prevProduct()">
-
+<div class="left" onclick="prevProduct()">
 ←
-
 </div>
 
 
 
 
-<div class="product-wrap">
+<div>
 
 
-
-<div class="category-title">
-
-TOP / 001
-
+<div class="category-title" id="categoryName">
+TOP
 </div>
-
-
 
 
 <div class="product-image">
-
 PRODUCT IMAGE
-
 </div>
-
-
 
 
 
 <div class="product-name" id="productName">
-
 EMERGENCY TEE 001
-
 </div>
 
 
 
-
-
-<div class="product-info">
-
+<div class="product-info" id="productInfo">
 
 ₩49,000
 
 <br><br>
-
 
 BLACK
 
@@ -822,35 +575,28 @@ COTTON 100%
 
 <br><br>
 
-
 SIZE
 
 <br>
 
-S&nbsp;&nbsp; M&nbsp;&nbsp; L&nbsp;&nbsp; XL
-
+S M L XL
 
 </div>
 
 
 
-<div class="buy" onclick="addCart()">
 
+<div class="button" onclick="addCart()">
 ADD TO CART
-
 </div>
 
 
 <br>
 
 
-
-<div class="buy" onclick="buyNow()">
-
+<div class="button" onclick="buyNow()">
 BUY NOW
-
 </div>
-
 
 
 
@@ -860,21 +606,9 @@ BUY NOW
 
 
 <div class="arrow" onclick="nextProduct()">
-
 →
-
 </div>
 
-
-
-
-</div>
- <!-- CART ICON -->
-
-
-<div id="cartIcon" onclick="openCart()">
-
-CART (0)
 
 </div>
 
@@ -891,188 +625,133 @@ CART (0)
 
 
 <div class="back" onclick="backMenu()">
-
 ←
-
 </div>
 
 
-
-<div class="product-wrap">
+<div>
 
 
 <div class="category-title">
-
 CART
-
 </div>
-
 
 
 <div id="cartList">
 
-
 CART IS EMPTY
-
 
 </div>
 
 
+<br>
 
 
-<div id="totalPrice">
-
+<div id="total">
 
 TOTAL ₩0
 
-
 </div>
 
 
 
-
-<div class="buy" onclick="checkout()">
-
+<div class="button" onclick="checkout()">
 CHECK OUT
-
 </div>
-
-
-
-</div>
-
 
 
 </div>
 
 
+</div>
 
 
 
 
 
-<!-- ORDER PAGE -->
+<!-- ORDER -->
 
 
 <div class="page" id="order">
 
 
 <div class="back" onclick="openCart()">
-
 ←
-
 </div>
 
 
-
-
-<div class="product-wrap">
+<div>
 
 
 <div class="category-title">
-
 ORDER
-
 </div>
-
-
 
 
 <div class="product-info">
 
-
 NAME
 
 <br>
-
-________________
+_____________
 
 <br><br>
-
 
 ADDRESS
 
 <br>
-
-________________
+_____________
 
 <br><br>
-
 
 PHONE
 
 <br>
-
-________________
-
+_____________
 
 </div>
 
 
-
-
-<div class="buy">
-
+<div class="button">
 PLACE ORDER
-
-</div>
-
-
-
 </div>
 
 
 </div>
 
 
-
-
-
-
-
+</div>
 <!-- LOOKBOOK -->
-
 
 <div class="page" id="lookbook">
 
 
 <div class="back" onclick="backMenu()">
-
 ←
+</div>
+
+
+<div>
+
+
+<div class="category-title">
+LOOKBOOK
+</div>
+
+
+<div class="product-image" id="lookImage">
+
+LOOKBOOK 01
 
 </div>
 
 
-
-
-<div class="product-wrap">
-
-
-<div class="product-image">
-
-LOOKBOOK IMAGE 01
-
-</div>
-
-
-
-<div class="product-name">
-
-01 / 03
-
-</div>
-
-
-<div class="arrow" onclick="nextLookbook()">
-
+<div class="arrow" onclick="nextLook()">
 →
-
 </div>
 
 
-
 </div>
-
 
 
 </div>
@@ -1090,11 +769,8 @@ LOOKBOOK IMAGE 01
 
 
 <div class="back" onclick="backMenu()">
-
 ←
-
 </div>
-
 
 
 <div class="product-info">
@@ -1118,69 +794,70 @@ and street culture through modern silhouettes.
 
 BREAK YOUR FIT.
 
-
 </div>
 
 
 </div>
- let products=[];
 
-let productIndex=0;
+
+
+
+
+
+<script>
+
+
+// 상품 데이터
+
+
+let products=[];
+
+let index=0;
 
 
 let cart=[];
 
 
 
-const tops=[
-
+const topProducts=[
 
 {
 name:"EMERGENCY TEE 001",
 price:49000
 },
 
-
 {
 name:"HAMMER LOGO TEE 002",
 price:52000
 },
-
 
 {
 name:"BREAK FIT TEE 003",
 price:55000
 }
 
-
 ];
 
 
 
-
-const bottoms=[
-
+const bottomProducts=[
 
 {
 name:"HAMMER PANTS 001",
 price:79000
 },
 
-
 {
 name:"UTILITY PANTS 002",
 price:85000
 },
-
 
 {
 name:"DENIM PANTS 003",
 price:89000
 }
 
-
 ];
-
 
 
 
@@ -1189,15 +866,11 @@ price:89000
 
 function hideAll(){
 
+document.querySelectorAll(".page").forEach(function(e){
 
-document.querySelectorAll(".page").forEach(function(page){
-
-
-page.style.display="none";
-
+e.style.display="none";
 
 });
-
 
 }
 
@@ -1206,53 +879,56 @@ page.style.display="none";
 
 
 
+// 로딩
 
-/* HOME */
+
+window.onload=function(){
+
+setTimeout(function(){
+
+document.getElementById("loading").style.display="none";
+
+document.getElementById("home").style.display="flex";
+
+
+},2000);
+
+};
+
+
+
+
+
+
+
+// 메뉴
 
 
 function openMenu(){
 
-
 hideAll();
-
 
 document.getElementById("menu").style.display="flex";
 
-
 }
-
-
 
 
 
 function backHome(){
 
-
 hideAll();
-
 
 document.getElementById("home").style.display="flex";
 
-
 }
 
 
 
-
-
-
-
-/* SHOP */
-
-
-function openShopCategory(){
-
+function backMenu(){
 
 hideAll();
 
-
-document.getElementById("category").style.display="flex";
-
+document.getElementById("menu").style.display="flex";
 
 }
 
@@ -1260,112 +936,93 @@ document.getElementById("category").style.display="flex";
 
 
 
-function openTop(){
+// SHOP
 
 
-products=tops;
+function openShop(){
 
-productIndex=0;
+hideAll();
+
+document.getElementById("shop").style.display="flex";
+
+}
+
+
+
+
+
+function openProducts(type){
+
+
+if(type=="top"){
+
+products=topProducts;
+
+}else{
+
+products=bottomProducts;
+
+}
+
+
+index=0;
 
 showProduct();
 
 
 }
-
-
-
-
-
-function openBottom(){
-
-
-products=bottoms;
-
-productIndex=0;
-
-showProduct();
-
-
-}
-
-
-
 
 
 
 
 function showProduct(){
 
-
 hideAll();
-
 
 document.getElementById("product").style.display="flex";
 
 
-
 document.getElementById("productName").innerHTML=
 
-products[productIndex].name;
+products[index].name;
 
 
 }
-
-
-
-
-
 
 
 
 function nextProduct(){
 
-
-productIndex++;
-
-
-if(productIndex>=products.length){
+index++;
 
 
-productIndex=0;
+if(index>=products.length){
 
+index=0;
 
 }
 
 
-
-document.getElementById("productName").innerHTML=
-
-products[productIndex].name;
+showProduct();
 
 
 }
-
-
-
-
 
 
 
 function prevProduct(){
 
-
-productIndex--;
-
-
-if(productIndex<0){
+index--;
 
 
-productIndex=products.length-1;
+if(index<0){
 
+index=products.length-1;
 
 }
 
 
-
-document.getElementById("productName").innerHTML=
-
-products[productIndex].name;
+showProduct();
 
 
 }
@@ -1373,32 +1030,11 @@ products[productIndex].name;
 
 
 
-
-
-
-function backCategory(){
-
+function backShop(){
 
 hideAll();
 
-
-document.getElementById("category").style.display="flex";
-
-
-}
-
-
-
-
-
-function backMenu(){
-
-
-hideAll();
-
-
-document.getElementById("menu").style.display="flex";
-
+document.getElementById("shop").style.display="flex";
 
 }
 
@@ -1408,17 +1044,16 @@ document.getElementById("menu").style.display="flex";
 
 
 
-/* CART */
+// CART
 
 
 function addCart(){
 
-
-cart.push(products[productIndex]);
-
+cart.push(products[index]);
 
 updateCart();
 
+alert("ADDED TO CART");
 
 }
 
@@ -1426,22 +1061,16 @@ updateCart();
 
 function updateCart(){
 
-
 document.getElementById("cartIcon").innerHTML=
 
 "CART ("+cart.length+")";
-
-
 
 }
 
 
 
 
-
-
 function openCart(){
-
 
 hideAll();
 
@@ -1449,44 +1078,40 @@ hideAll();
 document.getElementById("cart").style.display="flex";
 
 
-
-let list="";
-
+let text="";
 
 let total=0;
-
 
 
 cart.forEach(function(item){
 
 
-list += item.name+"<br>₩"+item.price+"<br><br>";
+text += item.name+"<br>";
+
+text += "₩"+item.price+"<br><br>";
 
 
-total += item.price;
+total+=item.price;
 
 
 });
 
 
 
-if(cart.length===0){
+if(cart.length==0){
 
-
-list="CART IS EMPTY";
-
+text="CART IS EMPTY";
 
 }
 
 
 
-document.getElementById("cartList").innerHTML=list;
+document.getElementById("cartList").innerHTML=text;
 
 
-document.getElementById("totalPrice").innerHTML=
+document.getElementById("total").innerHTML=
 
 "TOTAL ₩"+total;
-
 
 
 }
@@ -1498,18 +1123,13 @@ document.getElementById("totalPrice").innerHTML=
 
 function buyNow(){
 
-
 cart=[];
 
-
-cart.push(products[productIndex]);
-
+cart.push(products[index]);
 
 updateCart();
 
-
 checkout();
-
 
 }
 
@@ -1518,60 +1138,50 @@ checkout();
 
 function checkout(){
 
-
 hideAll();
-
 
 document.getElementById("order").style.display="flex";
 
-
 }
-/* LOOKBOOK */
 
 
-let lookPage=1;
 
+
+
+
+
+
+// LOOKBOOK
+
+
+let look=1;
 
 
 function openLookbook(){
 
-
 hideAll();
-
 
 document.getElementById("lookbook").style.display="flex";
 
-
-lookPage=1;
-
-
-updateLookbook();
-
-
 }
 
 
 
+function nextLook(){
+
+look++;
 
 
-function nextLookbook(){
+if(look>3){
 
-
-lookPage++;
-
-
-
-if(lookPage>3){
-
-
-lookPage=1;
-
+look=1;
 
 }
 
 
+document.getElementById("lookImage").innerHTML=
 
-updateLookbook();
+"LOOKBOOK 0"+look;
 
 
 }
@@ -1582,108 +1192,22 @@ updateLookbook();
 
 
 
-function updateLookbook(){
-
-
-let imageBox=document.querySelector("#lookbook .product-image");
-
-
-
-imageBox.style.opacity="0";
-
-
-
-setTimeout(function(){
-
-
-imageBox.innerHTML=
-
-"LOOKBOOK IMAGE "+lookPage;
-
-
-imageBox.style.opacity="1";
-
-
-},300);
-
-
-
-}
-
-
-
-
-
-
-
-/* ABOUT */
-
+// ABOUT
 
 
 function openAbout(){
 
-
 hideAll();
-
 
 document.getElementById("about").style.display="flex";
 
-
 }
-
-
-
-
-
-
-
-/* LOADING */
-
-
-window.onload=function(){
-
-
-setTimeout(function(){
-
-
-document.getElementById("loading").style.display="none";
-
-
-document.getElementById("home").style.display="flex";
-
-
-},2500);
-
-
-}
- <script>
-
-
-/* 페이지 기본 상태 */
-
-
-document.getElementById("home").style.display="none";
-
-document.getElementById("menu").style.display="none";
-
-document.getElementById("category").style.display="none";
-
-document.getElementById("product").style.display="none";
-
-document.getElementById("cart").style.display="none";
-
-document.getElementById("order").style.display="none";
-
-document.getElementById("lookbook").style.display="none";
-
-document.getElementById("about").style.display="none";
 
 
 
 </script>
 
 
-
 </body>
 
-</html> 
+</html>
