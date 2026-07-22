@@ -42,14 +42,14 @@ text-align:center;
 
 
 
-/* INTRO */
+/* =================
+INTRO
+================= */
 
 
 #home{
 
 display:flex;
-
-animation:fade 1.5s ease;
 
 }
 
@@ -57,19 +57,28 @@ animation:fade 1.5s ease;
 
 .logo{
 
-font-size:42px;
-letter-spacing:12px;
-font-weight:600;
+font-size:40px;
+letter-spacing:14px;
+font-weight:400;
+
+opacity:0;
+
+animation:logoAppear 1.8s ease forwards;
 
 }
 
 
+
 .tagline{
 
-margin-top:35px;
-font-size:13px;
-letter-spacing:8px;
-opacity:.8;
+margin-top:40px;
+font-size:12px;
+letter-spacing:10px;
+
+opacity:0;
+
+animation:textAppear 1.5s ease forwards;
+animation-delay:.8s;
 
 }
 
@@ -77,27 +86,66 @@ opacity:.8;
 
 .enter{
 
-margin-top:65px;
-font-size:12px;
-letter-spacing:6px;
+margin-top:70px;
+
+font-size:11px;
+letter-spacing:8px;
+
 cursor:pointer;
 
 border-bottom:1px solid white;
-padding-bottom:10px;
+
+padding-bottom:12px;
+
+opacity:0;
+
+animation:textAppear 1.5s ease forwards;
+animation-delay:1.5s;
+
+transition:.4s;
+
+}
+
+
+
+.enter:hover{
+
+letter-spacing:12px;
 
 }
 
 
 
 
+.year{
 
-/* MENU */
+position:absolute;
+
+bottom:30px;
+
+width:100%;
+
+font-size:10px;
+
+letter-spacing:5px;
+
+opacity:.5;
+
+}
+
+
+
+/* =================
+MENU
+================= */
 
 
 #menu{
 
 flex-direction:column;
+
 gap:35px;
+
 position:relative;
 
 }
@@ -106,64 +154,137 @@ position:relative;
 
 .menu-item{
 
-font-size:18px;
+font-size:16px;
+
 letter-spacing:8px;
+
 cursor:pointer;
-transition:.3s;
+
+transition:.5s;
+
+opacity:0;
+
+animation:menuAppear .8s ease forwards;
+
+}
+
+
+
+.menu-item:nth-child(2){
+
+animation-delay:.2s;
+
+}
+
+
+.menu-item:nth-child(3){
+
+animation-delay:.4s;
+
+}
+
+
+.menu-item:nth-child(4){
+
+animation-delay:.6s;
 
 }
 
 
 .menu-item:hover{
 
-opacity:.5;
 letter-spacing:12px;
+
+opacity:.5;
 
 }
 
 
 
 
-/* BACK */
+/* =================
+BACK
+================= */
 
 
 .back{
 
 position:absolute;
+
 top:40px;
+
 left:40px;
+
 font-size:22px;
+
 cursor:pointer;
 
 }
 
 
 
-/* CATEGORY */
+
+/* =================
+SHOP CATEGORY
+================= */
 
 
 #category{
 
 flex-direction:column;
+
 gap:40px;
+
 position:relative;
 
 }
 
 
+
+.category-title{
+
+position:absolute;
+
+top:100px;
+
+font-size:11px;
+
+letter-spacing:8px;
+
+opacity:.5;
+
+}
+
+
+
 .category-item{
 
-font-size:20px;
+font-size:17px;
+
 letter-spacing:10px;
+
 cursor:pointer;
+
+transition:.5s;
+
+}
+
+
+
+.category-item:hover{
+
+letter-spacing:15px;
+
+opacity:.5;
 
 }
 
 
 
 
-
-/* PRODUCT */
+/* =================
+PRODUCT
+================= */
 
 
 #product{
@@ -174,38 +295,105 @@ position:relative;
 
 
 
+.product-wrap{
+
+text-align:center;
+
+animation:fade .8s ease;
+
+}
+
+
+
+.collection{
+
+font-size:10px;
+
+letter-spacing:6px;
+
+opacity:.5;
+
+margin-bottom:35px;
+
+}
+
+
+
+.product-image{
+
+width:320px;
+
+height:420px;
+
+border:1px solid #222;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:10px;
+
+letter-spacing:4px;
+
+margin:auto;
+
+}
+
+
+
 .product-name{
 
-font-size:25px;
+margin-top:35px;
+
+font-size:18px;
+
 letter-spacing:8px;
 
 }
 
 
-.product-image{
 
-width:280px;
-height:350px;
-border:1px solid #333;
+.product-info{
 
-margin:40px auto;
+margin-top:25px;
 
-display:flex;
-align-items:center;
-justify-content:center;
+font-size:11px;
 
-font-size:10px;
-letter-spacing:3px;
-opacity:.5;
+letter-spacing:4px;
+
+line-height:2;
 
 }
 
 
-.product-info{
 
-font-size:12px;
+.buy{
+
+margin-top:35px;
+
+border:1px solid white;
+
+padding:15px 50px;
+
+font-size:10px;
+
 letter-spacing:5px;
-line-height:2.5;
+
+display:inline-block;
+
+cursor:pointer;
+
+}
+
+
+
+.buy:hover{
+
+background:white;
+
+color:black;
 
 }
 
@@ -214,20 +402,29 @@ line-height:2.5;
 .arrow{
 
 position:absolute;
+
 right:40px;
+
 top:50%;
+
 font-size:35px;
+
 cursor:pointer;
 
 }
+
 
 
 .left-arrow{
 
 position:absolute;
+
 left:40px;
+
 top:50%;
+
 font-size:35px;
+
 cursor:pointer;
 
 }
@@ -235,95 +432,12 @@ cursor:pointer;
 
 
 
-
-/* LOOKBOOK */
-
-
-#lookbook{
-
-position:relative;
-flex-direction:column;
-
-}
+/* =================
+ANIMATION
+================= */
 
 
-
-.grid{
-
-display:grid;
-grid-template-columns:repeat(3,90px);
-gap:10px;
-
-}
-
-
-.grid div{
-
-width:90px;
-height:90px;
-border:1px solid #333;
-
-}
-
-
-
-.look-arrow{
-
-position:absolute;
-right:50px;
-bottom:80px;
-font-size:30px;
-cursor:pointer;
-
-}
-
-
-
-
-/* ABOUT */
-
-
-#about{
-
-position:relative;
-padding:40px;
-
-}
-
-
-.about-text{
-
-max-width:500px;
-
-font-size:13px;
-letter-spacing:3px;
-line-height:2.5;
-
-}
-
-
-
-
-/* FOOTER */
-
-
-.year{
-
-position:absolute;
-bottom:30px;
-width:100%;
-text-align:center;
-font-size:10px;
-letter-spacing:5px;
-opacity:.5;
-
-}
-
-
-
-
-
-@keyframes fade{
+@keyframes logoAppear{
 
 from{
 
@@ -343,33 +457,84 @@ transform:translateY(0);
 
 
 
+@keyframes textAppear{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+@keyframes menuAppear{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
 
 @media(max-width:600px){
 
+
 .logo{
 
-font-size:27px;
-letter-spacing:7px;
+font-size:26px;
+
+letter-spacing:8px;
 
 }
 
 
-.grid{
+.product-image{
 
-grid-template-columns:repeat(3,70px);
+width:260px;
 
-}
-
-
-.grid div{
-
-width:70px;
-height:70px;
+height:350px;
 
 }
 
 }
-
 
 
 </style>
@@ -377,32 +542,55 @@ height:70px;
 </head>
 
 
-
 <body>
   <!-- HOME -->
 
+
 <div class="page" id="home">
+
 
 <div>
 
+
 <div class="logo">
+
 EMERGENCY HAMMER
+
 </div>
+
 
 
 <div class="tagline">
+
 BREAK YOUR FIT.
+
 </div>
+
 
 
 <div class="enter" onclick="openMenu()">
+
 ENTER
+
+</div>
+
+
+
+<div class="year">
+
+EST. 2026
+
+</div>
+
+
+
 </div>
 
 
 </div>
 
-</div>
+
+
 
 
 
@@ -414,39 +602,57 @@ ENTER
 
 
 <div class="back" onclick="backHome()">
+
 ←
+
 </div>
 
 
 
 <div class="menu-item" onclick="openShopCategory()">
-SHOP
+
+01&nbsp;&nbsp; SHOP
+
 </div>
+
 
 
 <div class="menu-item" onclick="openLookbook()">
-LOOKBOOK
+
+02&nbsp;&nbsp; LOOKBOOK
+
 </div>
+
 
 
 <div class="menu-item" onclick="openAbout()">
-ABOUT
+
+03&nbsp;&nbsp; ABOUT
+
 </div>
+
 
 
 <div class="menu-item">
 
-<a href="https://www.instagram.com/emergencyhammer_official" 
+
+<a href="https://www.instagram.com/emergencyhammer_official"
 style="color:white;text-decoration:none;">
 
-INSTAGRAM
+
+04&nbsp;&nbsp; INSTAGRAM
+
 
 </a>
 
+
 </div>
 
 
+
 </div>
+
+
 
 
 
@@ -459,20 +665,49 @@ INSTAGRAM
 
 
 <div class="back" onclick="backMenu()">
+
 ←
+
 </div>
+
+
+
+
+<div class="category-title">
+
+SHOP
+
+</div>
+
+
 
 
 <div class="category-item" onclick="openTop()">
-TOP
+
+01&nbsp;&nbsp; TOP
+
 </div>
+
+
 
 
 <div class="category-item" onclick="openBottom()">
-BOTTOM
+
+02&nbsp;&nbsp; BOTTOM
+
 </div>
 
 
+
+<div class="year">
+
+SELECT CATEGORY
+
+</div>
+
+
+
+
 </div>
 
 
@@ -480,31 +715,39 @@ BOTTOM
 
 
 
-<!-- PRODUCT PAGE -->
+<!-- PRODUCT -->
 
 
 <div class="page" id="product">
 
 
 <div class="back" onclick="backCategory()">
+
 ←
+
 </div>
 
 
 
 <div class="left-arrow" onclick="prevProduct()">
+
 ←
-</div>
-
-
-
-
-<div>
-
-
-<div class="product-name" id="productName">
 
 </div>
+
+
+
+
+<div class="product-wrap">
+
+
+
+<div class="collection">
+
+TOP / 001
+
+</div>
+
 
 
 
@@ -516,21 +759,51 @@ PRODUCT IMAGE
 
 
 
+
+
+<div class="product-name" id="productName">
+
+EMERGENCY TEE 001
+
+</div>
+
+
+
+
 <div class="product-info">
 
 
 ₩49,000
 
-<br>
+<br><br>
 
 BLACK
 
 <br>
 
-SIZE S / M / L / XL
+COTTON 100%
+
+<br><br>
+
+SIZE
+
+<br>
+
+S&nbsp;&nbsp; M&nbsp;&nbsp; L&nbsp;&nbsp; XL
+
 
 
 </div>
+
+
+
+
+<div class="buy">
+
+ADD TO CART
+
+</div>
+
 
 
 </div>
@@ -546,6 +819,7 @@ SIZE S / M / L / XL
 
 
 
+
 </div>
 <!-- LOOKBOOK -->
 
@@ -554,7 +828,9 @@ SIZE S / M / L / XL
 
 
 <div class="back" onclick="backMenu()">
+
 ←
+
 </div>
 
 
@@ -566,9 +842,11 @@ SIZE S / M / L / XL
 <div></div>
 <div></div>
 
+
 <div></div>
 <div></div>
 <div></div>
+
 
 <div></div>
 <div></div>
@@ -579,9 +857,13 @@ SIZE S / M / L / XL
 
 
 
-<div class="look-arrow" onclick="nextLookbook()">
+
+<div class="arrow" onclick="nextLookbook()">
+
 →
+
 </div>
+
 
 
 
@@ -608,7 +890,9 @@ SIZE S / M / L / XL
 
 
 <div class="back" onclick="backMenu()">
+
 ←
+
 </div>
 
 
@@ -618,17 +902,19 @@ SIZE S / M / L / XL
 
 EMERGENCY HAMMER is a streetwear brand founded in 2026.
 
-<br><br>
-
-
-Created to balance intelligence and street culture,
-we redefine everyday silhouettes through modern design.
 
 <br><br>
 
 
-Breaking ordinary limits,
-we create pieces that challenge your perspective.
+A brand created to balance intelligence and street culture,
+redefining modern silhouettes through unique perspectives.
+
+
+<br><br>
+
+
+We break ordinary limits and create pieces that express individuality.
+
 
 <br><br>
 
@@ -645,98 +931,121 @@ BREAK YOUR FIT.
 
 
 
-<div class="year">
-
-EST. 2026
-
-</div>
-
-
 
 <script>
- let products = [];
-
-let productIndex = 0;
 
 
 
-const tops = [
+let products=[];
 
-"GRAPHIC TEE 001",
+let productIndex=0;
+
+
+
+const tops=[
+
+
+"EMERGENCY TEE 001",
+
 
 "HAMMER LOGO TEE 002",
 
+
 "BREAK FIT TEE 003"
+
 
 ];
 
 
-const bottoms = [
+
+const bottoms=[
+
 
 "HAMMER PANTS 001",
 
+
 "UTILITY PANTS 002",
 
+
 "DENIM PANTS 003"
+
 
 ];
 
 
 
 
-
-/* 화면 전환 */
 
 
 function hideAll(){
 
+
 document.querySelectorAll(".page").forEach(function(page){
+
 
 page.style.display="none";
 
+
 });
 
+
 }
+
+
 
 
 
 
 function openMenu(){
 
+
 hideAll();
+
 
 document.getElementById("menu").style.display="flex";
 
+
 }
+
+
 
 
 
 
 function backHome(){
 
+
 hideAll();
 
+
 document.getElementById("home").style.display="flex";
+
 
 }
 
 
 
 
-/* SHOP */
 
 
 function openShopCategory(){
 
+
 hideAll();
 
+
 document.getElementById("category").style.display="flex";
+
 
 }
 
 
 
+
+
+
 function openTop(){
+
 
 products=tops;
 
@@ -744,11 +1053,14 @@ productIndex=0;
 
 showProduct();
 
+
 }
 
 
 
+
 function openBottom(){
+
 
 products=bottoms;
 
@@ -756,22 +1068,30 @@ productIndex=0;
 
 showProduct();
 
+
 }
+
 
 
 
 
 function showProduct(){
 
+
 hideAll();
+
 
 document.getElementById("product").style.display="flex";
 
 
-document.getElementById("productName").innerHTML =
+document.getElementById("productName").innerHTML=
+
 products[productIndex];
 
+
 }
+
+
 
 
 
@@ -779,21 +1099,28 @@ products[productIndex];
 
 function nextProduct(){
 
+
 productIndex++;
 
 
-if(productIndex >= products.length){
+
+if(productIndex>=products.length){
+
 
 productIndex=0;
+
 
 }
 
 
-document.getElementById("productName").innerHTML =
+
+document.getElementById("productName").innerHTML=
+
 products[productIndex];
 
 
 }
+
 
 
 
@@ -801,49 +1128,57 @@ products[productIndex];
 
 function prevProduct(){
 
+
 productIndex--;
 
 
-if(productIndex < 0){
+
+if(productIndex<0){
+
 
 productIndex=products.length-1;
 
+
 }
 
 
-document.getElementById("productName").innerHTML =
+
+document.getElementById("productName").innerHTML=
+
 products[productIndex];
 
+
 }
+
+
+
 
 
 
 
 function backCategory(){
 
+
 hideAll();
+
 
 document.getElementById("category").style.display="flex";
 
-}
 
+}
 
 
 
 function backMenu(){
 
+
 hideAll();
+
 
 document.getElementById("menu").style.display="flex";
 
+
 }
-
-
-
-
-
-
-
 /* LOOKBOOK */
 
 
@@ -851,32 +1186,47 @@ let lookPage = 1;
 
 
 
+
 function openLookbook(){
+
 
 lookPage=1;
 
+
 changeLookbook();
 
+
 }
+
 
 
 
 
 function nextLookbook(){
 
+
 lookPage++;
+
 
 
 if(lookPage>3){
 
+
 lookPage=1;
 
+
 }
+
 
 
 changeLookbook();
 
+
+
 }
+
+
+
 
 
 
@@ -886,19 +1236,27 @@ function changeLookbook(){
 
 hideAll();
 
+
 document.getElementById("lookbook").style.display="flex";
 
 
+
 document.getElementById("lookPage").innerHTML =
+
 "0"+lookPage+" / 03";
+
+
 
 
 let boxes=document.querySelectorAll("#lookGrid div");
 
 
+
 boxes.forEach(function(box){
 
+
 box.style.opacity="0";
+
 
 });
 
@@ -906,29 +1264,48 @@ box.style.opacity="0";
 
 setTimeout(function(){
 
+
 boxes.forEach(function(box){
+
+
+box.style.transition=".6s";
+
 
 box.style.opacity="1";
 
-box.style.transition="0.5s";
 
 });
+
 
 },100);
 
 
 
 }
+
+
+
+
+
+
+
+
 /* ABOUT */
+
 
 
 function openAbout(){
 
+
 hideAll();
+
 
 document.getElementById("about").style.display="flex";
 
+
 }
+
+
 
 
 
@@ -938,5 +1315,6 @@ document.getElementById("about").style.display="flex";
 
 
 </body>
+
 
 </html>  
