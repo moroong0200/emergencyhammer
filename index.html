@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
 <title>EMERGENCY HAMMER</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -17,84 +16,55 @@ box-sizing:border-box;
 body{
 background:#000;
 color:#fff;
-font-family:Helvetica Neue,Arial,sans-serif;
+font-family:Arial, sans-serif;
 height:100vh;
 }
 
-header{
-padding:40px;
+.page{
+height:100vh;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:center;
+text-align:center;
 }
 
-.logo{
-font-size:18px;
-letter-spacing:5px;
-}
-
-.menu{
+#home{
 display:flex;
+}
+
+#menu{
+display:none;
+flex-direction:column;
 gap:35px;
 }
 
-.menu a{
-color:#fff;
-text-decoration:none;
-font-size:12px;
-letter-spacing:3px;
-opacity:.8;
+.logo{
+font-size:40px;
+letter-spacing:10px;
 }
 
-.hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero h1{
-font-size:55px;
-letter-spacing:12px;
-}
-
-.hero p{
+.text{
 margin-top:30px;
+letter-spacing:8px;
 font-size:13px;
-letter-spacing:7px;
 }
 
-.shop{
-margin-top:80px;
-font-size:12px;
-letter-spacing:5px;
+button{
+margin-top:60px;
+background:none;
+border:none;
+color:white;
 border-bottom:1px solid white;
 padding-bottom:8px;
+letter-spacing:5px;
+cursor:pointer;
 }
 
-footer{
-position:absolute;
-bottom:30px;
-width:100%;
-text-align:center;
-font-size:10px;
-letter-spacing:4px;
-opacity:.5;
-}
-
-@media(max-width:600px){
-
-.hero h1{
-font-size:30px;
-letter-spacing:7px;
-}
-
-.menu{
-gap:15px;
-}
-
+a{
+color:white;
+text-decoration:none;
+font-size:18px;
+letter-spacing:8px;
 }
 
 </style>
@@ -104,14 +74,28 @@ gap:15px;
 
 <body>
 
+<div class="page" id="home">
 
-<header>
+<div>
 
 <div class="logo">
 EMERGENCY HAMMER
 </div>
 
-<div class="menu">
+<div class="text">
+BREAK YOUR FIT.
+</div>
+
+<button onclick="enterSite()">
+ENTER
+</button>
+
+</div>
+
+</div>
+
+
+<div class="page" id="menu">
 
 <a href="#">SHOP</a>
 <a href="#">LOOKBOOK</a>
@@ -120,31 +104,18 @@ EMERGENCY HAMMER
 
 </div>
 
-</header>
 
+<script>
 
+function enterSite(){
 
-<section class="hero">
+document.getElementById("home").style.display="none";
 
-<h1>
-BREAK YOUR FIT.
-</h1>
+document.getElementById("menu").style.display="flex";
 
-<p>
-NEW STREETWEAR BRAND
-</p>
+}
 
-<div class="shop">
-ENTER SHOP
-</div>
-
-</section>
-
-
-
-<footer>
-EST. 2026
-</footer>
+</script>
 
 
 </body>
