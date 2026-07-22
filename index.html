@@ -16,271 +16,97 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
-/* BRAND ANIMATION */
 
-
-.logo,
-.loading-logo{
-
-animation:fadeUp 1.5s ease forwards;
-
-}
-
-
-
-.tagline{
-
-opacity:0;
-
-animation:fadeIn 1.5s ease forwards;
-animation-delay:.7s;
-
-}
-
-
-
-.enter{
-
-opacity:0;
-
-animation:fadeIn 1.5s ease forwards;
-animation-delay:1.3s;
-
-}
-
-
-
-.menu-item{
-
-opacity:0;
-
-animation:slideUp .8s ease forwards;
-
-}
-
-
-
-.menu-item:nth-child(2){
-
-animation-delay:.2s;
-
-}
-
-
-.menu-item:nth-child(3){
-
-animation-delay:.4s;
-
-}
-
-
-.menu-item:nth-child(4){
-
-animation-delay:.6s;
-
-}
-
-
-
-
-.product-image{
-
-animation:zoomIn .8s ease;
-
-}
-
-
-
-.product-name,
-.product-info,
-.button{
-
-animation:fadeUp .8s ease;
-
-}
-
-
-
-
-.page{
-
-animation:pageFade .5s ease;
-
-}
-
-
-
-
-/* KEYFRAMES */
-
-
-@keyframes fadeUp{
-
-from{
-
-opacity:0;
-
-transform:translateY(25px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-}
-
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-
-
-@keyframes slideUp{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
-
-@keyframes zoomIn{
-
-from{
-
-opacity:0;
-
-transform:scale(.95);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-
-
-@keyframes pageFade{
-
-from{
-
-opacity:0;
-
-}
-
-
-to{
-
-opacity:1;
-
-}
-
-}
 
 body{
 
 background:#000;
 color:#fff;
-font-family:Arial, Helvetica, sans-serif;
-overflow:hidden;
+
+font-family:
+Helvetica Neue,
+Arial,
+sans-serif;
+
 height:100vh;
 
+overflow:hidden;
+
 }
+
+
+
+/* =====================
+PAGE SYSTEM
+===================== */
 
 
 .page{
 
-display:none;
 width:100%;
 height:100vh;
+
+display:none;
 
 align-items:center;
 justify-content:center;
 
+position:relative;
+
 text-align:center;
 
-position:relative;
+animation:pageIn .7s ease;
 
 }
 
 
-/* LOADING */
+
+
+/* =====================
+LOADING
+===================== */
+
 
 #loading{
 
 position:fixed;
+
 width:100%;
 height:100vh;
 
 background:#000;
 
-z-index:999;
+z-index:9999;
 
 display:flex;
-
-flex-direction:column;
 
 align-items:center;
 
 justify-content:center;
 
+flex-direction:column;
+
+animation:loadingOut 2.5s forwards;
+
 }
+
 
 
 .loading-logo{
 
-font-size:35px;
+font-size:36px;
 
-letter-spacing:12px;
+letter-spacing:14px;
+
+animation:logoIn 1.5s ease;
 
 }
 
 
+
 .loading-sub{
 
-margin-top:25px;
+margin-top:30px;
 
 font-size:10px;
 
@@ -288,21 +114,29 @@ letter-spacing:8px;
 
 opacity:.5;
 
+animation:fadeIn 2s ease;
+
 }
 
 
 
 
-/* HOME */
+
+/* =====================
+HOME
+===================== */
 
 
 .logo{
 
-font-size:40px;
+font-size:42px;
 
 letter-spacing:14px;
 
+animation:logoIn 1.5s ease;
+
 }
+
 
 
 .tagline{
@@ -312,6 +146,12 @@ margin-top:40px;
 font-size:12px;
 
 letter-spacing:10px;
+
+opacity:0;
+
+animation:fadeIn 1.5s forwards;
+
+animation-delay:.7s;
 
 }
 
@@ -325,13 +165,30 @@ font-size:11px;
 
 letter-spacing:8px;
 
-border-bottom:1px solid white;
-
-padding-bottom:10px;
-
 cursor:pointer;
 
+border-bottom:1px solid white;
+
+padding-bottom:12px;
+
+opacity:0;
+
+animation:fadeIn 1.5s forwards;
+
+animation-delay:1.3s;
+
+transition:.4s;
+
 }
+
+
+
+.enter:hover{
+
+letter-spacing:14px;
+
+}
+
 
 
 
@@ -339,22 +196,87 @@ cursor:pointer;
 
 position:absolute;
 
-bottom:30px;
+bottom:35px;
+
+width:100%;
 
 font-size:10px;
 
-letter-spacing:5px;
+letter-spacing:6px;
 
 opacity:.5;
-
-width:100%;
 
 }
 
 
 
 
-/* COMMON */
+/* =====================
+MENU
+===================== */
+
+
+.menu-item{
+
+font-size:16px;
+
+letter-spacing:8px;
+
+margin:25px;
+
+cursor:pointer;
+
+opacity:0;
+
+animation:menuIn .8s forwards;
+
+transition:.4s;
+
+}
+
+
+
+.menu-item:nth-child(1){
+
+animation-delay:.1s;
+
+}
+
+.menu-item:nth-child(2){
+
+animation-delay:.3s;
+
+}
+
+.menu-item:nth-child(3){
+
+animation-delay:.5s;
+
+}
+
+.menu-item:nth-child(4){
+
+animation-delay:.7s;
+
+}
+
+
+
+.menu-item:hover{
+
+letter-spacing:14px;
+
+opacity:.5;
+
+}
+
+
+
+
+
+/* =====================
+BACK BUTTON
+===================== */
 
 
 .back{
@@ -365,21 +287,7 @@ top:40px;
 
 left:40px;
 
-font-size:25px;
-
-cursor:pointer;
-
-}
-
-
-
-.menu-item{
-
-font-size:16px;
-
-letter-spacing:8px;
-
-margin:20px;
+font-size:28px;
 
 cursor:pointer;
 
@@ -388,32 +296,19 @@ transition:.3s;
 }
 
 
-.menu-item:hover{
 
-letter-spacing:12px;
+.back:hover{
 
-opacity:.6;
-
-}
-
-
-
-
-/* SHOP */
-
-
-.category-item{
-
-font-size:18px;
-
-letter-spacing:10px;
-
-margin:35px;
-
-cursor:pointer;
+transform:translateX(-5px);
 
 }
 
+
+
+
+/* =====================
+SHOP
+===================== */
 
 
 .category-title{
@@ -432,17 +327,44 @@ opacity:.5;
 
 
 
+.category-item{
 
-/* PRODUCT */
+font-size:18px;
+
+letter-spacing:12px;
+
+margin:35px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+
+
+.category-item:hover{
+
+letter-spacing:18px;
+
+}
+
+
+
+
+
+/* =====================
+PRODUCT
+===================== */
 
 
 .product-image{
 
-width:300px;
+width:320px;
 
-height:400px;
+height:420px;
 
-border:1px solid #333;
+border:1px solid #222;
 
 display:flex;
 
@@ -456,17 +378,19 @@ font-size:10px;
 
 letter-spacing:5px;
 
+animation:zoomIn .8s;
+
 }
 
 
 
 .product-name{
 
-margin-top:30px;
+margin-top:35px;
 
 font-size:18px;
 
-letter-spacing:7px;
+letter-spacing:8px;
 
 }
 
@@ -478,7 +402,7 @@ margin-top:25px;
 
 font-size:11px;
 
-letter-spacing:4px;
+letter-spacing:5px;
 
 line-height:2;
 
@@ -488,17 +412,46 @@ line-height:2;
 
 .button{
 
+display:inline-block;
+
 border:1px solid white;
 
-padding:15px 40px;
-
-display:inline-block;
+padding:16px 45px;
 
 margin-top:20px;
 
 font-size:10px;
 
-letter-spacing:5px;
+letter-spacing:6px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+
+
+.button:hover{
+
+background:#fff;
+
+color:#000;
+
+}
+
+
+
+
+
+.arrow,
+.left{
+
+position:absolute;
+
+top:50%;
+
+font-size:35px;
 
 cursor:pointer;
 
@@ -508,15 +461,7 @@ cursor:pointer;
 
 .arrow{
 
-position:absolute;
-
 right:40px;
-
-top:50%;
-
-font-size:35px;
-
-cursor:pointer;
 
 }
 
@@ -524,22 +469,18 @@ cursor:pointer;
 
 .left{
 
-position:absolute;
-
 left:40px;
-
-top:50%;
-
-font-size:35px;
-
-cursor:pointer;
 
 }
 
 
 
 
-/* CART */
+
+
+/* =====================
+CART
+===================== */
 
 
 #cartIcon{
@@ -562,34 +503,298 @@ z-index:10;
 
 
 
+
+/* =====================
+PAGE TRANSITION
+===================== */
+
+
+#transition{
+
+position:fixed;
+
+width:100%;
+
+height:100vh;
+
+background:#000;
+
+top:0;
+
+left:0;
+
+z-index:9998;
+
+transform:scaleY(0);
+
+transform-origin:bottom;
+
+}
+
+
+
+
+.transition-active{
+
+animation:transitionMove .8s forwards;
+
+}
+
+
+
+
+
+
+
+/* =====================
+KEYFRAMES
+===================== */
+
+
+@keyframes logoIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+@keyframes fadeIn{
+
+
+from{
+
+opacity:0;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+@keyframes menuIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+@keyframes zoomIn{
+
+
+from{
+
+opacity:0;
+
+transform:scale(.9);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+@keyframes pageIn{
+
+
+from{
+
+opacity:0;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+@keyframes loadingOut{
+
+
+0%{
+
+opacity:1;
+
+}
+
+
+80%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+
+}
+
+
+
+@keyframes transitionMove{
+
+
+0%{
+
+transform:scaleY(0);
+
+}
+
+
+50%{
+
+transform:scaleY(1);
+
+}
+
+
+100%{
+
+transform:scaleY(0);
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.logo{
+
+font-size:26px;
+
+letter-spacing:8px;
+
+}
+
+
+.product-image{
+
+width:260px;
+
+height:350px;
+
+}
+
+
+}
+
 </style>
 
 </head>
 
 
 <body>
- <!-- LOADING -->
+ <!-- PAGE TRANSITION -->
+
+<div id="transition"></div>
+
+
+
+<!-- LOADING -->
 
 <div id="loading">
 
+
 <div class="loading-logo">
+
 EMERGENCY HAMMER
+
 </div>
+
 
 <div class="loading-sub">
+
 EST. 2026
-</div>
 
 </div>
 
 
+</div>
 
 
-<!-- CART -->
+
+
+
+<!-- CART TOP -->
 
 <div id="cartIcon" onclick="openCart()">
+
 CART (0)
+
 </div>
+
+
 
 
 
@@ -599,29 +804,44 @@ CART (0)
 
 <div class="page" id="home">
 
+
 <div>
 
+
 <div class="logo">
+
 EMERGENCY HAMMER
+
 </div>
+
 
 
 <div class="tagline">
+
 BREAK YOUR FIT.
+
 </div>
+
 
 
 <div class="enter" onclick="openMenu()">
+
 ENTER
+
 </div>
+
 
 
 <div class="year">
+
 EST. 2026
+
 </div>
 
 
+
 </div>
+
 
 </div>
 
@@ -633,43 +853,58 @@ EST. 2026
 
 <!-- MENU -->
 
+
 <div class="page" id="menu">
 
 
 <div class="back" onclick="backHome()">
+
 ←
+
 </div>
+
 
 
 <div>
 
 
 <div class="menu-item" onclick="openShop()">
+
 01 SHOP
+
 </div>
+
 
 
 <div class="menu-item" onclick="openLookbook()">
+
 02 LOOKBOOK
+
 </div>
+
 
 
 <div class="menu-item" onclick="openAbout()">
+
 03 ABOUT
+
 </div>
+
 
 
 <div class="menu-item">
 
+
 <a href="https://www.instagram.com/emergencyhammer_official"
+
 style="color:white;text-decoration:none;">
+
 
 04 INSTAGRAM
 
+
 </a>
 
-</div>
-
 
 </div>
 
@@ -677,44 +912,61 @@ style="color:white;text-decoration:none;">
 </div>
 
 
+</div>
 
 
 
 
 
 
-<!-- SHOP CATEGORY -->
+
+
+
+<!-- SHOP -->
 
 <div class="page" id="shop">
 
 
 <div class="back" onclick="backMenu()">
+
 ←
+
 </div>
+
 
 
 <div>
 
 
 <div class="category-title">
+
 SHOP
+
 </div>
+
 
 
 <div class="category-item" onclick="openProducts('top')">
+
 01 TOP
+
 </div>
+
 
 
 <div class="category-item" onclick="openProducts('bottom')">
+
 02 BOTTOM
+
+</div>
+
+
+
 </div>
 
 
 </div>
 
-
-</div>
 
 
 
@@ -730,13 +982,17 @@ SHOP
 
 
 <div class="back" onclick="backShop()">
+
 ←
+
 </div>
 
 
 
 <div class="left" onclick="prevProduct()">
+
 ←
+
 </div>
 
 
@@ -746,27 +1002,39 @@ SHOP
 
 
 <div class="category-title" id="categoryName">
+
 TOP
+
 </div>
+
 
 
 <div class="product-image">
+
 PRODUCT IMAGE
+
 </div>
+
 
 
 
 <div class="product-name" id="productName">
+
 EMERGENCY TEE 001
+
 </div>
 
 
 
-<div class="product-info" id="productInfo">
+
+
+<div class="product-info">
+
 
 ₩49,000
 
 <br><br>
+
 
 BLACK
 
@@ -776,66 +1044,84 @@ COTTON 100%
 
 <br><br>
 
+
 SIZE
 
 <br>
 
 S M L XL
 
+
 </div>
+
 
 
 
 
 <div class="button" onclick="addCart()">
+
 ADD TO CART
+
 </div>
+
 
 
 <br>
 
 
+
 <div class="button" onclick="buyNow()">
+
 BUY NOW
-</div>
-
-
 
 </div>
+
+
+
+</div>
+
 
 
 
 
 <div class="arrow" onclick="nextProduct()">
+
 →
-</div>
-
 
 </div>
 
 
+</div>
 
 
 
 
 
-<!-- CART PAGE -->
 
+
+
+<!-- CART -->
 
 <div class="page" id="cart">
 
 
 <div class="back" onclick="backMenu()">
+
 ←
+
 </div>
+
 
 
 <div>
 
 
 <div class="category-title">
+
 CART
+
 </div>
+
 
 
 <div id="cartList">
@@ -843,6 +1129,7 @@ CART
 CART IS EMPTY
 
 </div>
+
 
 
 <br>
@@ -856,15 +1143,23 @@ TOTAL ₩0
 
 
 
+
 <div class="button" onclick="checkout()">
+
 CHECK OUT
+
+</div>
+
+
+
 </div>
 
 
 </div>
 
 
-</div>
+
+
 
 
 
@@ -877,67 +1172,105 @@ CHECK OUT
 
 
 <div class="back" onclick="openCart()">
+
 ←
+
 </div>
+
 
 
 <div>
 
 
 <div class="category-title">
+
 ORDER
+
 </div>
+
+
 
 
 <div class="product-info">
 
+
 NAME
 
 <br>
-_____________
+
+________________
+
 
 <br><br>
+
 
 ADDRESS
 
 <br>
-_____________
+
+________________
+
 
 <br><br>
+
 
 PHONE
 
 <br>
-_____________
+
+________________
+
+
 
 </div>
+
+
 
 
 <div class="button">
+
 PLACE ORDER
+
+</div>
+
+
+
 </div>
 
 
 </div>
 
 
-</div>
+
+
+
+
+
 <!-- LOOKBOOK -->
+
 
 <div class="page" id="lookbook">
 
 
 <div class="back" onclick="backMenu()">
+
 ←
+
 </div>
+
+
 
 
 <div>
 
 
 <div class="category-title">
+
 LOOKBOOK
+
 </div>
+
+
 
 
 <div class="product-image" id="lookImage">
@@ -947,15 +1280,20 @@ LOOKBOOK 01
 </div>
 
 
+
 <div class="arrow" onclick="nextLook()">
+
 →
+
+</div>
+
+
+
 </div>
 
 
 </div>
 
-
-</div>
 
 
 
@@ -970,8 +1308,11 @@ LOOKBOOK 01
 
 
 <div class="back" onclick="backMenu()">
+
 ←
+
 </div>
+
 
 
 <div class="product-info">
@@ -979,10 +1320,12 @@ LOOKBOOK 01
 
 EMERGENCY HAMMER
 
+
 <br><br>
 
 
 Founded in 2026.
+
 
 <br><br>
 
@@ -990,37 +1333,33 @@ Founded in 2026.
 A streetwear brand combining intelligence
 and street culture through modern silhouettes.
 
+
 <br><br>
 
 
 BREAK YOUR FIT.
 
-</div>
-
 
 </div>
 
 
-
-
-
-
+</div>
 <script>
 
 
-// 상품 데이터
+// =====================
+// DATA
+// =====================
 
 
 let products=[];
 
-let index=0;
-
+let productIndex=0;
 
 let cart=[];
 
 
-
-const topProducts=[
+const tops=[
 
 {
 name:"EMERGENCY TEE 001",
@@ -1040,8 +1379,7 @@ price:55000
 ];
 
 
-
-const bottomProducts=[
+const bottoms=[
 
 {
 name:"HAMMER PANTS 001",
@@ -1063,13 +1401,16 @@ price:89000
 
 
 
+// =====================
+// PAGE SYSTEM
+// =====================
 
 
 function hideAll(){
 
-document.querySelectorAll(".page").forEach(function(e){
+document.querySelectorAll(".page").forEach(function(page){
 
-e.style.display="none";
+page.style.display="none";
 
 });
 
@@ -1078,38 +1419,46 @@ e.style.display="none";
 
 
 
+function showPage(id){
+
+let transition=document.getElementById("transition");
 
 
-// 로딩
+transition.classList.add("transition-active");
 
 
-window.onload=function(){
 
 setTimeout(function(){
 
-document.getElementById("loading").style.display="none";
 
-document.getElementById("home").style.display="flex";
-
-
-},2000);
-
-};
+hideAll();
 
 
+document.getElementById(id).style.display="flex";
+
+
+transition.classList.remove("transition-active");
+
+
+},400);
+
+
+}
 
 
 
 
 
-// 메뉴
+
+
+// =====================
+// HOME MENU
+// =====================
 
 
 function openMenu(){
 
-hideAll();
-
-document.getElementById("menu").style.display="flex";
+showPage("menu");
 
 }
 
@@ -1117,9 +1466,7 @@ document.getElementById("menu").style.display="flex";
 
 function backHome(){
 
-hideAll();
-
-document.getElementById("home").style.display="flex";
+showPage("home");
 
 }
 
@@ -1127,9 +1474,7 @@ document.getElementById("home").style.display="flex";
 
 function backMenu(){
 
-hideAll();
-
-document.getElementById("menu").style.display="flex";
+showPage("menu");
 
 }
 
@@ -1137,94 +1482,15 @@ document.getElementById("menu").style.display="flex";
 
 
 
+
+// =====================
 // SHOP
+// =====================
 
 
 function openShop(){
 
-hideAll();
-
-document.getElementById("shop").style.display="flex";
-
-}
-
-
-
-
-
-function openProducts(type){
-
-
-if(type=="top"){
-
-products=topProducts;
-
-}else{
-
-products=bottomProducts;
-
-}
-
-
-index=0;
-
-showProduct();
-
-
-}
-
-
-
-
-function showProduct(){
-
-hideAll();
-
-document.getElementById("product").style.display="flex";
-
-
-document.getElementById("productName").innerHTML=
-
-products[index].name;
-
-
-}
-
-
-
-function nextProduct(){
-
-index++;
-
-
-if(index>=products.length){
-
-index=0;
-
-}
-
-
-showProduct();
-
-
-}
-
-
-
-function prevProduct(){
-
-index--;
-
-
-if(index<0){
-
-index=products.length-1;
-
-}
-
-
-showProduct();
-
+showPage("shop");
 
 }
 
@@ -1233,9 +1499,7 @@ showProduct();
 
 function backShop(){
 
-hideAll();
-
-document.getElementById("shop").style.display="flex";
+showPage("shop");
 
 }
 
@@ -1245,16 +1509,121 @@ document.getElementById("shop").style.display="flex";
 
 
 
+function openProducts(type){
+
+
+if(type==="top"){
+
+products=tops;
+
+}else{
+
+products=bottoms;
+
+}
+
+
+
+productIndex=0;
+
+showProduct();
+
+
+}
+
+
+
+
+
+function showProduct(){
+
+
+showPage("product");
+
+
+
+document.getElementById("productName").innerHTML=
+
+products[productIndex].name;
+
+
+
+document.getElementById("productInfo").innerHTML=
+
+
+"₩"+products[productIndex].price+
+
+"<br><br>BLACK<br>COTTON 100%<br><br>SIZE<br>S M L XL";
+
+
+}
+
+
+
+
+
+
+function nextProduct(){
+
+
+productIndex++;
+
+
+
+if(productIndex>=products.length){
+
+productIndex=0;
+
+}
+
+
+showProduct();
+
+
+}
+
+
+
+
+
+function prevProduct(){
+
+
+productIndex--;
+
+
+if(productIndex<0){
+
+productIndex=products.length-1;
+
+}
+
+
+showProduct();
+
+
+}
+
+
+
+
+
+
+
+// =====================
 // CART
+// =====================
+
 
 
 function addCart(){
 
-cart.push(products[index]);
+
+cart.push(products[productIndex]);
+
 
 updateCart();
 
-alert("ADDED TO CART");
 
 }
 
@@ -1262,21 +1631,24 @@ alert("ADDED TO CART");
 
 function updateCart(){
 
+
 document.getElementById("cartIcon").innerHTML=
 
 "CART ("+cart.length+")";
+
 
 }
 
 
 
 
+
+
 function openCart(){
 
-hideAll();
 
+showPage("cart");
 
-document.getElementById("cart").style.display="flex";
 
 
 let text="";
@@ -1284,12 +1656,13 @@ let text="";
 let total=0;
 
 
+
 cart.forEach(function(item){
 
 
-text += item.name+"<br>";
+text+=item.name+"<br>";
 
-text += "₩"+item.price+"<br><br>";
+text+="₩"+item.price+"<br><br>";
 
 
 total+=item.price;
@@ -1299,7 +1672,8 @@ total+=item.price;
 
 
 
-if(cart.length==0){
+
+if(cart.length===0){
 
 text="CART IS EMPTY";
 
@@ -1315,6 +1689,7 @@ document.getElementById("total").innerHTML=
 "TOTAL ₩"+total;
 
 
+
 }
 
 
@@ -1324,24 +1699,30 @@ document.getElementById("total").innerHTML=
 
 function buyNow(){
 
+
 cart=[];
 
-cart.push(products[index]);
+
+cart.push(products[productIndex]);
+
 
 updateCart();
 
+
 checkout();
 
+
 }
+
 
 
 
 
 function checkout(){
 
-hideAll();
 
-document.getElementById("order").style.display="flex";
+showPage("order");
+
 
 }
 
@@ -1351,58 +1732,109 @@ document.getElementById("order").style.display="flex";
 
 
 
-
+// =====================
 // LOOKBOOK
+// =====================
 
 
-let look=1;
+let lookNumber=1;
+
 
 
 function openLookbook(){
 
-hideAll();
-
-document.getElementById("lookbook").style.display="flex";
+showPage("lookbook");
 
 }
+
+
 
 
 
 function nextLook(){
 
-look++;
+
+lookNumber++;
 
 
-if(look>3){
+if(lookNumber>3){
 
-look=1;
-
-}
-
-
-document.getElementById("lookImage").innerHTML=
-
-"LOOKBOOK 0"+look;
-
+lookNumber=1;
 
 }
 
 
 
+let box=document.getElementById("lookImage");
+
+box.style.opacity="0";
+
+
+
+setTimeout(function(){
+
+
+box.innerHTML=
+
+"LOOKBOOK 0"+lookNumber;
+
+
+box.style.opacity="1";
+
+
+},300);
+
+
+
+}
 
 
 
 
+
+
+
+// =====================
 // ABOUT
+// =====================
+
 
 
 function openAbout(){
 
-hideAll();
-
-document.getElementById("about").style.display="flex";
+showPage("about");
 
 }
+
+
+
+
+
+
+// =====================
+// START
+// =====================
+
+
+
+window.onload=function(){
+
+
+
+setTimeout(function(){
+
+
+document.getElementById("loading").style.display="none";
+
+
+showPage("home");
+
+
+},2500);
+
+
+
+};
 
 
 
