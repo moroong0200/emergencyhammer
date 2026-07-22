@@ -321,3 +321,178 @@ SIZE S / M / L / XL
 
 
 </div>
+  <div class="year">
+EST. 2026
+</div>
+
+
+
+<script>
+
+
+let category = "";
+
+let index = 0;
+
+
+
+const tops = [
+
+"GRAPHIC TEE 001",
+
+"HAMMER LOGO TEE 002",
+
+"BREAK FIT TEE 003"
+
+];
+
+
+const bottoms = [
+
+"HAMMER PANTS 001",
+
+"UTILITY PANTS 002",
+
+"DENIM PANTS 003"
+
+];
+
+
+
+let products = tops;
+
+
+
+function openMenu(){
+
+document.getElementById("home").style.display="none";
+
+document.getElementById("menu").style.display="flex";
+
+}
+
+
+
+
+function openCategory(){
+
+document.getElementById("menu").style.display="none";
+
+document.getElementById("category").style.display="flex";
+
+}
+
+
+
+function backMenu(){
+
+document.getElementById("category").style.display="none";
+
+document.getElementById("menu").style.display="flex";
+
+}
+
+
+
+
+function openTop(){
+
+category="top";
+
+products=tops;
+
+index=0;
+
+showProduct();
+
+}
+
+
+
+function openBottom(){
+
+category="bottom";
+
+products=bottoms;
+
+index=0;
+
+showProduct();
+
+}
+
+
+
+
+function showProduct(){
+
+document.getElementById("category").style.display="none";
+
+document.getElementById("product").style.display="flex";
+
+
+document.getElementById("productName").innerHTML =
+products[index];
+
+
+}
+
+
+
+
+function nextProduct(){
+
+index++;
+
+
+if(index >= products.length){
+
+index=0;
+
+}
+
+
+document.getElementById("productName").innerHTML =
+products[index];
+
+
+}
+
+
+
+
+function prevProduct(){
+
+index--;
+
+
+if(index < 0){
+
+index=products.length-1;
+
+}
+
+
+document.getElementById("productName").innerHTML =
+products[index];
+
+
+}
+
+
+
+function backCategory(){
+
+document.getElementById("product").style.display="none";
+
+document.getElementById("category").style.display="flex";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
