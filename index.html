@@ -35,11 +35,12 @@ text-align:center;
 }
 
 
+/* HOME */
+
 .logo{
 font-size:42px;
 letter-spacing:12px;
 }
-
 
 .tagline{
 margin-top:35px;
@@ -52,9 +53,9 @@ opacity:.8;
 button{
 margin-top:60px;
 background:none;
-border:0;
-color:white;
-border-bottom:1px solid white;
+border:none;
+color:#fff;
+border-bottom:1px solid #fff;
 padding-bottom:8px;
 letter-spacing:6px;
 cursor:pointer;
@@ -62,7 +63,7 @@ cursor:pointer;
 
 
 
-/* 메뉴 */
+/* MENU CATEGORY PRODUCT */
 
 #menu,
 #category,
@@ -76,11 +77,11 @@ position:relative;
 }
 
 
+
 .menu-item,
 .category-item{
 
-color:white;
-text-decoration:none;
+color:#fff;
 font-size:18px;
 letter-spacing:8px;
 cursor:pointer;
@@ -99,7 +100,7 @@ letter-spacing:12px;
 
 
 
-/* 뒤로가기 */
+/* BACK */
 
 .back{
 
@@ -113,7 +114,7 @@ cursor:pointer;
 
 
 
-/* 상품 */
+/* PRODUCT */
 
 .product-name{
 
@@ -155,7 +156,7 @@ line-height:2.5;
 
 position:absolute;
 right:40px;
-bottom:50%;
+top:50%;
 font-size:35px;
 cursor:pointer;
 
@@ -166,7 +167,7 @@ cursor:pointer;
 
 position:absolute;
 left:40px;
-bottom:50%;
+top:50%;
 font-size:35px;
 cursor:pointer;
 
@@ -187,12 +188,14 @@ opacity:.5;
 }
 
 
+
 @media(max-width:600px){
 
 .logo{
-font-size:26px;
+font-size:27px;
 letter-spacing:7px;
 }
+
 
 .product-name{
 font-size:18px;
@@ -208,6 +211,7 @@ font-size:18px;
 <body>
 
 
+<!-- HOME -->
 
 <div class="page" id="home">
 
@@ -217,43 +221,58 @@ font-size:18px;
 EMERGENCY HAMMER
 </div>
 
+
 <div class="tagline">
 BREAK YOUR FIT.
 </div>
+
 
 <button onclick="openMenu()">
 ENTER
 </button>
 
-</div>
 
 </div>
 
+</div>
 
 
+
+<!-- MENU -->
 
 <div class="page" id="menu">
+
+
+<div class="back" onclick="backHome()">
+←
+</div>
+
 
 <div class="menu-item" onclick="openCategory()">
 SHOP
 </div>
 
+
 <div class="menu-item">
 LOOKBOOK
 </div>
+
 
 <div class="menu-item">
 ABOUT
 </div>
 
+
 <div class="menu-item">
 INSTAGRAM
 </div>
 
+
 </div>
 
 
 
+<!-- CATEGORY -->
 
 <div class="page" id="category">
 
@@ -277,6 +296,7 @@ BOTTOM
 
 
 
+<!-- PRODUCT -->
 
 <div class="page" id="product">
 
@@ -321,7 +341,7 @@ SIZE S / M / L / XL
 
 
 </div>
-  <div class="year">
+<div class="year">
 EST. 2026
 </div>
 
@@ -330,7 +350,7 @@ EST. 2026
 <script>
 
 
-let category = "";
+let products = [];
 
 let index = 0;
 
@@ -347,6 +367,7 @@ const tops = [
 ];
 
 
+
 const bottoms = [
 
 "HAMMER PANTS 001",
@@ -359,8 +380,6 @@ const bottoms = [
 
 
 
-let products = tops;
-
 
 
 function openMenu(){
@@ -368,6 +387,16 @@ function openMenu(){
 document.getElementById("home").style.display="none";
 
 document.getElementById("menu").style.display="flex";
+
+}
+
+
+
+function backHome(){
+
+document.getElementById("menu").style.display="none";
+
+document.getElementById("home").style.display="flex";
 
 }
 
@@ -395,13 +424,12 @@ document.getElementById("menu").style.display="flex";
 
 
 
+
 function openTop(){
 
-category="top";
+products = tops;
 
-products=tops;
-
-index=0;
+index = 0;
 
 showProduct();
 
@@ -411,11 +439,9 @@ showProduct();
 
 function openBottom(){
 
-category="bottom";
+products = bottoms;
 
-products=bottoms;
-
-index=0;
+index = 0;
 
 showProduct();
 
@@ -434,7 +460,6 @@ document.getElementById("product").style.display="flex";
 document.getElementById("productName").innerHTML =
 products[index];
 
-
 }
 
 
@@ -447,14 +472,13 @@ index++;
 
 if(index >= products.length){
 
-index=0;
+index = 0;
 
 }
 
 
 document.getElementById("productName").innerHTML =
 products[index];
-
 
 }
 
@@ -468,7 +492,7 @@ index--;
 
 if(index < 0){
 
-index=products.length-1;
+index = products.length - 1;
 
 }
 
@@ -476,8 +500,8 @@ index=products.length-1;
 document.getElementById("productName").innerHTML =
 products[index];
 
-
 }
+
 
 
 
@@ -488,6 +512,7 @@ document.getElementById("product").style.display="none";
 document.getElementById("category").style.display="flex";
 
 }
+
 
 
 </script>
