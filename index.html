@@ -11,10 +11,13 @@
 
 <style>
 
+
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 
@@ -28,23 +31,24 @@ Helvetica Neue,
 Arial,
 sans-serif;
 
-height:100vh;
-
 overflow:hidden;
+
+height:100vh;
 
 }
 
 
 
+
 /* =====================
-PAGE SYSTEM
+GLOBAL
 ===================== */
 
 
 .page{
 
-width:100%;
 height:100vh;
+width:100%;
 
 display:none;
 
@@ -53,11 +57,30 @@ justify-content:center;
 
 position:relative;
 
-text-align:center;
-
-animation:pageIn .7s ease;
+animation:pageIn .6s ease;
 
 }
+
+
+
+
+#transition{
+
+position:fixed;
+
+width:100%;
+height:100vh;
+
+background:#fff;
+
+z-index:9999;
+
+transform:scaleY(0);
+
+transform-origin:bottom;
+
+}
+
 
 
 
@@ -76,17 +99,15 @@ height:100vh;
 
 background:#000;
 
-z-index:9999;
+z-index:10000;
 
 display:flex;
+
+flex-direction:column;
 
 align-items:center;
 
 justify-content:center;
-
-flex-direction:column;
-
-animation:loadingOut 2.5s forwards;
 
 }
 
@@ -96,7 +117,7 @@ animation:loadingOut 2.5s forwards;
 
 font-size:36px;
 
-letter-spacing:14px;
+letter-spacing:15px;
 
 animation:logoIn 1.5s ease;
 
@@ -114,8 +135,6 @@ letter-spacing:8px;
 
 opacity:.5;
 
-animation:fadeIn 2s ease;
-
 }
 
 
@@ -123,7 +142,7 @@ animation:fadeIn 2s ease;
 
 
 /* =====================
-HOME
+INTRO
 ===================== */
 
 
@@ -132,8 +151,6 @@ HOME
 font-size:42px;
 
 letter-spacing:14px;
-
-animation:logoIn 1.5s ease;
 
 }
 
@@ -151,9 +168,10 @@ opacity:0;
 
 animation:fadeIn 1.5s forwards;
 
-animation-delay:.7s;
+animation-delay:.5s;
 
 }
+
 
 
 
@@ -161,21 +179,21 @@ animation-delay:.7s;
 
 margin-top:70px;
 
+border-bottom:1px solid white;
+
+padding-bottom:15px;
+
 font-size:11px;
 
 letter-spacing:8px;
 
 cursor:pointer;
 
-border-bottom:1px solid white;
-
-padding-bottom:12px;
-
 opacity:0;
 
 animation:fadeIn 1.5s forwards;
 
-animation-delay:1.3s;
+animation-delay:1s;
 
 transition:.4s;
 
@@ -185,7 +203,7 @@ transition:.4s;
 
 .enter:hover{
 
-letter-spacing:14px;
+letter-spacing:15px;
 
 }
 
@@ -196,17 +214,16 @@ letter-spacing:14px;
 
 position:absolute;
 
-bottom:35px;
-
-width:100%;
+bottom:40px;
 
 font-size:10px;
 
-letter-spacing:6px;
+letter-spacing:7px;
 
 opacity:.5;
 
 }
+
 
 
 
@@ -218,11 +235,11 @@ MENU
 
 .menu-item{
 
+margin:25px;
+
 font-size:16px;
 
 letter-spacing:8px;
-
-margin:25px;
 
 cursor:pointer;
 
@@ -236,11 +253,20 @@ transition:.4s;
 
 
 
+.menu-item:hover{
+
+letter-spacing:15px;
+
+}
+
+
+
 .menu-item:nth-child(1){
 
 animation-delay:.1s;
 
 }
+
 
 .menu-item:nth-child(2){
 
@@ -248,11 +274,13 @@ animation-delay:.3s;
 
 }
 
+
 .menu-item:nth-child(3){
 
 animation-delay:.5s;
 
 }
+
 
 .menu-item:nth-child(4){
 
@@ -262,20 +290,11 @@ animation-delay:.7s;
 
 
 
-.menu-item:hover{
-
-letter-spacing:14px;
-
-opacity:.5;
-
-}
-
-
 
 
 
 /* =====================
-BACK BUTTON
+BACK
 ===================== */
 
 
@@ -296,12 +315,13 @@ transition:.3s;
 }
 
 
-
 .back:hover{
 
-transform:translateX(-5px);
+transform:translateX(-8px);
 
 }
+
+
 
 
 
@@ -315,7 +335,7 @@ SHOP
 
 position:absolute;
 
-top:90px;
+top:80px;
 
 font-size:11px;
 
@@ -327,13 +347,14 @@ opacity:.5;
 
 
 
+
 .category-item{
 
 font-size:18px;
 
-letter-spacing:12px;
+letter-spacing:10px;
 
-margin:35px;
+margin:30px;
 
 cursor:pointer;
 
@@ -353,16 +374,45 @@ letter-spacing:18px;
 
 
 
+
 /* =====================
-PRODUCT
+PRODUCT LIST
 ===================== */
 
 
-.product-image{
+.product-list{
 
-width:320px;
+display:flex;
 
-height:420px;
+gap:25px;
+
+}
+
+
+
+.product-card{
+
+width:220px;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+
+
+.product-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+.product-thumb{
+
+height:280px;
 
 border:1px solid #222;
 
@@ -372,13 +422,66 @@ align-items:center;
 
 justify-content:center;
 
-margin:auto;
+font-size:9px;
+
+letter-spacing:4px;
+
+}
+
+
+
+.product-card-name{
+
+margin-top:20px;
+
+font-size:11px;
+
+letter-spacing:4px;
+
+}
+
+
+
+.product-card-price{
+
+margin-top:10px;
 
 font-size:10px;
 
+opacity:.6;
+
+}
+
+
+
+
+
+
+
+/* =====================
+DETAIL
+===================== */
+
+
+.product-image{
+
+width:330px;
+
+height:430px;
+
+border:1px solid #222;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
 letter-spacing:5px;
 
-animation:zoomIn .8s;
+font-size:10px;
+
+animation:zoomIn .5s;
 
 }
 
@@ -386,11 +489,11 @@ animation:zoomIn .8s;
 
 .product-name{
 
-margin-top:35px;
+margin-top:30px;
 
 font-size:18px;
 
-letter-spacing:8px;
+letter-spacing:7px;
 
 }
 
@@ -402,27 +505,39 @@ margin-top:25px;
 
 font-size:11px;
 
-letter-spacing:5px;
-
 line-height:2;
+
+letter-spacing:4px;
 
 }
 
 
 
-.button{
+.product-price{
 
-display:inline-block;
+margin-top:20px;
+
+letter-spacing:5px;
+
+}
+
+
+
+
+
+.button{
 
 border:1px solid white;
 
-padding:16px 45px;
+padding:15px 45px;
+
+display:inline-block;
 
 margin-top:20px;
 
 font-size:10px;
 
-letter-spacing:6px;
+letter-spacing:5px;
 
 cursor:pointer;
 
@@ -434,42 +549,9 @@ transition:.4s;
 
 .button:hover{
 
-background:#fff;
+background:white;
 
-color:#000;
-
-}
-
-
-
-
-
-.arrow,
-.left{
-
-position:absolute;
-
-top:50%;
-
-font-size:35px;
-
-cursor:pointer;
-
-}
-
-
-
-.arrow{
-
-right:40px;
-
-}
-
-
-
-.left{
-
-left:40px;
+color:black;
 
 }
 
@@ -497,46 +579,128 @@ letter-spacing:5px;
 
 cursor:pointer;
 
-z-index:10;
+z-index:5;
 
 }
+
+
+
+
+.cart-item{
+
+width:350px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 0;
+
+border-bottom:1px solid #222;
+
+}
+
+
+
+.cart-image{
+
+width:60px;
+
+height:80px;
+
+border:1px solid #333;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:8px;
+
+}
+
+
+
+
+.qty button{
+
+background:none;
+
+color:white;
+
+border:1px solid #555;
+
+padding:5px 10px;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+.remove{
+
+font-size:22px;
+
+cursor:pointer;
+
+}
+
+
+
 
 
 
 
 /* =====================
-PAGE TRANSITION
+LOOKBOOK
 ===================== */
 
 
-#transition{
+.look-grid{
 
-position:fixed;
+display:grid;
 
-width:100%;
+grid-template-columns:repeat(3,1fr);
 
-height:100vh;
+gap:10px;
 
-background:#000;
-
-top:0;
-
-left:0;
-
-z-index:9998;
-
-transform:scaleY(0);
-
-transform-origin:bottom;
+width:500px;
 
 }
 
 
 
+.look-item{
 
-.transition-active{
+aspect-ratio:1;
 
-animation:transitionMove .8s forwards;
+border:1px solid #222;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:9px;
+
+letter-spacing:3px;
+
+transition:.4s;
+
+}
+
+
+
+.look-item:hover{
+
+transform:scale(1.05);
 
 }
 
@@ -547,12 +711,84 @@ animation:transitionMove .8s forwards;
 
 
 /* =====================
-KEYFRAMES
+ABOUT
 ===================== */
+
+
+.about-wrap{
+
+width:600px;
+
+text-align:center;
+
+height:80vh;
+
+overflow:auto;
+
+}
+
+
+
+.about-section{
+
+margin-top:60px;
+
+}
+
+
+
+.about-title{
+
+font-size:11px;
+
+letter-spacing:8px;
+
+opacity:.5;
+
+margin-bottom:25px;
+
+}
+
+
+
+.about-section p{
+
+font-size:11px;
+
+line-height:2.2;
+
+letter-spacing:3px;
+
+}
+
+
+
+
+
+/* =====================
+ANIMATION
+===================== */
+
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
 
 
 @keyframes logoIn{
-
 
 from{
 
@@ -562,7 +798,6 @@ transform:translateY(30px);
 
 }
 
-
 to{
 
 opacity:1;
@@ -571,13 +806,11 @@ transform:translateY(0);
 
 }
 
-
 }
 
 
 
-@keyframes fadeIn{
-
+@keyframes pageIn{
 
 from{
 
@@ -585,13 +818,11 @@ opacity:0;
 
 }
 
-
 to{
 
 opacity:1;
 
 }
-
 
 }
 
@@ -599,7 +830,6 @@ opacity:1;
 
 @keyframes menuIn{
 
-
 from{
 
 opacity:0;
@@ -607,7 +837,6 @@ opacity:0;
 transform:translateY(30px);
 
 }
-
 
 to{
 
@@ -617,13 +846,11 @@ transform:translateY(0);
 
 }
 
-
 }
 
 
 
 @keyframes zoomIn{
-
 
 from{
 
@@ -633,7 +860,6 @@ transform:scale(.9);
 
 }
 
-
 to{
 
 opacity:1;
@@ -642,126 +868,28 @@ transform:scale(1);
 
 }
 
-
 }
 
 
 
-@keyframes pageIn{
 
-
-from{
-
-opacity:0;
-
-}
-
-
-to{
-
-opacity:1;
-
-}
-
-
-}
-
-
-
-@keyframes loadingOut{
-
-
-0%{
-
-opacity:1;
-
-}
-
-
-80%{
-
-opacity:1;
-
-}
-
-
-100%{
-
-opacity:0;
-
-visibility:hidden;
-
-}
-
-
-}
-
-
-
-@keyframes transitionMove{
-
-
-0%{
-
-transform:scaleY(0);
-
-}
-
-
-50%{
-
-transform:scaleY(1);
-
-}
-
-
-100%{
-
-transform:scaleY(0);
-
-}
-
-
-}
-
-
-
-@media(max-width:600px){
-
-
-.logo{
-
-font-size:26px;
-
-letter-spacing:8px;
-
-}
-
-
-.product-image{
-
-width:260px;
-
-height:350px;
-
-}
-
-
-}
 
 </style>
+
 
 </head>
 
 
 <body>
- <!-- PAGE TRANSITION -->
+ <!-- TRANSITION -->
 
 <div id="transition"></div>
 
 
 
+
 <!-- LOADING -->
+
 
 <div id="loading">
 
@@ -786,7 +914,10 @@ EST. 2026
 
 
 
-<!-- CART TOP -->
+
+
+<!-- CART ICON -->
+
 
 <div id="cartIcon" onclick="openCart()">
 
@@ -800,9 +931,10 @@ CART (0)
 
 
 
-<!-- HOME -->
+<!-- INTRO -->
 
-<div class="page" id="home">
+
+<div class="page" id="intro">
 
 
 <div>
@@ -839,11 +971,12 @@ EST. 2026
 </div>
 
 
-
 </div>
 
 
 </div>
+
+
 
 
 
@@ -857,12 +990,11 @@ EST. 2026
 <div class="page" id="menu">
 
 
-<div class="back" onclick="backHome()">
+<div class="back" onclick="openIntro()">
 
 ←
 
 </div>
-
 
 
 <div>
@@ -873,7 +1005,6 @@ EST. 2026
 01 SHOP
 
 </div>
-
 
 
 <div class="menu-item" onclick="openLookbook()">
@@ -892,16 +1023,14 @@ EST. 2026
 
 
 
-<div class="menu-item">
 
+<div class="menu-item">
 
 <a href="https://www.instagram.com/emergencyhammer_official"
 
 style="color:white;text-decoration:none;">
 
-
 04 INSTAGRAM
-
 
 </a>
 
@@ -922,16 +1051,18 @@ style="color:white;text-decoration:none;">
 
 
 
-<!-- SHOP -->
+<!-- SHOP CATEGORY -->
+
 
 <div class="page" id="shop">
 
 
-<div class="back" onclick="backMenu()">
+<div class="back" onclick="openMenu()">
 
 ←
 
 </div>
+
 
 
 
@@ -946,50 +1077,53 @@ SHOP
 
 
 
-<div class="category-item" onclick="openProducts('top')">
 
-01 TOP
+<div class="category-item" onclick="openList('new')">
 
-</div>
-
-
-
-<div class="category-item" onclick="openProducts('bottom')">
-
-02 BOTTOM
-
-</div>
-
-
-
-</div>
-
+NEW ARRIVAL
 
 </div>
 
 
 
 
+<div class="category-item" onclick="openList('top')">
 
-
-
-
-
-<!-- PRODUCT -->
-
-
-<div class="page" id="product">
-
-
-<div class="back" onclick="backShop()">
-
-←
+TOP
 
 </div>
 
 
 
-<div class="left" onclick="prevProduct()">
+
+<div class="category-item" onclick="openList('bottom')">
+
+BOTTOM
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PRODUCT LIST -->
+
+
+<div class="page" id="productList">
+
+
+<div class="back" onclick="openShop()">
 
 ←
 
@@ -1001,7 +1135,7 @@ SHOP
 <div>
 
 
-<div class="category-title" id="categoryName">
+<div class="category-title" id="listTitle">
 
 TOP
 
@@ -1009,18 +1143,67 @@ TOP
 
 
 
-<div class="product-image">
 
-PRODUCT IMAGE
+<div class="product-list" id="productsBox">
+
+
+
+</div>
+
+
+
+</div>
+
 
 </div>
 
 
 
 
-<div class="product-name" id="productName">
 
-EMERGENCY TEE 001
+
+
+
+
+<!-- PRODUCT DETAIL -->
+
+
+<div class="page" id="detail">
+
+
+<div class="back" onclick="backList()">
+
+←
+
+</div>
+
+
+
+<div>
+
+
+
+<div class="product-image" id="detailImage">
+
+FRONT
+
+</div>
+
+
+
+
+<div class="product-name" id="detailName">
+
+TEE
+
+</div>
+
+
+
+
+<div class="product-price" id="detailPrice">
+
+₩49,000
 
 </div>
 
@@ -1031,25 +1214,21 @@ EMERGENCY TEE 001
 <div class="product-info">
 
 
-₩49,000
+DESCRIPTION
 
 <br><br>
 
 
-BLACK
+240G HEAVY COTTON
 
 <br>
 
-COTTON 100%
-
-<br><br>
-
-
-SIZE
+SLIM STREET SILHOUETTE
 
 <br>
 
-S M L XL
+EST. 2026
+
 
 
 </div>
@@ -1058,7 +1237,69 @@ S M L XL
 
 
 
-<div class="button" onclick="addCart()">
+<div>
+
+
+SIZE
+
+
+<br>
+
+
+
+<button onclick="selectSize(this)">
+S
+</button>
+
+<button onclick="selectSize(this)">
+M
+</button>
+
+<button onclick="selectSize(this)">
+L
+</button>
+
+<button onclick="selectSize(this)">
+XL
+</button>
+
+
+</div>
+
+
+
+
+
+<div>
+
+
+<button onclick="changeQty(-1)">
+-
+
+</button>
+
+
+<span id="qty">
+
+1
+
+</span>
+
+
+<button onclick="changeQty(1)">
++
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="button" onclick="addDetailCart()">
 
 ADD TO CART
 
@@ -1070,7 +1311,7 @@ ADD TO CART
 
 
 
-<div class="button" onclick="buyNow()">
+<div class="button" onclick="buyDetail()">
 
 BUY NOW
 
@@ -1081,17 +1322,8 @@ BUY NOW
 </div>
 
 
-
-
-
-<div class="arrow" onclick="nextProduct()">
-
-→
-
 </div>
 
-
-</div>
 
 
 
@@ -1102,10 +1334,11 @@ BUY NOW
 
 <!-- CART -->
 
+
 <div class="page" id="cart">
 
 
-<div class="back" onclick="backMenu()">
+<div class="back" onclick="openMenu()">
 
 ←
 
@@ -1124,15 +1357,11 @@ CART
 
 
 
-<div id="cartList">
 
-CART IS EMPTY
+<div id="cartList">
 
 </div>
 
-
-
-<br>
 
 
 <div id="total">
@@ -1143,13 +1372,19 @@ TOTAL ₩0
 
 
 
+<div class="button" onclick="openShop()">
+
+CONTINUE SHOPPING
+
+</div>
+
+
 
 <div class="button" onclick="checkout()">
 
 CHECK OUT
 
 </div>
-
 
 
 </div>
@@ -1198,7 +1433,7 @@ NAME
 
 <br>
 
-________________
+____________
 
 
 <br><br>
@@ -1208,7 +1443,7 @@ ADDRESS
 
 <br>
 
-________________
+____________
 
 
 <br><br>
@@ -1218,12 +1453,10 @@ PHONE
 
 <br>
 
-________________
-
+____________
 
 
 </div>
-
 
 
 
@@ -1234,11 +1467,11 @@ PLACE ORDER
 </div>
 
 
-
 </div>
 
 
 </div>
+
 
 
 
@@ -1252,7 +1485,7 @@ PLACE ORDER
 <div class="page" id="lookbook">
 
 
-<div class="back" onclick="backMenu()">
+<div class="back" onclick="openMenu()">
 
 ←
 
@@ -1273,20 +1506,26 @@ LOOKBOOK
 
 
 
-<div class="product-image" id="lookImage">
+<div class="look-grid" id="lookGrid">
 
-LOOKBOOK 01
 
 </div>
 
 
 
-<div class="arrow" onclick="nextLook()">
+<div class="button" onclick="nextLook()">
 
-→
+NEXT →
 
 </div>
 
+
+
+<div class="button" onclick="prevLook()">
+
+← PREV
+
+</div>
 
 
 </div>
@@ -1307,7 +1546,7 @@ LOOKBOOK 01
 <div class="page" id="about">
 
 
-<div class="back" onclick="backMenu()">
+<div class="back" onclick="openMenu()">
 
 ←
 
@@ -1315,29 +1554,122 @@ LOOKBOOK 01
 
 
 
-<div class="product-info">
+<div class="about-wrap">
 
+
+
+<div class="logo">
 
 EMERGENCY HAMMER
 
+</div>
+
+
+
+<div class="about-section">
+
+
+<div class="about-title">
+
+ABOUT
+
+</div>
+
+
+
+<p>
+
+EMERGENCY HAMMER IS A STREETWEAR BRAND BUILT ON THE IDEA OF BREAKING LIMITS.
 
 <br><br>
 
+WE COMBINE INTELLIGENCE,
+PRECISION AND STREET CULTURE
+TO CREATE A NEW STANDARD OF FIT.
 
-Founded in 2026.
-
-
-<br><br>
-
-
-A streetwear brand combining intelligence
-and street culture through modern silhouettes.
+</p>
 
 
-<br><br>
+</div>
 
+
+
+
+
+
+<div class="about-section">
+
+
+<div class="about-title">
+
+PHILOSOPHY
+
+</div>
+
+
+<p>
 
 BREAK YOUR FIT.
+
+<br><br>
+
+NOT FOLLOWING THE SHAPE.
+<br>
+
+CREATING YOUR OWN FORM.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="about-section">
+
+
+<div class="about-title">
+
+DESIGN
+
+</div>
+
+
+<p>
+
+CLEAN SILHOUETTES.
+<br>
+
+STRONG DETAILS.
+<br>
+
+STREET AND INTELLIGENCE.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="about-section">
+
+
+ESTABLISHED
+
+<br>
+
+2026
+
+<br><br>
+
+SEOUL, KOREA
+
+</div>
+
 
 
 </div>
@@ -1348,18 +1680,14 @@ BREAK YOUR FIT.
 
 
 // =====================
-// DATA
+// PRODUCT DATA
 // =====================
 
 
-let products=[];
-
-let productIndex=0;
-
-let cart=[];
+const products = {
 
 
-const tops=[
+new:[
 
 {
 name:"EMERGENCY TEE 001",
@@ -1376,10 +1704,30 @@ name:"BREAK FIT TEE 003",
 price:55000
 }
 
-];
+],
 
 
-const bottoms=[
+top:[
+
+{
+name:"EMERGENCY TEE 001",
+price:49000
+},
+
+{
+name:"HAMMER LOGO TEE 002",
+price:52000
+},
+
+{
+name:"BREAK FIT TEE 003",
+price:55000
+}
+
+],
+
+
+bottom:[
 
 {
 name:"HAMMER PANTS 001",
@@ -1396,36 +1744,65 @@ name:"DENIM PANTS 003",
 price:89000
 }
 
-];
+]
+
+
+};
+
+
+
+
+
+
+let currentProducts=[];
+
+let currentIndex=0;
+
+
+let cart=[];
+
+
+let selectedSize="";
+
+let quantity=1;
+
+let lookPage=1;
+
+
+
 
 
 
 
 // =====================
-// PAGE SYSTEM
+// PAGE CONTROL
 // =====================
 
 
 function hideAll(){
 
-document.querySelectorAll(".page").forEach(function(page){
+document.querySelectorAll(".page")
+
+.forEach(function(page){
 
 page.style.display="none";
 
 });
+
 
 }
 
 
 
 
-function showPage(id){
+
+function movePage(id){
+
 
 let transition=document.getElementById("transition");
 
 
-transition.classList.add("transition-active");
-
+transition.style.animation="transitionMove .7s";
 
 
 setTimeout(function(){
@@ -1437,10 +1814,10 @@ hideAll();
 document.getElementById(id).style.display="flex";
 
 
-transition.classList.remove("transition-active");
+transition.style.animation="none";
 
 
-},400);
+},350);
 
 
 }
@@ -1450,31 +1827,23 @@ transition.classList.remove("transition-active");
 
 
 
+// =====================
+// INTRO / MENU
+// =====================
 
-// =====================
-// HOME MENU
-// =====================
 
 
 function openMenu(){
 
-showPage("menu");
+movePage("menu");
 
 }
 
 
 
-function backHome(){
+function openIntro(){
 
-showPage("home");
-
-}
-
-
-
-function backMenu(){
-
-showPage("menu");
+movePage("intro");
 
 }
 
@@ -1490,16 +1859,7 @@ showPage("menu");
 
 function openShop(){
 
-showPage("shop");
-
-}
-
-
-
-
-function backShop(){
-
-showPage("shop");
+movePage("shop");
 
 }
 
@@ -1509,52 +1869,94 @@ showPage("shop");
 
 
 
-function openProducts(type){
+function openList(type){
 
 
-if(type==="top"){
+currentProducts=products[type];
 
-products=tops;
 
-}else{
+currentIndex=0;
 
-products=bottoms;
+
+
+document.getElementById("listTitle").innerHTML=
+
+type.toUpperCase();
+
+
+
+let box=document.getElementById("productsBox");
+
+
+let html="";
+
+
+
+currentProducts.forEach(function(item,index){
+
+
+
+html +=
+
+`
+
+<div class="product-card"
+
+onclick="openDetail(${index})">
+
+
+<div class="product-thumb">
+
+IMAGE
+
+</div>
+
+
+
+<div class="product-card-name">
+
+${item.name}
+
+</div>
+
+
+
+<div class="product-card-price">
+
+₩${item.price}
+
+</div>
+
+
+
+</div>
+
+
+`;
+
+
+
+});
+
+
+
+
+box.innerHTML=html;
+
+
+
+movePage("productList");
+
 
 }
 
 
 
-productIndex=0;
-
-showProduct();
 
 
-}
+function backList(){
 
-
-
-
-
-function showProduct(){
-
-
-showPage("product");
-
-
-
-document.getElementById("productName").innerHTML=
-
-products[productIndex].name;
-
-
-
-document.getElementById("productInfo").innerHTML=
-
-
-"₩"+products[productIndex].price+
-
-"<br><br>BLACK<br>COTTON 100%<br><br>SIZE<br>S M L XL";
-
+movePage("productList");
 
 }
 
@@ -1563,21 +1965,66 @@ document.getElementById("productInfo").innerHTML=
 
 
 
-function nextProduct(){
 
 
-productIndex++;
+// =====================
+// DETAIL
+// =====================
+
+
+function openDetail(index){
+
+
+currentIndex=index;
+
+
+let item=currentProducts[index];
 
 
 
-if(productIndex>=products.length){
+document.getElementById("detailName").innerHTML=item.name;
 
-productIndex=0;
+
+document.getElementById("detailPrice").innerHTML=
+
+"₩"+item.price;
+
+
+
+quantity=1;
+
+
+document.getElementById("qty").innerHTML=quantity;
+
+
+
+selectedSize="";
+
+
+
+movePage("detail");
+
 
 }
 
 
-showProduct();
+
+
+
+
+function selectSize(btn){
+
+
+document.querySelectorAll(".detail button")
+
+.forEach(function(b){
+
+b.classList.remove("active");
+
+});
+
+
+selectedSize=btn.innerHTML;
 
 
 }
@@ -1585,21 +2032,21 @@ showProduct();
 
 
 
-
-function prevProduct(){
-
-
-productIndex--;
+function changeQty(num){
 
 
-if(productIndex<0){
+quantity+=num;
 
-productIndex=products.length-1;
+
+if(quantity<1){
+
+quantity=1;
 
 }
 
 
-showProduct();
+
+document.getElementById("qty").innerHTML=quantity;
 
 
 }
@@ -1615,11 +2062,57 @@ showProduct();
 // =====================
 
 
+function addDetailCart(){
 
-function addCart(){
+
+if(selectedSize===""){
+
+alert("SELECT SIZE");
+
+return;
+
+}
 
 
-cart.push(products[productIndex]);
+
+let item=currentProducts[currentIndex];
+
+
+
+let exist=cart.find(function(c){
+
+return c.name===item.name &&
+c.size===selectedSize;
+
+});
+
+
+
+if(exist){
+
+
+exist.qty+=quantity;
+
+
+}else{
+
+
+cart.push({
+
+name:item.name,
+
+price:item.price,
+
+size:selectedSize,
+
+qty:quantity
+
+
+});
+
+
+}
+
 
 
 updateCart();
@@ -1629,12 +2122,24 @@ updateCart();
 
 
 
+
+
 function updateCart(){
+
+
+let count=0;
+
+
+cart.forEach(function(item){
+
+count+=item.qty;
+
+});
 
 
 document.getElementById("cartIcon").innerHTML=
 
-"CART ("+cart.length+")";
+"CART ("+count+")";
 
 
 }
@@ -1647,41 +2152,114 @@ document.getElementById("cartIcon").innerHTML=
 function openCart(){
 
 
-showPage("cart");
+movePage("cart");
 
 
 
-let text="";
+let box=document.getElementById("cartList");
+
+
+let html="";
 
 let total=0;
 
 
 
-cart.forEach(function(item){
+cart.forEach(function(item,index){
 
 
-text+=item.name+"<br>";
 
-text+="₩"+item.price+"<br><br>";
+total += item.price*item.qty;
 
 
-total+=item.price;
+
+html+=
+
+`
+
+<div class="cart-item">
+
+
+<div class="cart-image">
+
+IMAGE
+
+</div>
+
+
+
+<div>
+
+
+${item.name}
+
+<br>
+
+SIZE ${item.size}
+
+<br>
+
+₩${item.price}
+
+
+
+<div class="qty">
+
+
+<button onclick="changeCartQty(${index},-1)">
+-
+</button>
+
+
+${item.qty}
+
+
+<button onclick="changeCartQty(${index},1)">
++
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="remove"
+
+onclick="removeCart(${index})">
+
+×
+
+</div>
+
+
+
+</div>
+
+
+`;
+
 
 
 });
 
 
 
-
 if(cart.length===0){
 
-text="CART IS EMPTY";
+
+html="CART IS EMPTY";
+
 
 }
 
 
 
-document.getElementById("cartList").innerHTML=text;
+
+box.innerHTML=html;
+
 
 
 document.getElementById("total").innerHTML=
@@ -1697,16 +2275,56 @@ document.getElementById("total").innerHTML=
 
 
 
-function buyNow(){
+function changeCartQty(index,num){
 
 
-cart=[];
+cart[index].qty+=num;
 
 
-cart.push(products[productIndex]);
+if(cart[index].qty<=0){
+
+cart.splice(index,1);
+
+}
 
 
 updateCart();
+
+openCart();
+
+
+}
+
+
+
+
+
+
+function removeCart(index){
+
+
+cart.splice(index,1);
+
+
+updateCart();
+
+
+openCart();
+
+
+}
+
+
+
+
+
+
+
+
+function buyDetail(){
+
+
+addDetailCart();
 
 
 checkout();
@@ -1717,12 +2335,9 @@ checkout();
 
 
 
-
 function checkout(){
 
-
-showPage("order");
-
+movePage("order");
 
 }
 
@@ -1737,15 +2352,102 @@ showPage("order");
 // =====================
 
 
-let lookNumber=1;
+
+let looks=[
+
+[
+"LOOK 01",
+"LOOK 02",
+"LOOK 03",
+"LOOK 04",
+"LOOK 05",
+"LOOK 06",
+"LOOK 07",
+"LOOK 08",
+"LOOK 09"
+],
+
+
+[
+"LOOK 10",
+"LOOK 11",
+"LOOK 12",
+"LOOK 13",
+"LOOK 14",
+"LOOK 15",
+"LOOK 16",
+"LOOK 17",
+"LOOK 18"
+],
+
+
+[
+"LOOK 19",
+"LOOK 20",
+"LOOK 21",
+"LOOK 22",
+"LOOK 23",
+"LOOK 24",
+"LOOK 25",
+"LOOK 26",
+"LOOK 27"
+]
+
+];
+
+
+
+
 
 
 
 function openLookbook(){
 
-showPage("lookbook");
+lookPage=1;
+
+renderLookbook();
+
+movePage("lookbook");
+
 
 }
+
+
+
+
+
+function renderLookbook(){
+
+
+let html="";
+
+
+looks[lookPage-1].forEach(function(item){
+
+
+html+=
+
+`
+
+<div class="look-item">
+
+${item}
+
+</div>
+
+
+`;
+
+
+});
+
+
+document.getElementById("lookGrid").innerHTML=html;
+
+
+}
+
+
 
 
 
@@ -1754,40 +2456,43 @@ showPage("lookbook");
 function nextLook(){
 
 
-lookNumber++;
+lookPage++;
 
 
-if(lookNumber>3){
+if(lookPage>3){
 
-lookNumber=1;
+lookPage=1;
+
+}
+
+
+renderLookbook();
+
 
 }
 
 
 
-let box=document.getElementById("lookImage");
-
-box.style.opacity="0";
 
 
 
-setTimeout(function(){
+function prevLook(){
 
 
-box.innerHTML=
-
-"LOOKBOOK 0"+lookNumber;
+lookPage--;
 
 
-box.style.opacity="1";
+if(lookPage<1){
 
-
-},300);
-
-
+lookPage=3;
 
 }
 
+
+renderLookbook();
+
+
+}
 
 
 
@@ -1802,9 +2507,11 @@ box.style.opacity="1";
 
 function openAbout(){
 
-showPage("about");
+movePage("about");
 
 }
+
+
 
 
 
@@ -1827,7 +2534,7 @@ setTimeout(function(){
 document.getElementById("loading").style.display="none";
 
 
-showPage("home");
+document.getElementById("intro").style.display="flex";
 
 
 },2500);
@@ -1839,6 +2546,7 @@ showPage("home");
 
 
 </script>
+
 
 
 </body>
