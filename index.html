@@ -25,68 +25,48 @@ overflow:hidden;
 }
 
 
-/* 공통 */
-
 .page{
-
 height:100vh;
 width:100%;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-
-}
-
-
-/* 인트로 */
-
-#home{
-
-display:flex;
-animation:fade 1.5s ease;
-
 }
 
 
 .logo{
-
 font-size:42px;
 letter-spacing:12px;
-font-weight:600;
-
 }
 
 
 .tagline{
-
 margin-top:35px;
 font-size:13px;
 letter-spacing:8px;
 opacity:.8;
-
 }
 
 
 button{
-
-margin-top:65px;
+margin-top:60px;
 background:none;
-border:none;
+border:0;
 color:white;
-cursor:pointer;
-font-size:12px;
-letter-spacing:6px;
 border-bottom:1px solid white;
 padding-bottom:8px;
-
+letter-spacing:6px;
+cursor:pointer;
 }
 
 
 
 /* 메뉴 */
 
-#menu{
+#menu,
+#category,
+#product{
 
 display:none;
 flex-direction:column;
@@ -96,80 +76,27 @@ position:relative;
 }
 
 
-.menu-item{
+.menu-item,
+.category-item{
 
 color:white;
 text-decoration:none;
 font-size:18px;
 letter-spacing:8px;
+cursor:pointer;
 transition:.3s;
 
 }
 
 
-.menu-item:hover{
+.menu-item:hover,
+.category-item:hover{
 
 opacity:.5;
 letter-spacing:12px;
 
 }
 
-
-/* SHOP */
-
-#shop{
-
-display:none;
-flex-direction:column;
-position:relative;
-
-}
-
-
-.product{
-
-font-size:24px;
-letter-spacing:8px;
-
-}
-
-
-.image-box{
-
-width:260px;
-height:330px;
-border:1px solid #333;
-margin:40px auto;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:11px;
-letter-spacing:3px;
-opacity:.5;
-
-}
-
-
-.info{
-
-font-size:13px;
-letter-spacing:4px;
-line-height:2.5;
-
-}
-
-
-.buy{
-
-margin-top:30px;
-font-size:12px;
-letter-spacing:5px;
-border-bottom:1px solid white;
-padding-bottom:8px;
-
-}
 
 
 /* 뒤로가기 */
@@ -186,7 +113,66 @@ cursor:pointer;
 
 
 
-/* 하단 */
+/* 상품 */
+
+.product-name{
+
+font-size:24px;
+letter-spacing:8px;
+
+}
+
+
+.image{
+
+width:260px;
+height:330px;
+border:1px solid #333;
+margin:35px auto;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:10px;
+letter-spacing:3px;
+opacity:.5;
+
+}
+
+
+.info{
+
+font-size:13px;
+letter-spacing:4px;
+line-height:2.5;
+
+}
+
+
+
+.arrow{
+
+position:absolute;
+right:40px;
+bottom:50%;
+font-size:35px;
+cursor:pointer;
+
+}
+
+
+.left-arrow{
+
+position:absolute;
+left:40px;
+bottom:50%;
+font-size:35px;
+cursor:pointer;
+
+}
+
+
 
 .year{
 
@@ -201,57 +187,18 @@ opacity:.5;
 }
 
 
-
-/* 애니메이션 */
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-
-
-/* 모바일 */
-
 @media(max-width:600px){
 
 .logo{
-
-font-size:27px;
+font-size:26px;
 letter-spacing:7px;
-
 }
 
-
-.tagline{
-
-font-size:10px;
-letter-spacing:5px;
-
-}
-
-
-.product{
-
+.product-name{
 font-size:18px;
-
 }
 
 }
-
 
 </style>
 
@@ -262,10 +209,7 @@ font-size:18px;
 
 
 
-<!-- 첫 화면 -->
-
 <div class="page" id="home">
-
 
 <div>
 
@@ -273,64 +217,45 @@ font-size:18px;
 EMERGENCY HAMMER
 </div>
 
-
 <div class="tagline">
 BREAK YOUR FIT.
 </div>
-
 
 <button onclick="openMenu()">
 ENTER
 </button>
 
-
 </div>
 
 </div>
 
 
 
-
-<!-- 메뉴 -->
 
 <div class="page" id="menu">
 
-
-<div class="back" onclick="backHome()">
-←
-</div>
-
-
-<a class="menu-item" onclick="openShop()">
+<div class="menu-item" onclick="openCategory()">
 SHOP
-</a>
+</div>
 
-
-<a class="menu-item" href="#">
+<div class="menu-item">
 LOOKBOOK
-</a>
+</div>
 
-
-<a class="menu-item" href="#">
+<div class="menu-item">
 ABOUT
-</a>
+</div>
 
-
-<a class="menu-item" href="#">
+<div class="menu-item">
 INSTAGRAM
-</a>
-
+</div>
 
 </div>
 
 
 
 
-
-<!-- 상품 페이지 -->
-
-
-<div class="page" id="shop">
+<div class="page" id="category">
 
 
 <div class="back" onclick="backMenu()">
@@ -338,16 +263,42 @@ INSTAGRAM
 </div>
 
 
+<div class="category-item" onclick="openTop()">
+TOP
+</div>
+
+
+<div class="category-item" onclick="openBottom()">
+BOTTOM
+</div>
+
+
+</div>
+
+
+
+
+<div class="page" id="product">
+
+
+<div class="back" onclick="backCategory()">
+←
+</div>
+
+
+<div class="left-arrow" onclick="prevProduct()">
+←
+</div>
+
 
 <div>
 
 
-<div class="product">
-GRAPHIC TEE 001
+<div class="product-name" id="productName">
 </div>
 
 
-<div class="image-box">
+<div class="image">
 PRODUCT IMAGE
 </div>
 
@@ -355,20 +306,8 @@ PRODUCT IMAGE
 <div class="info">
 
 ₩49,000<br>
-
 BLACK<br>
-
-SIZE<br>
-
-S / M / L / XL
-
-</div>
-
-
-<div class="buy">
-ADD TO CART
-</div>
-
+SIZE S / M / L / XL
 
 </div>
 
@@ -376,60 +315,9 @@ ADD TO CART
 </div>
 
 
-
-
-<div class="year">
-EST. 2026
+<div class="arrow" onclick="nextProduct()">
+→
 </div>
 
 
-
-
-<script>
-
-
-function openMenu(){
-
-document.getElementById("home").style.display="none";
-
-document.getElementById("menu").style.display="flex";
-
-}
-
-
-
-function backHome(){
-
-document.getElementById("menu").style.display="none";
-
-document.getElementById("home").style.display="flex";
-
-}
-
-
-
-function openShop(){
-
-document.getElementById("menu").style.display="none";
-
-document.getElementById("shop").style.display="flex";
-
-}
-
-
-
-function backMenu(){
-
-document.getElementById("shop").style.display="none";
-
-document.getElementById("menu").style.display="flex";
-
-}
-
-
-</script>
-
-
-</body>
-
-</html>
+</div>
