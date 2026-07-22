@@ -7,6 +7,7 @@
 <title>EMERGENCY HAMMER</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -14,57 +15,137 @@ box-sizing:border-box;
 }
 
 body{
-height:100vh;
 background:#000;
 color:#fff;
+font-family:Helvetica Neue,Arial,sans-serif;
+height:100vh;
+}
+
+header{
+padding:40px;
 display:flex;
+justify-content:space-between;
 align-items:center;
-justify-content:center;
-font-family:Helvetica,Arial,sans-serif;
 }
 
-.main{
-text-align:center;
+.logo{
+font-size:18px;
+letter-spacing:5px;
 }
 
-h1{
-font-size:45px;
-letter-spacing:8px;
-font-weight:600;
+.menu{
+display:flex;
+gap:35px;
 }
 
-p{
-margin-top:25px;
-font-size:14px;
-letter-spacing:6px;
-opacity:0.8;
-}
-
-a{
-display:inline-block;
-margin-top:60px;
+.menu a{
 color:#fff;
 text-decoration:none;
 font-size:12px;
+letter-spacing:3px;
+opacity:.8;
+}
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+letter-spacing:12px;
+}
+
+.hero p{
+margin-top:30px;
+font-size:13px;
+letter-spacing:7px;
+}
+
+.shop{
+margin-top:80px;
+font-size:12px;
 letter-spacing:5px;
-border-bottom:1px solid #fff;
+border-bottom:1px solid white;
 padding-bottom:8px;
 }
+
+footer{
+position:absolute;
+bottom:30px;
+width:100%;
+text-align:center;
+font-size:10px;
+letter-spacing:4px;
+opacity:.5;
+}
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:30px;
+letter-spacing:7px;
+}
+
+.menu{
+gap:15px;
+}
+
+}
+
 </style>
 
 </head>
 
+
 <body>
 
-<div class="main">
 
-<h1>EMERGENCY HAMMER</h1>
+<header>
 
-<p>BREAK YOUR FIT.</p>
+<div class="logo">
+EMERGENCY HAMMER
+</div>
 
-<a href="#">ENTER</a>
+<div class="menu">
+
+<a href="#">SHOP</a>
+<a href="#">LOOKBOOK</a>
+<a href="#">ABOUT</a>
+<a href="#">INSTAGRAM</a>
 
 </div>
+
+</header>
+
+
+
+<section class="hero">
+
+<h1>
+BREAK YOUR FIT.
+</h1>
+
+<p>
+NEW STREETWEAR BRAND
+</p>
+
+<div class="shop">
+ENTER SHOP
+</div>
+
+</section>
+
+
+
+<footer>
+EST. 2026
+</footer>
+
 
 </body>
 </html>
