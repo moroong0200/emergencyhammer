@@ -808,7 +808,62 @@ transform:scale(1);
 }
 
 }
+/* =====================
+MOBILE SHOP STYLE
+===================== */
 
+@media(max-width:768px){
+
+#productList .product-list{
+
+width:90vw;
+height:65vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+
+#productList .product-card{
+
+display:none;
+
+width:85vw;
+
+text-align:center;
+
+}
+
+
+#productList .product-card.active{
+
+display:block;
+
+}
+
+
+#productList .product-thumb{
+
+width:85vw;
+
+height:55vh;
+
+}
+
+
+#productList .product-card:hover{
+
+transform:none;
+
+}
+
+} 
 </style>
 
 </head>
@@ -1595,7 +1650,7 @@ currentProducts.forEach(function(item,index){
 html+=`
 
 
-<div class="product-card ${index===0 ? "active":""}"
+<div class="product-card ${index===0 ? "active" : ""}"
 
 onclick="openDetail(${index})">
 
@@ -1680,10 +1735,28 @@ function nextProduct(){
 let cards=document.querySelectorAll(".product-card");
 
 
+if(cards.length===0) return;
 
-if(cards.length===0){
 
-return;
+
+cards[currentIndex].classList.remove("active");
+
+
+
+currentIndex++;
+
+
+
+if(currentIndex>=cards.length){
+
+currentIndex=0;
+
+}
+
+
+
+cards[currentIndex].classList.add("active");
+
 
 }
 
