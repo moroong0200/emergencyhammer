@@ -834,33 +834,46 @@ text-align:center;
 
 }
 /* =====================
-MOBILE DETAIL SCROLL FIX
+MOBILE DETAIL CENTER SCROLL FIX
 ===================== */
 
 @media(max-width:768px){
+
 
 #detail{
 
 height:100vh;
 
-overflow-y:auto;
+overflow:hidden;
 
-align-items:flex-start;
+align-items:center;
 
-padding-top:80px;
+justify-content:center;
 
-padding-bottom:50px;
+padding:0;
 
 }
+
 
 
 #detail > div{
 
 width:90vw;
 
+height:85vh;
+
+overflow-y:auto;
+
+overflow-x:hidden;
+
 text-align:center;
 
+padding-top:20px;
+
+padding-bottom:50px;
+
 }
+
 
 
 .product-image{
@@ -874,12 +887,6 @@ max-height:500px;
 }
 
 
-.product-info{
-
-margin-bottom:20px;
-
-}
-
 
 #detail .button{
 
@@ -888,7 +895,8 @@ margin-bottom:20px;
 }
 
 
-} 
+
+}
 </style>
 
 </head>
