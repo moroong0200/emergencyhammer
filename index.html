@@ -1081,7 +1081,11 @@ TOP
 <div class="product-list" id="productsBox">
 
 </div>
+ <div class="mobile-next" onclick="prevProduct()">
 
+←
+
+</div>
 <div class="mobile-next" onclick="nextProduct()">
 
 NEXT →
@@ -1747,6 +1751,19 @@ cards[currentIndex].classList.add("active");
 
 
 }
+function prevProduct(){
+
+currentIndex--;
+
+if(currentIndex<0){
+
+currentIndex=currentProducts.length-1;
+
+}
+
+openDetail(currentIndex);
+
+} 
 // =====================
 // DETAIL
 // =====================
