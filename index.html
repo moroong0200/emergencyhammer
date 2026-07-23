@@ -19,74 +19,32 @@
 <body>
 
 
-<!-- =========================
-INTRO / LOADING
-========================= -->
-
+<!-- =====================
+LOADING
+===================== -->
 
 <div id="loading">
 
     <div class="loading-logo">
-
         EMERGENCY<br>
         HAMMER
-
     </div>
 
 </div>
 
 
 
-<section id="intro">
-
-    <div class="intro-content">
-
-        <h1>
-
-            EMERGENCY<br>
-            HAMMER
-
-        </h1>
 
 
-        <p>
-
-            BREAK YOUR FIT.
-
-        </p>
+<!-- =====================
+HEADER
+===================== -->
 
 
-        <button id="enterBtn">
-
-            ENTER
-
-        </button>
-
-    </div>
-
-</section>
+<header class="header">
 
 
-
-
-<!-- =========================
-MAIN SITE
-========================= -->
-
-
-<div id="site">
-
-
-
-<!-- =========================
-PC HEADER
-========================= -->
-
-
-<header class="pc-header desktop-only">
-
-
-    <div class="brand-logo">
+    <div class="logo">
 
         EMERGENCY HAMMER
 
@@ -94,33 +52,20 @@ PC HEADER
 
 
 
-    <nav>
+    <nav class="pc-nav">
 
         <a href="#shop">
-
             SHOP
-
         </a>
 
 
         <a href="#lookbook">
-
             LOOKBOOK
-
         </a>
 
 
         <a href="#about">
-
             ABOUT
-
-        </a>
-
-
-        <a href="#contact">
-
-            CONTACT
-
         </a>
 
 
@@ -128,44 +73,9 @@ PC HEADER
 
 
 
-    <div class="header-menu">
 
 
-        <button id="searchBtn">
-
-            SEARCH
-
-        </button>
-
-
-
-        <button id="cartBtn">
-
-            CART
-
-        </button>
-
-
-
-    </div>
-
-
-</header>
-
-
-
-
-
-
-<!-- =========================
-MOBILE HEADER
-========================= -->
-
-
-<header class="mobile-header mobile-only">
-
-
-    <button id="hamburger">
+    <button class="hamburger" id="hamburger">
 
         ☰
 
@@ -173,23 +83,6 @@ MOBILE HEADER
 
 
 
-    <div class="mobile-logo">
-
-        EMERGENCY<br>
-        HAMMER
-
-    </div>
-
-
-
-    <button id="mobileCart">
-
-        🛒
-
-    </button>
-
-
-
 </header>
 
 
@@ -198,371 +91,48 @@ MOBILE HEADER
 
 
 
-<!-- =========================
-MOBILE SIDE MENU
-========================= -->
+<!-- =====================
+MOBILE MENU
+===================== -->
 
 
-<div id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu">
 
 
-    <div class="mobile-menu-top">
+    <button id="closeMenu">
 
+        ×
 
-        <div class="mobile-menu-logo">
+    </button>
 
-            EMERGENCY<br>
-            HAMMER
 
-        </div>
 
-
-
-        <button id="menuClose">
-
-            ✕
-
-        </button>
-
-
-    </div>
-
-
-
-
-
-    <nav>
-
-
-        <a href="#shop">
-
-            SHOP
-
-        </a>
-
-
-
-        <a href="#lookbook">
-
-            LOOKBOOK
-
-        </a>
-
-
-
-        <a href="#about">
-
-            ABOUT
-
-        </a>
-
-
-
-        <a href="#contact">
-
-            CONTACT
-
-        </a>
-
-
-
-    </nav>
-
-
-
-
-
-    <div class="mobile-language">
-
-
-        <button>
-
-            KR
-
-        </button>
-
-
-
-        <button>
-
-            EN
-
-        </button>
-
-
-    </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- =========================
-HERO
-========================= -->
-
-
-<section id="hero">
-
-
-
-    <div class="hero-text">
-
-
-        <span>
-
-            NEW COLLECTION
-
-        </span>
-
-
-
-        <h1>
-
-
-            BREAK<br>
-            YOUR<br>
-            FIT.
-
-
-        </h1>
-
-
-
-        <p>
-
-            EMERGENCY HAMMER
-
-        </p>
-
-
-
-
-        <button class="shop-btn">
-
-
-            SHOP NOW
-
-
-        </button>
-
-
-    </div>
-
-
-
-
-
-    <div class="hero-image">
-
-
-        <img src="assets/main.jpg" alt="main">
-
-
-    </div>
-
-
-
-
-</section>
-
-
-
-
-
-
-<!-- =========================
-MOBILE HERO
-========================= -->
-
-
-<section id="mobileHero" class="mobile-only">
-
-
-    <img src="assets/mobile-main.jpg" alt="">
-
-
-
-    <div>
-
-
-        <h1>
-
-            BREAK<br>
-            YOUR<br>
-            FIT.
-
-        </h1>
-
-
-
-        <button>
-
-            SHOP NOW
-
-        </button>
-
-
-    </div>
-
-
-
-</section>
-<!-- =========================
-SHOP SECTION
-========================= -->
-
-
-<section id="shop">
-
-
-
-<div class="section-title">
-
-
-    <span>
-
-        COLLECTION
-
-    </span>
-
-
-    <h2>
-
+    <a href="#shop">
         SHOP
+    </a>
 
-    </h2>
 
+    <a href="#lookbook">
+        LOOKBOOK
+    </a>
 
 
-</div>
+    <a href="#about">
+        ABOUT
+    </a>
 
 
 
+    <div class="language">
 
+        <button>
+            KR
+        </button>
 
-<!-- CATEGORY -->
 
-
-<div class="shop-category">
-
-
-    <button class="active">
-
-        ALL
-
-    </button>
-
-
-    <button>
-
-        TEE
-
-    </button>
-
-
-    <button>
-
-        LONG SLEEVE
-
-    </button>
-
-
-    <button>
-
-        HOODIE
-
-    </button>
-
-
-
-</div>
-
-
-
-
-
-
-
-<!-- =========================
-PRODUCT GRID
-========================= -->
-
-
-<div class="product-grid">
-
-
-
-
-
-<!-- PRODUCT 01 -->
-
-
-<div class="product-card">
-
-
-
-    <div class="product-image">
-
-
-        <img src="assets/product01.jpg" alt="">
-
-
-
-        <div class="product-hover">
-
-
-            <button class="quick-view">
-
-                QUICK VIEW
-
-            </button>
-
-
-
-            <button 
-            class="add-cart"
-            data-name="EH LOGO TEE"
-            data-price="59000">
-
-
-                ADD CART
-
-
-            </button>
-
-
-
-        </div>
-
-
-    </div>
-
-
-
-
-
-    <div class="product-info">
-
-
-        <h3>
-
-            EH LOGO TEE
-
-        </h3>
-
-
-
-        <p>
-
-            ₩59,000
-
-        </p>
+        <button>
+            EN
+        </button>
 
 
     </div>
@@ -578,73 +148,39 @@ PRODUCT GRID
 
 
 
-
-<!-- PRODUCT 02 -->
-
-
-<div class="product-card">
+<!-- =====================
+HERO
+===================== -->
 
 
-
-    <div class="product-image">
-
-
-        <img src="assets/product02.jpg" alt="">
+<section class="hero">
 
 
 
-        <div class="product-hover">
+<div class="hero-text">
 
 
-            <button class="quick-view">
-
-                QUICK VIEW
-
-            </button>
-
-
-
-            <button 
-            class="add-cart"
-            data-name="HAMMER CROSS TEE"
-            data-price="69000">
-
-
-                ADD CART
-
-
-            </button>
+<p>
+NEW COLLECTION
+</p>
 
 
 
-        </div>
+<h1>
 
+BREAK<br>
+YOUR<br>
+FIT
 
-    </div>
-
-
-
-
-
-    <div class="product-info">
-
-
-        <h3>
-
-            HAMMER CROSS TEE
-
-        </h3>
+</h1>
 
 
 
-        <p>
+<button>
 
-            ₩69,000
+SHOP NOW
 
-        </p>
-
-
-    </div>
+</button>
 
 
 
@@ -654,166 +190,10 @@ PRODUCT GRID
 
 
 
+<div class="hero-image">
 
 
-
-
-<!-- PRODUCT 03 -->
-
-
-<div class="product-card">
-
-
-
-    <div class="product-image">
-
-
-        <img src="assets/product03.jpg" alt="">
-
-
-
-        <div class="product-hover">
-
-
-            <button class="quick-view">
-
-                QUICK VIEW
-
-            </button>
-
-
-
-            <button 
-            class="add-cart"
-            data-name="EMERGENCY LS"
-            data-price="79000">
-
-
-                ADD CART
-
-
-            </button>
-
-
-
-        </div>
-
-
-    </div>
-
-
-
-
-
-    <div class="product-info">
-
-
-        <h3>
-
-            EMERGENCY LS
-
-        </h3>
-
-
-
-        <p>
-
-            ₩79,000
-
-        </p>
-
-
-    </div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-<!-- PRODUCT 04 -->
-
-
-<div class="product-card">
-
-
-
-    <div class="product-image">
-
-
-        <img src="assets/product04.jpg" alt="">
-
-
-
-        <div class="product-hover">
-
-
-            <button class="quick-view">
-
-                QUICK VIEW
-
-            </button>
-
-
-
-            <button 
-            class="add-cart"
-            data-name="BLACK BASIC"
-
-            data-price="62000">
-
-
-                ADD CART
-
-
-            </button>
-
-
-
-        </div>
-
-
-    </div>
-
-
-
-
-
-    <div class="product-info">
-
-
-        <h3>
-
-            BLACK BASIC
-
-        </h3>
-
-
-
-        <p>
-
-            ₩62,000
-
-        </p>
-
-
-    </div>
-
-
-
-</div>
-
-
-
-
-
+<img src="assets/main.jpg" alt="main">
 
 
 </div>
@@ -832,30 +212,34 @@ PRODUCT GRID
 
 
 
-<!-- =========================
-MOBILE PRODUCT LIST
-========================= -->
+<!-- =====================
+SHOP
+===================== -->
 
 
-<section id="mobileShop"
-class="mobile-only">
+<section id="shop"
+class="shop">
+
+
+<h2>
+
+SHOP
+
+</h2>
 
 
 
-<div class="mobile-product-list">
+
+
+<div class="products">
 
 
 
-
-
-<div class="mobile-product-card">
+<div class="product">
 
 
 <img src="assets/product01.jpg">
 
-
-
-<div>
 
 
 <h3>
@@ -865,7 +249,6 @@ EH LOGO TEE
 </h3>
 
 
-
 <p>
 
 ₩59,000
@@ -873,18 +256,17 @@ EH LOGO TEE
 </p>
 
 
-</div>
 
+<button class="add-cart"
+data-name="EH LOGO TEE"
+data-price="59000">
 
-
-
-<button class="add-cart">
-
-+
+ADD CART
 
 </button>
 
 
+
 </div>
 
 
@@ -893,16 +275,11 @@ EH LOGO TEE
 
 
 
-
-
-<div class="mobile-product-card">
+<div class="product">
 
 
 <img src="assets/product02.jpg">
 
-
-
-<div>
 
 
 <h3>
@@ -910,7 +287,6 @@ EH LOGO TEE
 HAMMER CROSS TEE
 
 </h3>
-
 
 
 <p>
@@ -920,29 +296,25 @@ HAMMER CROSS TEE
 </p>
 
 
-</div>
 
+<button class="add-cart"
+data-name="HAMMER CROSS TEE"
+data-price="69000">
 
-
-
-<button class="add-cart">
-
-+
+ADD CART
 
 </button>
 
 
-</div>
-
-
-
-
-
-
-
 
 </div>
 
+
+
+
+
+
+</div>
 
 
 </section>
@@ -955,1822 +327,34 @@ HAMMER CROSS TEE
 
 
 
-<!-- =========================
-FLOAT CART BUTTON
-========================= -->
+<!-- =====================
+LOOKBOOK
+===================== -->
 
 
-<button id="floatingCart">
-
-
-
-🛒
-
-
-
-<span id="cartNumber">
-
-0
-
-</span>
-
-
-
-</button>
-
-
-
-
-
-
-
-
-
-<!-- =========================
-CART SIDE PANEL
-========================= -->
-
-
-<div id="cartPanel">
-
-
-
-
-
-<div class="cart-header">
+<section id="lookbook"
+class="lookbook">
 
 
 <h2>
 
-CART
+LOOKBOOK
 
 </h2>
 
 
 
-<button id="cartClose">
 
-✕
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div id="cartItems">
-
-
-<!-- JS 생성 영역 -->
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="cart-footer">
-
-
-
-<div class="total-price">
-
-
-TOTAL
-
-
-<strong id="totalPrice">
-
-₩0
-
-</strong>
-
-
-
-</div>
-
-
-
-
-
-<button id="checkoutBtn">
-
-
-CHECKOUT
-
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-<!-- =========================
-PRODUCT QUICK VIEW POPUP
-========================= -->
-
-
-<div id="quickViewModal">
-
-
-
-<div class="quick-box">
-
-
-
-<button id="quickClose">
-
-✕
-
-</button>
-
-
-
-
-
-<img id="quickImage" src="">
-
-
-
-
-
-<h2 id="quickName">
-
-
-PRODUCT NAME
-
-
-</h2>
-
-
-
-
-
-<p id="quickPrice">
-
-
-₩0
-
-
-</p>
-
-
-
-
-
-<button>
-
-
-VIEW DETAIL
-
-
-</button>
-
-
-
-
-
-</div>
-
-
-
-</div>
-<!-- =========================
-PRODUCT DETAIL PAGE
-========================= -->
-
-
-<section id="productDetail">
-
-
-
-
-
-<!-- BACK BUTTON -->
-
-
-<button id="backButton">
-
-
-← BACK
-
-
-</button>
-
-
-
-
-
-
-
-
-
-<div class="detail-container">
-
-
-
-
-
-<!-- =========================
-IMAGE AREA
-========================= -->
-
-
-<div class="detail-gallery">
-
-
-
-
-
-<div class="main-product-image">
-
-
-<img
-
-id="mainProductImage"
-
-src="assets/product01.jpg"
-
-alt="">
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="thumbnail-list">
-
-
-
-<img
-
-class="active"
-
-src="assets/product01.jpg"
-
-alt="">
-
-
-
-
-
-<img
-
-src="assets/product01-back.jpg"
-
-alt="">
-
-
-
-
-
-
-<img
-
-src="assets/product01-detail.jpg"
-
-alt="">
-
-
-
-
-
-
-<img
-
-src="assets/product01-fit.jpg"
-
-alt="">
-
-
-
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- =========================
-PRODUCT INFO
-========================= -->
-
-
-
-<div class="detail-info">
-
-
-
-
-
-<span class="product-category">
-
-
-T-SHIRT
-
-
-</span>
-
-
-
-
-
-
-
-<h1>
-
-
-EH LOGO TEE
-
-
-</h1>
-
-
-
-
-
-
-
-<div class="detail-price">
-
-
-₩59,000
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<p class="detail-description">
-
-
-
-Premium Heavy Cotton
-
-<br>
-
-Relaxed Shoulder Fit
-
-<br>
-
-Made in Korea
-
-
-
-</p>
-
-
-
-
-
-
-
-
-
-<!-- COLOR -->
-
-
-
-<div class="option-box">
-
-
-
-<h3>
-
-
-COLOR
-
-
-</h3>
-
-
-
-
-
-<div class="color-buttons">
-
-
-
-<button class="black active">
-
-
-</button>
-
-
-
-
-<button class="white">
-
-
-</button>
-
-
-
-
-<button class="gray">
-
-
-</button>
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- SIZE -->
-
-
-
-<div class="option-box">
-
-
-
-<h3>
-
-
-SIZE
-
-
-</h3>
-
-
-
-
-
-<div class="size-buttons">
-
-
-
-<button>
-
-
-S
-
-
-</button>
-
-
-
-
-<button class="active">
-
-
-M
-
-
-</button>
-
-
-
-
-
-<button>
-
-
-L
-
-
-</button>
-
-
-
-
-
-<button>
-
-
-XL
-
-
-</button>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- QUANTITY -->
-
-
-
-<div class="option-box">
-
-
-
-<h3>
-
-
-QUANTITY
-
-
-</h3>
-
-
-
-
-
-<div class="quantity-box">
-
-
-
-<button>
-
-
-−
-
-
-</button>
-
-
-
-
-
-<input
-
-value="1"
-
-type="number">
-
-
-
-
-
-
-<button>
-
-
-+
-
-
-</button>
-
-
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- BUY AREA -->
-
-
-
-<div class="purchase-buttons">
-
-
-
-
-
-<button class="buy-now">
-
-
-BUY NOW
-
-
-</button>
-
-
-
-
-
-
-
-<button class="detail-add-cart">
-
-
-ADD TO CART
-
-
-</button>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- DELIVERY INFO -->
-
-
-
-<div class="delivery-info">
-
-
-
-
-
-<div>
-
-
-SHIPPING
-
-
-<span>
-
-
-FREE
-
-
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-<div>
-
-
-DELIVERY
-
-
-<span>
-
-
-1~3 DAYS
-
-
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div>
-
-
-RETURN
-
-
-<span>
-
-
-7 DAYS
-
-
-</span>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================
-PRODUCT DETAIL CONTENT
-========================= -->
-
-
-
-
-
-<section id="productContents">
-
-
-
-
-
-<div class="content-tabs">
-
-
-
-<button class="active">
-
-
-DETAIL
-
-
-</button>
-
-
-
-
-
-<button>
-
-
-SIZE GUIDE
-
-
-</button>
-
-
-
-
-
-<button>
-
-
-REVIEW
-
-
-</button>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="detail-description-image">
-
-
-
-
-
-<img
-
-src="assets/detail01.jpg"
-
-alt="">
-
-
-
-
-
-<img
-
-src="assets/detail02.jpg"
-
-alt="">
-
-
-
-
-
-
-<img
-
-src="assets/detail03.jpg"
-
-alt="">
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================
-SIZE GUIDE
-========================= -->
-
-
-
-<section id="sizeGuide">
-
-
-
-<h2>
-
-
-SIZE GUIDE
-
-
-</h2>
-
-
-
-
-
-
-<table>
-
-
-
-<tr>
-
-<th>
-
-SIZE
-
-</th>
-
-
-<th>
-
-S
-
-</th>
-
-
-<th>
-
-M
-
-</th>
-
-
-<th>
-
-L
-
-</th>
-
-
-<th>
-
-XL
-
-</th>
-
-
-
-</tr>
-
-
-
-
-
-
-
-<tr>
-
-
-<td>
-
-Length
-
-</td>
-
-
-
-<td>
-
-68
-
-</td>
-
-
-<td>
-
-70
-
-</td>
-
-
-<td>
-
-72
-
-</td>
-
-
-<td>
-
-74
-
-</td>
-
-
-
-</tr>
-
-
-
-
-
-
-
-
-<tr>
-
-
-<td>
-
-Shoulder
-
-</td>
-
-
-
-<td>
-
-50
-
-</td>
-
-
-<td>
-
-52
-
-</td>
-
-
-<td>
-
-54
-
-</td>
-
-
-<td>
-
-56
-
-</td>
-
-
-
-</tr>
-
-
-
-
-
-
-
-
-<tr>
-
-
-<td>
-
-Chest
-
-</td>
-
-
-
-<td>
-
-56
-
-</td>
-
-
-<td>
-
-58
-
-</td>
-
-
-<td>
-
-60
-
-</td>
-
-
-<td>
-
-62
-
-</td>
-
-
-
-</tr>
-
-
-
-
-
-
-</table>
-
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================
-RECOMMEND PRODUCT
-========================= -->
-
-
-
-<section id="recommend">
-
-
-
-<h2>
-
-
-YOU MAY ALSO LIKE
-
-
-</h2>
-
-
-
-
-
-
-
-<div class="recommend-grid">
-
-
-
-
-
-
-<div>
-
-
-<img src="assets/product02.jpg">
-
-
-<h3>
-
-HAMMER CROSS TEE
-
-</h3>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div>
-
-
-<img src="assets/product03.jpg">
-
-
-<h3>
-
-EMERGENCY LS
-
-</h3>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div>
-
-
-<img src="assets/product04.jpg">
-
-
-<h3>
-
-BLACK BASIC
-
-</h3>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- =========================
-MOBILE DETAIL
-========================= -->
-
-
-
-<section id="mobileDetail"
-class="mobile-only">
-
-
-
-
-
-
-
-<div class="mobile-detail-image">
+<div class="look-grid">
 
 
 <img src="assets/product01.jpg">
 
 
-</div>
-
-
-
-
-
-
-
-
-
-<div class="mobile-detail-info">
-
-
-
-<h1>
-
-
-EH LOGO TEE
-
-
-</h1>
-
-
-
-
-
-<p>
-
-
-₩59,000
-
-
-</p>
-
-
-
-
-
-
-<select>
-
-
-<option>
-
-
-M SIZE
-
-
-</option>
-
-
-<option>
-
-
-L SIZE
-
-
-</option>
-
-
-<option>
-
-
-XL SIZE
-
-
-</option>
-
-
-
-</select>
-
-
-
-
-
-
-
-
-<div class="mobile-detail-buttons">
-
-
-<button>
-
-
-BUY NOW
-
-
-</button>
-
-
-
-
-
-<button>
-
-
-ADD
-
-
-</button>
-
-
-
+<img src="assets/product02.jpg">
 
 
 </div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-</section>
-<!-- =========================
-LOOKBOOK
-========================= -->
-
-
-<section id="lookbook">
-
-
-
-
-
-<div class="section-title">
-
-
-
-<span>
-
-2026 COLLECTION
-
-</span>
-
-
-
-
-
-<h2>
-
-
-LOOKBOOK
-
-
-</h2>
-
-
-
-
-
-<p>
-
-
-EMERGENCY HAMMER VISUAL ARCHIVE
-
-
-</p>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="lookbook-grid">
-
-
-
-
-
-<article class="look-card">
-
-
-
-<div class="look-image">
-
-
-
-<img src="assets/look01.jpg">
-
-
-
-
-
-<div class="look-hover">
-
-
-<span>
-
-VIEW LOOK
-
-</span>
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="look-info">
-
-
-
-<span>
-
-
-LOOK 01
-
-
-</span>
-
-
-
-<h3>
-
-
-BREAK YOUR FIT
-
-
-</h3>
-
-
-
-</div>
-
-
-
-
-
-
-</article>
-
-
-
-
-
-
-
-
-
-<article class="look-card">
-
-
-
-<div class="look-image">
-
-
-
-<img src="assets/look02.jpg">
-
-
-
-
-
-<div class="look-hover">
-
-
-<span>
-
-VIEW LOOK
-
-</span>
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="look-info">
-
-
-
-<span>
-
-
-LOOK 02
-
-
-</span>
-
-
-
-<h3>
-
-
-STREET ESSENTIAL
-
-
-</h3>
-
-
-
-</div>
-
-
-
-
-
-
-</article>
-
-
-
-
-
-
-
-
-
-<article class="look-card">
-
-
-
-<div class="look-image">
-
-
-
-<img src="assets/look03.jpg">
-
-
-
-
-
-<div class="look-hover">
-
-
-<span>
-
-VIEW LOOK
-
-</span>
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="look-info">
-
-
-
-<span>
-
-
-LOOK 03
-
-
-</span>
-
-
-
-<h3>
-
-
-MONO BLACK
-
-
-</h3>
-
-
-
-</div>
-
-
-
-
-
-
-</article>
-
-
-
-
-
-
-
-
-
-<article class="look-card">
-
-
-
-<div class="look-image">
-
-
-
-<img src="assets/look04.jpg">
-
-
-
-
-
-<div class="look-hover">
-
-
-<span>
-
-VIEW LOOK
-
-</span>
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="look-info">
-
-
-
-<span>
-
-
-LOOK 04
-
-
-</span>
-
-
-
-<h3>
-
-
-EMERGENCY MOOD
-
-
-</h3>
-
-
-
-</div>
-
-
-
-
-
-
-</article>
-
-
-
-
-
-
-
-</div>
-
-
 
 
 
@@ -2785,216 +369,30 @@ EMERGENCY MOOD
 
 
 
-
-
-
-
-
-<!-- =========================
-BRAND FILM
-========================= -->
-
-
-
-<section id="brandFilm">
-
-
-
-
-
-<video autoplay muted loop playsinline>
-
-
-<source src="assets/brand.mp4" type="video/mp4">
-
-
-</video>
-
-
-
-
-
-
-
-<div class="film-content">
-
-
-
-<h2>
-
-
-EMERGENCY<br>
-
-HAMMER
-
-
-</h2>
-
-
-
-
-
-<p>
-
-
-BREAK YOUR FIT.
-
-
-</p>
-
-
-
-
-
-<button>
-
-
-WATCH FILM
-
-
-</button>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================
+<!-- =====================
 ABOUT
-========================= -->
+===================== -->
 
 
-<section id="about">
-
-
-
-
-
-<div class="about-title">
-
-
-
-<span>
-
-
-ABOUT
-
-
-</span>
-
-
+<section id="about"
+class="about">
 
 
 <h2>
 
-
-EMERGENCY<br>
-
-HAMMER
-
+EMERGENCY HAMMER
 
 </h2>
 
 
 
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="about-text">
-
-
-
-
-
 <p>
 
+BREAK YOUR FIT.<br>
 
-EMERGENCY HAMMER는
-
-<br>
-
-평범한 실루엣을 깨고
-
-<br>
-
-새로운 핏을 만드는 브랜드입니다.
-
+새로운 핏을 만드는 브랜드
 
 </p>
-
-
-
-
-
-
-
-<p>
-
-
-우리는 옷이 단순한 소재가 아니라
-
-<br>
-
-자신을 표현하는 도구라고 생각합니다.
-
-
-</p>
-
-
-
-
-
-
-
-<strong>
-
-
-BREAK YOUR FIT.
-
-
-</strong>
-
-
-
-
-
-</div>
-
-
-
-
-
 
 
 
@@ -3008,469 +406,27 @@ BREAK YOUR FIT.
 
 
 
-
-
-
-
-
-<!-- =========================
-INSTAGRAM
-========================= -->
-
-
-<section id="instagram">
-
-
-
-
-
-
-<div class="section-title">
-
-
-<h2>
-
-
-INSTAGRAM
-
-
-</h2>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="instagram-grid">
-
-
-
-<img src="assets/insta01.jpg">
-
-
-
-<img src="assets/insta02.jpg">
-
-
-
-<img src="assets/insta03.jpg">
-
-
-
-<img src="assets/insta04.jpg">
-
-
-
-<img src="assets/insta05.jpg">
-
-
-
-<img src="assets/insta06.jpg">
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================
-CONTACT
-========================= -->
-
-
-<section id="contact">
-
-
-
-<h2>
-
-
-CONTACT
-
-
-</h2>
-
-
-
-
-
-<p>
-
-
-support@emergencyhammer.com
-
-
-</p>
-
-
-
-
-
-<button>
-
-
-SEND MESSAGE
-
-
-</button>
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================
+<!-- =====================
 FOOTER
-========================= -->
+===================== -->
 
 
 <footer>
 
 
-
-
-
-
-
-<div class="footer-container">
-
-
-
-
-
-
-
-<div class="footer-brand">
-
-
-
 <h3>
 
-
 EMERGENCY HAMMER
-
 
 </h3>
 
 
 
-
 <p>
-
-
-BREAK YOUR FIT.
-
-
-</p>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="footer-menu">
-
-
-
-<h4>
-
-
-SHOP
-
-
-</h4>
-
-
-<a>
-
-
-NEW ARRIVAL
-
-
-</a>
-
-
-<a>
-
-
-T-SHIRT
-
-
-</a>
-
-
-<a>
-
-
-HOODIE
-
-
-</a>
-
-
-<a>
-
-
-ACCESSORY
-
-
-</a>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="footer-menu">
-
-
-
-<h4>
-
-
-SUPPORT
-
-
-</h4>
-
-
-
-<a>
-
-
-FAQ
-
-
-</a>
-
-
-
-<a>
-
-
-SHIPPING
-
-
-</a>
-
-
-
-<a>
-
-
-RETURN
-
-
-</a>
-
-
-
-<a>
-
-
-CONTACT
-
-
-</a>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="footer-menu">
-
-
-
-<h4>
-
-
-FOLLOW
-
-
-</h4>
-
-
-
-
-<a>
-
-
-INSTAGRAM
-
-
-</a>
-
-
-
-
-<a>
-
-
-TIKTOK
-
-
-</a>
-
-
-
-
-<a>
-
-
-THREADS
-
-
-</a>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="footer-bottom">
-
-
-
-<p>
-
 
 © 2026 EMERGENCY HAMMER
 
-
 </p>
-
-
-
-
-
-<div class="language-select">
-
-
-
-<button>
-
-
-KR
-
-
-</button>
-
-
-
-<button>
-
-
-EN
-
-
-</button>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-</div>
-
-
-
-
 
 
 
@@ -3484,123 +440,79 @@ EN
 
 
 
-<!-- =========================
-MOBILE BOTTOM NAV
-========================= -->
+<script src="script.js"></script>
 
 
-<nav class="mobile-bottom-nav mobile-only">
+</body>
+
+</html>
+/* =====================
+RESET
+===================== */
 
 
-
-<button>
-
-
-HOME
-
-
-</button>
-
-
-
-
-
-<button>
-
-
-SHOP
-
-
-</button>
-
-
-
-
-
-<button>
-
-
-CART
-
-
-</button>
-
-
-
-
-
-<button>
-
-
-MENU
-
-
-</button>
-
-
-
-
-
-
-
-</nav>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
 
 
 html{
 
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 
 }
 
 
 body{
 
-    background:#000;
+background:#000;
 
-    color:#fff;
+color:#fff;
 
-    font-family:
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+font-family:
+Arial,
+"Helvetica Neue",
+sans-serif;
 
-    overflow-x:hidden;
+overflow-x:hidden;
 
 }
+
 
 
 img{
 
-    width:100%;
+width:100%;
 
-    display:block;
-
-}
-
-
-button{
-
-    cursor:pointer;
-
-    background:none;
-
-    border:none;
-
-    color:inherit;
+display:block;
 
 }
+
 
 
 a{
 
-    color:inherit;
+color:#fff;
 
-    text-decoration:none;
+text-decoration:none;
+
+}
+
+
+
+button{
+
+cursor:pointer;
+
+background:none;
+
+border:none;
+
+color:#fff;
 
 }
 
@@ -3611,27 +523,30 @@ a{
 
 
 
-
-/* =========================
+/* =====================
 LOADING
-========================= */
+===================== */
 
 
 #loading{
 
-    position:fixed;
+position:fixed;
 
-    inset:0;
+top:0;
+left:0;
 
-    background:#000;
+width:100%;
+height:100vh;
 
-    display:flex;
+background:#000;
 
-    align-items:center;
+display:flex;
 
-    justify-content:center;
+align-items:center;
 
-    z-index:99999;
+justify-content:center;
+
+z-index:9999;
 
 }
 
@@ -3639,21 +554,21 @@ LOADING
 
 .loading-logo{
 
-    font-size:45px;
+font-size:40px;
 
-    font-weight:900;
+font-weight:900;
 
-    letter-spacing:8px;
+letter-spacing:8px;
 
-    text-align:center;
+text-align:center;
 
-    animation:loadingFade 1.5s infinite;
+animation:loading 1.5s infinite;
 
 }
 
 
 
-@keyframes loadingFade{
+@keyframes loading{
 
 
 0%{
@@ -3687,120 +602,35 @@ opacity:.2;
 
 
 
-/* =========================
-INTRO
-========================= */
-
-
-#intro{
-
-    height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-}
-
-
-
-.intro-content h1{
-
-    font-size:90px;
-
-    line-height:.95;
-
-    letter-spacing:10px;
-
-    font-weight:900;
-
-}
-
-
-
-
-.intro-content p{
-
-    margin-top:30px;
-
-    letter-spacing:8px;
-
-    color:#888;
-
-}
-
-
-
-
-#enterBtn{
-
-    margin-top:60px;
-
-    width:220px;
-
-    height:60px;
-
-    border:1px solid #fff;
-
-    transition:.4s;
-
-}
-
-
-
-
-#enterBtn:hover{
-
-    background:#fff;
-
-    color:#000;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
+/* =====================
 HEADER
-========================= */
+===================== */
 
 
-.pc-header{
+.header{
 
-    position:fixed;
+position:fixed;
 
-    top:0;
+top:0;
+left:0;
 
-    left:0;
+width:100%;
 
-    width:100%;
+height:90px;
 
-    height:90px;
+padding:0 5%;
 
-    padding:0 5%;
+display:flex;
 
-    display:flex;
+align-items:center;
 
-    justify-content:space-between;
+justify-content:space-between;
 
-    align-items:center;
+background:rgba(0,0,0,.6);
 
-    z-index:1000;
+backdrop-filter:blur(15px);
 
-    background:
-
-    rgba(0,0,0,.55);
-
-    backdrop-filter:blur(15px);
+z-index:1000;
 
 }
 
@@ -3808,25 +638,13 @@ HEADER
 
 
 
-.brand-logo{
+.logo{
 
-    font-size:22px;
+font-size:22px;
 
-    font-weight:800;
+font-weight:900;
 
-    letter-spacing:4px;
-
-}
-
-
-
-
-
-.pc-header nav{
-
-    display:flex;
-
-    gap:45px;
+letter-spacing:4px;
 
 }
 
@@ -3834,13 +652,11 @@ HEADER
 
 
 
-.pc-header nav a{
+.pc-nav{
 
-    font-size:14px;
+display:flex;
 
-    letter-spacing:2px;
-
-    position:relative;
+gap:50px;
 
 }
 
@@ -3848,8 +664,19 @@ HEADER
 
 
 
-.pc-header nav a:after{
+.pc-nav a{
 
+font-size:14px;
+
+letter-spacing:3px;
+
+position:relative;
+
+}
+
+
+
+.pc-nav a::after{
 
 content:"";
 
@@ -3867,12 +694,11 @@ background:#fff;
 
 transition:.3s;
 
-
 }
 
 
 
-.pc-header nav a:hover:after{
+.pc-nav a:hover::after{
 
 width:100%;
 
@@ -3883,22 +709,11 @@ width:100%;
 
 
 
+.hamburger{
 
-.header-menu{
+display:none;
 
-    display:flex;
-
-    gap:25px;
-
-}
-
-
-
-.header-menu button{
-
-    font-size:13px;
-
-    letter-spacing:2px;
+font-size:28px;
 
 }
 
@@ -3910,26 +725,115 @@ width:100%;
 
 
 
-/* =========================
+/* =====================
+MOBILE MENU
+===================== */
+
+
+.mobile-menu{
+
+position:fixed;
+
+top:0;
+
+left:-100%;
+
+width:85%;
+
+height:100vh;
+
+background:#050505;
+
+z-index:2000;
+
+padding:40px;
+
+transition:.4s;
+
+display:flex;
+
+flex-direction:column;
+
+gap:40px;
+
+}
+
+
+
+.mobile-menu.active{
+
+left:0;
+
+}
+
+
+
+.mobile-menu a{
+
+font-size:30px;
+
+letter-spacing:3px;
+
+}
+
+
+
+#closeMenu{
+
+font-size:35px;
+
+text-align:right;
+
+}
+
+
+
+.language{
+
+display:flex;
+
+gap:15px;
+
+}
+
+
+
+.language button{
+
+border:1px solid #333;
+
+padding:12px 25px;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================
 HERO
-========================= */
+===================== */
 
 
-#hero{
+.hero{
 
-    min-height:100vh;
+width:90%;
 
-    width:90%;
+margin:auto;
 
-    margin:auto;
+height:100vh;
 
-    display:flex;
+display:flex;
 
-    justify-content:space-between;
+align-items:center;
 
-    align-items:center;
+justify-content:space-between;
 
-    padding-top:100px;
+padding-top:80px;
 
 }
 
@@ -3939,51 +843,35 @@ HERO
 
 .hero-text{
 
-    width:45%;
+width:45%;
 
 }
-
-
-
-
-
-.hero-text span{
-
-    color:#777;
-
-    letter-spacing:5px;
-
-}
-
-
-
-
-
-.hero-text h1{
-
-    margin-top:35px;
-
-    font-size:120px;
-
-    line-height:.85;
-
-    font-weight:900;
-
-    letter-spacing:5px;
-
-}
-
-
 
 
 
 .hero-text p{
 
-    margin-top:40px;
+color:#777;
 
-    color:#888;
+letter-spacing:5px;
 
-    letter-spacing:4px;
+font-size:14px;
+
+}
+
+
+
+.hero-text h1{
+
+margin-top:30px;
+
+font-size:120px;
+
+line-height:.85;
+
+font-weight:900;
+
+letter-spacing:5px;
 
 }
 
@@ -3991,17 +879,17 @@ HERO
 
 
 
-.shop-btn{
+.hero-text button{
 
-    margin-top:50px;
+margin-top:50px;
 
-    width:220px;
+width:220px;
 
-    height:60px;
+height:60px;
 
-    border:1px solid #fff;
+border:1px solid #fff;
 
-    transition:.35s;
+transition:.3s;
 
 }
 
@@ -4009,11 +897,11 @@ HERO
 
 
 
-.shop-btn:hover{
+.hero-text button:hover{
 
-    background:#fff;
+background:#fff;
 
-    color:#000;
+color:#000;
 
 }
 
@@ -4025,17 +913,25 @@ HERO
 
 .hero-image{
 
-    width:45%;
+width:45%;
+
+overflow:hidden;
 
 }
-
-
 
 
 
 .hero-image img{
 
-    transition:.8s;
+transition:.6s;
+
+}
+
+
+
+.hero-image:hover img{
+
+transform:scale(1.05);
 
 }
 
@@ -4043,70 +939,33 @@ HERO
 
 
 
-.hero-image img:hover{
-
-    transform:scale(1.04);
-
-}
 
 
 
 
-
-
-
-
-
-/* =========================
+/* =====================
 SHOP
-========================= */
+===================== */
 
 
-#shop{
+.shop{
 
-    width:90%;
+width:90%;
 
-    margin:180px auto;
-
-}
-
-
-
-
-
-.section-title span{
-
-    color:#777;
-
-    letter-spacing:5px;
-
-    font-size:13px;
+margin:180px auto;
 
 }
 
 
 
+.shop h2,
+.lookbook h2{
 
+font-size:70px;
 
-.section-title h2{
+letter-spacing:5px;
 
-    margin-top:15px;
-
-    font-size:70px;
-
-    letter-spacing:5px;
-
-}
-
-
-
-
-
-.section-title p{
-
-    color:#888;
-
-    margin-top:20px;
+margin-bottom:60px;
 
 }
 
@@ -4115,40 +974,31 @@ SHOP
 
 
 
+.products{
 
-.shop-category{
+display:grid;
 
-    display:flex;
+grid-template-columns:repeat(2,1fr);
 
-    gap:15px;
-
-    margin:70px 0;
-
-}
-
-
-
-.shop-category button{
-
-    border:1px solid #333;
-
-    padding:15px 30px;
-
-    color:#999;
-
-    transition:.3s;
+gap:40px;
 
 }
 
 
 
+.product{
 
-.shop-category button.active,
-.shop-category button:hover{
+transition:.4s;
 
-    color:#000;
+}
 
-    background:#fff;
+
+
+.product img{
+
+aspect-ratio:1/1.2;
+
+object-fit:cover;
 
 }
 
@@ -4156,15 +1006,13 @@ SHOP
 
 
 
+.product h3{
 
+margin-top:20px;
 
-.product-grid{
+font-size:18px;
 
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:35px;
+letter-spacing:2px;
 
 }
 
@@ -4172,21 +1020,11 @@ SHOP
 
 
 
-.product-image{
+.product p{
 
-    overflow:hidden;
+margin-top:10px;
 
-    position:relative;
-
-}
-
-
-
-
-
-.product-image img{
-
-    transition:.6s;
+color:#888;
 
 }
 
@@ -4194,40 +1032,17 @@ SHOP
 
 
 
-.product-card:hover img{
+.add-cart{
 
-    transform:scale(1.08);
+margin-top:20px;
 
-}
+width:150px;
 
+height:45px;
 
+border:1px solid #fff;
 
-
-
-
-
-
-.product-hover{
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(0,0,0,.65);
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:15px;
-
-    opacity:0;
-
-    transition:.4s;
+transition:.3s;
 
 }
 
@@ -4235,182 +1050,11 @@ SHOP
 
 
 
-.product-card:hover .product-hover{
+.add-cart:hover{
 
-    opacity:1;
+background:#fff;
 
-}
-
-
-
-
-
-
-
-.product-hover button{
-
-    width:180px;
-
-    height:50px;
-
-    border:1px solid #fff;
-
-}
-
-
-
-
-
-
-
-.product-info{
-
-    padding-top:20px;
-
-}
-
-
-
-
-
-.product-info h3{
-
-    letter-spacing:2px;
-
-    font-size:17px;
-
-}
-
-
-
-
-
-.product-info p{
-
-    margin-top:10px;
-
-    color:#999;
-
-}
- /* =========================
-PRODUCT DETAIL
-========================= */
-
-
-#productDetail{
-
-    width:90%;
-
-    margin:160px auto;
-
-}
-
-
-
-#backButton{
-
-    margin-bottom:50px;
-
-    font-size:14px;
-
-    letter-spacing:3px;
-
-    color:#aaa;
-
-    transition:.3s;
-
-}
-
-
-
-#backButton:hover{
-
-    color:#fff;
-
-}
-
-
-
-
-
-.detail-container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:80px;
-
-}
-
-
-
-
-
-.detail-gallery{
-
-    width:55%;
-
-}
-
-
-
-
-
-.main-product-image{
-
-    overflow:hidden;
-
-}
-
-
-
-.main-product-image img{
-
-    transition:.5s;
-
-}
-
-
-
-
-
-.thumbnail-list{
-
-    display:flex;
-
-    gap:15px;
-
-    margin-top:20px;
-
-}
-
-
-
-
-
-.thumbnail-list img{
-
-    width:90px;
-
-    height:110px;
-
-    object-fit:cover;
-
-    opacity:.45;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-
-
-.thumbnail-list img.active,
-.thumbnail-list img:hover{
-
-    opacity:1;
+color:#000;
 
 }
 
@@ -4422,660 +1066,45 @@ PRODUCT DETAIL
 
 
 
-/* DETAIL INFO */
-
-
-.detail-info{
-
-    width:40%;
-
-}
-
-
-
-.product-category{
-
-    color:#777;
-
-    letter-spacing:4px;
-
-    font-size:13px;
-
-}
-
-
-
-
-
-.detail-info h1{
-
-    margin-top:20px;
-
-    font-size:45px;
-
-    letter-spacing:3px;
-
-}
-
-
-
-
-
-.detail-price{
-
-    margin-top:25px;
-
-    font-size:22px;
-
-}
-
-
-
-
-
-.detail-description{
-
-    margin-top:40px;
-
-    line-height:2;
-
-    color:#aaa;
-
-}
-
-
-
-
-
-
-
-
-
-.option-box{
-
-    margin-top:45px;
-
-}
-
-
-
-
-
-.option-box h3{
-
-    font-size:14px;
-
-    letter-spacing:3px;
-
-    margin-bottom:20px;
-
-}
-
-
-
-
-
-
-
-
-
-.color-buttons{
-
-    display:flex;
-
-    gap:15px;
-
-}
-
-
-
-
-
-.color-buttons button{
-
-    width:35px;
-
-    height:35px;
-
-    border-radius:50%;
-
-    border:1px solid #555;
-
-}
-
-
-
-
-
-.color-buttons .black{
-
-    background:#000;
-
-}
-
-
-
-.color-buttons .white{
-
-    background:#fff;
-
-}
-
-
-
-.color-buttons .gray{
-
-    background:#777;
-
-}
-
-
-
-
-
-
-
-
-
-.size-buttons{
-
-    display:flex;
-
-    gap:10px;
-
-}
-
-
-
-
-
-.size-buttons button{
-
-    width:55px;
-
-    height:45px;
-
-    border:1px solid #333;
-
-}
-
-
-
-
-
-.size-buttons button.active,
-.size-buttons button:hover{
-
-    background:#fff;
-
-    color:#000;
-
-}
-
-
-
-
-
-
-
-
-
-.quantity-box{
-
-    display:flex;
-
-    border:1px solid #333;
-
-    width:150px;
-
-}
-
-
-
-.quantity-box button{
-
-    width:45px;
-
-}
-
-
-
-.quantity-box input{
-
-    width:60px;
-
-    background:none;
-
-    border:none;
-
-    color:#fff;
-
-    text-align:center;
-
-}
-
-
-
-
-
-
-
-
-
-.purchase-buttons{
-
-    display:flex;
-
-    gap:15px;
-
-    margin-top:55px;
-
-}
-
-
-
-.purchase-buttons button{
-
-    height:60px;
-
-    flex:1;
-
-    border:1px solid #fff;
-
-    transition:.3s;
-
-}
-
-
-
-
-
-.buy-now{
-
-    background:#fff!important;
-
-    color:#000!important;
-
-}
-
-
-
-
-
-.detail-add-cart:hover{
-
-    background:#fff;
-
-    color:#000;
-
-}
-
-
-
-
-
-
-
-
-
-.delivery-info{
-
-    margin-top:50px;
-
-    border-top:1px solid #222;
-
-}
-
-
-
-
-
-.delivery-info div{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    padding:20px 0;
-
-    border-bottom:1px solid #222;
-
-    color:#888;
-
-}
-
-
-
-.delivery-info span{
-
-    color:#fff;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-SIZE GUIDE
-========================= */
-
-
-#sizeGuide{
-
-    width:90%;
-
-    margin:100px auto;
-
-}
-
-
-
-#sizeGuide h2{
-
-    font-size:40px;
-
-    margin-bottom:40px;
-
-}
-
-
-
-
-
-#sizeGuide table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-}
-
-
-
-
-
-#sizeGuide th,
-#sizeGuide td{
-
-    border-bottom:1px solid #222;
-
-    padding:20px;
-
-    text-align:center;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
+/* =====================
 LOOKBOOK
-========================= */
+===================== */
 
 
-#lookbook{
+.lookbook{
 
-    width:90%;
+width:90%;
 
-    margin:180px auto;
-
-}
-
-
-
-
-
-.lookbook-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:40px;
+margin:180px auto;
 
 }
 
 
 
 
+.look-grid{
 
-.look-card{
+display:grid;
 
-    overflow:hidden;
+grid-template-columns:repeat(2,1fr);
 
-}
-
-
-
-.look-image{
-
-    position:relative;
-
-    overflow:hidden;
+gap:30px;
 
 }
 
 
 
+.look-grid img{
 
-
-.look-image img{
-
-    transition:.8s;
+transition:.5s;
 
 }
 
 
 
+.look-grid img:hover{
 
-
-.look-card:hover img{
-
-    transform:scale(1.05);
-
-}
-
-
-
-
-
-
-
-.look-hover{
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(0,0,0,.45);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    opacity:0;
-
-    transition:.4s;
-
-}
-
-
-
-
-
-.look-card:hover .look-hover{
-
-    opacity:1;
-
-}
-
-
-
-
-
-.look-hover span{
-
-    border:1px solid #fff;
-
-    padding:15px 30px;
-
-    letter-spacing:3px;
-
-}
-
-
-
-
-
-.look-info{
-
-    padding:25px 0;
-
-}
-
-
-
-
-
-.look-info span{
-
-    color:#777;
-
-    letter-spacing:3px;
-
-}
-
-
-
-.look-info h3{
-
-    margin-top:12px;
-
-    font-size:25px;
-
-    letter-spacing:2px;
-
-}
- /* =========================
-BRAND FILM
-========================= */
-
-
-#brandFilm{
-
-    width:100%;
-
-    height:80vh;
-
-    position:relative;
-
-    overflow:hidden;
-
-    margin-top:180px;
-
-}
-
-
-
-#brandFilm video{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    opacity:.55;
-
-}
-
-
-
-
-
-.film-content{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-}
-
-
-
-.film-content h2{
-
-    font-size:80px;
-
-    line-height:.9;
-
-    letter-spacing:8px;
-
-    font-weight:900;
-
-}
-
-
-
-
-
-.film-content p{
-
-    margin-top:30px;
-
-    letter-spacing:8px;
-
-    color:#aaa;
-
-}
-
-
-
-
-
-.film-content button{
-
-    margin-top:50px;
-
-    width:220px;
-
-    height:60px;
-
-    border:1px solid #fff;
-
-    transition:.3s;
-
-}
-
-
-
-.film-content button:hover{
-
-    background:#fff;
-
-    color:#000;
+transform:scale(1.04);
 
 }
 
@@ -5087,20 +1116,36 @@ BRAND FILM
 
 
 
-/* =========================
+/* =====================
 ABOUT
-========================= */
+===================== */
 
 
-#about{
+.about{
 
-    width:90%;
+width:90%;
 
-    margin:200px auto;
+margin:180px auto;
 
-    display:flex;
+min-height:500px;
 
-    justify-content:space-between;
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+
+
+.about h2{
+
+font-size:70px;
+
+line-height:1;
+
+letter-spacing:5px;
 
 }
 
@@ -5108,75 +1153,15 @@ ABOUT
 
 
 
-.about-title{
+.about p{
 
-    width:45%;
+margin-top:40px;
 
-}
+font-size:20px;
 
+line-height:2;
 
-
-
-
-.about-title span{
-
-    color:#777;
-
-    letter-spacing:5px;
-
-}
-
-
-
-
-
-.about-title h2{
-
-    margin-top:30px;
-
-    font-size:80px;
-
-    line-height:.9;
-
-    letter-spacing:5px;
-
-}
-
-
-
-
-
-.about-text{
-
-    width:40%;
-
-}
-
-
-
-
-
-.about-text p{
-
-    color:#aaa;
-
-    font-size:20px;
-
-    line-height:2;
-
-    margin-bottom:40px;
-
-}
-
-
-
-
-
-.about-text strong{
-
-    font-size:35px;
-
-    letter-spacing:5px;
+color:#aaa;
 
 }
 
@@ -5188,534 +1173,67 @@ ABOUT
 
 
 
-/* =========================
-INSTAGRAM
-========================= */
-
-
-#instagram{
-
-    width:90%;
-
-    margin:180px auto;
-
-}
-
-
-
-
-
-.instagram-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
-
-}
-
-
-
-
-
-.instagram-grid img{
-
-    aspect-ratio:1/1;
-
-    object-fit:cover;
-
-    transition:.5s;
-
-}
-
-
-
-
-
-.instagram-grid img:hover{
-
-    transform:scale(1.04);
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-CONTACT
-========================= */
-
-
-#contact{
-
-    width:90%;
-
-    margin:150px auto;
-
-    text-align:center;
-
-}
-
-
-
-
-
-#contact h2{
-
-    font-size:60px;
-
-    letter-spacing:5px;
-
-}
-
-
-
-
-
-#contact p{
-
-    margin-top:30px;
-
-    color:#999;
-
-}
-
-
-
-
-
-#contact button{
-
-    margin-top:40px;
-
-    width:220px;
-
-    height:60px;
-
-    border:1px solid #fff;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
+/* =====================
 FOOTER
-========================= */
+===================== */
 
 
 footer{
 
-    border-top:1px solid #222;
+border-top:1px solid #222;
 
-    padding:80px 5% 40px;
-
-}
-
-
-
-
-
-.footer-container{
-
-    display:grid;
-
-    grid-template-columns:2fr 1fr 1fr 1fr;
-
-    gap:50px;
+padding:70px 5%;
 
 }
 
 
 
+footer h3{
 
+letter-spacing:5px;
 
-.footer-brand h3{
-
-    font-size:25px;
-
-    letter-spacing:4px;
+font-size:25px;
 
 }
 
 
 
-.footer-brand p{
+footer p{
 
-    margin-top:20px;
+margin-top:20px;
 
-    color:#777;
-
-    letter-spacing:3px;
+color:#777;
 
 }
-
-
-
-
-
-
-
-.footer-menu{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
-}
-
-
-
-
-
-.footer-menu h4{
-
-    margin-bottom:15px;
-
-    letter-spacing:3px;
-
-}
-
-
-
-
-
-.footer-menu a{
-
-    color:#888;
-
-    transition:.3s;
-
-}
-
-
-
-
-
-.footer-menu a:hover{
-
-    color:#fff;
-
-}
-
-
-
-
-
-
-
-
-
-.footer-bottom{
-
-    margin-top:80px;
-
-    padding-top:30px;
-
-    border-top:1px solid #222;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    color:#666;
-
-}
-
-
-
-
-
-
-
-.language-select{
-
-    display:flex;
-
-    gap:10px;
-
-}
-
-
-
-.language-select button{
-
-    color:#fff;
-
-    border:1px solid #333;
-
-    padding:8px 18px;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-CART PANEL
-========================= */
-
-
-#floatingCart{
-
-    position:fixed;
-
-    right:40px;
-
-    bottom:40px;
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:50%;
-
-    background:#fff;
-
-    color:#000;
-
-    font-size:25px;
-
-    z-index:500;
-
-}
-
-
-
-
-
-#cartNumber{
-
-    position:absolute;
-
-    top:-5px;
-
-    right:-5px;
-
-    width:25px;
-
-    height:25px;
-
-    background:#e00;
-
-    color:#fff;
-
-    border-radius:50%;
-
-    font-size:12px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-
-
-
-
-
-
-
-#cartPanel{
-
-    position:fixed;
-
-    right:-450px;
-
-    top:0;
-
-    width:420px;
-
-    height:100vh;
-
-    background:#080808;
-
-    z-index:2000;
-
-    transition:.4s;
-
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-
-
-
-
-#cartPanel.active{
-
-    right:0;
-
-}
-
-
-
-
-
-.cart-header{
-
-    padding:35px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    border-bottom:1px solid #222;
-
-}
-
-
-
-
-
-#cartItems{
-
-    flex:1;
-
-    padding:30px;
-
-    overflow:auto;
-
-}
-
-
-
-
-
-.cart-footer{
-
-    padding:30px;
-
-    border-top:1px solid #222;
-
-}
-
-
-
-
-
-.total-price{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    margin-bottom:30px;
-
-}
-
-
-
-
-
-#checkoutBtn{
-
-    width:100%;
-
-    height:60px;
-
-    background:#fff;
-
-    color:#000;
-
-}
-
-
-
-
-
-
-
-
-/* =========================
-ANIMATION
-========================= */
-
-
-.fade-up{
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    transition:1s;
-
-}
-
-
-
-.fade-up.active{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
- /* =====================================================
-RESPONSIVE.CSS
-PC 유지 + MOBILE OPTIMIZATION
-===================================================== */
-
-
-/* =========================
+/* =====================
 TABLET
-========================= */
+===================== */
 
 
 @media(max-width:1024px){
 
 
-
 .hero-text h1{
 
-    font-size:85px;
+font-size:80px;
 
 }
 
 
 
-.product-grid{
+.products{
 
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-
-
-.detail-container{
-
-    gap:40px;
+grid-template-columns:1fr;
 
 }
 
 
 
-.lookbook-grid{
+.shop h2,
+.lookbook h2,
+.about h2{
 
-    gap:25px;
+font-size:55px;
 
 }
 
@@ -5731,18 +1249,20 @@ TABLET
 
 
 
-/* =========================
+/* =====================
 MOBILE
-========================= */
+===================== */
 
 
 @media(max-width:768px){
 
 
 
+
+
 body{
 
-    width:100%;
+background:#000;
 
 }
 
@@ -5750,11 +1270,24 @@ body{
 
 
 
+/* HEADER */
 
 
-.desktop-only{
+.header{
 
-    display:none!important;
+height:70px;
+
+padding:0 20px;
+
+}
+
+
+
+.logo{
+
+font-size:14px;
+
+letter-spacing:2px;
 
 }
 
@@ -5762,218 +1295,17 @@ body{
 
 
 
-.mobile-only{
+.pc-nav{
 
-    display:block;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-MOBILE HEADER
-========================= */
-
-
-.mobile-header{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:70px;
-
-    padding:0 20px;
-
-    background:rgba(0,0,0,.8);
-
-    backdrop-filter:blur(15px);
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    z-index:1500;
+display:none;
 
 }
 
 
 
+.hamburger{
 
-
-.mobile-logo{
-
-    font-size:15px;
-
-    font-weight:800;
-
-    letter-spacing:3px;
-
-    text-align:center;
-
-}
-
-
-
-
-
-#hamburger{
-
-    font-size:28px;
-
-}
-
-
-
-
-
-#mobileCart{
-
-    font-size:22px;
-
-}
-
-
-
-
-
-
-
-
-/* =========================
-SIDE MENU
-========================= */
-
-
-#mobileMenu{
-
-    position:fixed;
-
-    left:-100%;
-
-    top:0;
-
-    width:85%;
-
-    height:100vh;
-
-    background:#050505;
-
-    padding:35px 25px;
-
-    transition:.45s;
-
-    z-index:3000;
-
-}
-
-
-
-#mobileMenu.active{
-
-    left:0;
-
-}
-
-
-
-.mobile-menu-top{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-}
-
-
-
-
-
-.mobile-menu-logo{
-
-    font-size:25px;
-
-    font-weight:800;
-
-    letter-spacing:3px;
-
-}
-
-
-
-
-
-#menuClose{
-
-    font-size:25px;
-
-}
-
-
-
-
-
-#mobileMenu nav{
-
-    margin-top:80px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:35px;
-
-}
-
-
-
-
-
-#mobileMenu nav a{
-
-    font-size:25px;
-
-    letter-spacing:3px;
-
-}
-
-
-
-
-
-.mobile-language{
-
-    margin-top:80px;
-
-    display:flex;
-
-    gap:15px;
-
-}
-
-
-
-
-
-.mobile-language button{
-
-    border:1px solid #333;
-
-    padding:12px 20px;
+display:block;
 
 }
 
@@ -5985,40 +1317,20 @@ SIDE MENU
 
 
 
-/* =========================
-INTRO MOBILE
-========================= */
+/* MOBILE MENU */
 
 
-.intro-content h1{
+.mobile-menu{
 
-    font-size:45px;
-
-    letter-spacing:5px;
+padding:30px;
 
 }
 
 
 
+.mobile-menu a{
 
-
-.intro-content p{
-
-    font-size:12px;
-
-}
-
-
-
-
-
-
-
-#enterBtn{
-
-    width:180px;
-
-    height:55px;
+font-size:25px;
 
 }
 
@@ -6030,28 +1342,26 @@ INTRO MOBILE
 
 
 
-/* =========================
-MOBILE HERO
-========================= */
+/* HERO */
 
 
-#hero{
+.hero{
 
-    display:none;
+width:100%;
 
-}
+height:auto;
 
+min-height:100vh;
 
+display:flex;
 
-#mobileHero{
+flex-direction:column-reverse;
 
-    display:block;
+justify-content:center;
 
-    padding-top:70px;
+padding:100px 20px 40px;
 
-    min-height:100vh;
-
-    position:relative;
+gap:40px;
 
 }
 
@@ -6059,11 +1369,35 @@ MOBILE HERO
 
 
 
-#mobileHero img{
+.hero-image{
 
-    height:100vh;
+width:100%;
 
-    object-fit:cover;
+}
+
+
+
+.hero-text{
+
+width:100%;
+
+}
+
+
+
+.hero-text p{
+
+font-size:11px;
+
+}
+
+
+
+.hero-text h1{
+
+font-size:65px;
+
+letter-spacing:3px;
 
 }
 
@@ -6071,13 +1405,11 @@ MOBILE HERO
 
 
 
-#mobileHero div{
+.hero-text button{
 
-    position:absolute;
+width:180px;
 
-    left:25px;
-
-    bottom:60px;
+height:55px;
 
 }
 
@@ -6085,29 +1417,14 @@ MOBILE HERO
 
 
 
-#mobileHero h1{
-
-    font-size:60px;
-
-    line-height:.9;
-
-    font-weight:900;
-
-}
+/* SHOP */
 
 
+.shop{
 
+width:90%;
 
-
-#mobileHero button{
-
-    margin-top:30px;
-
-    width:180px;
-
-    height:55px;
-
-    border:1px solid #fff;
+margin:100px auto;
 
 }
 
@@ -6115,20 +1432,22 @@ MOBILE HERO
 
 
 
+.shop h2,
+.lookbook h2,
+.about h2{
+
+font-size:45px;
+
+}
 
 
 
 
-/* =========================
-SHOP MOBILE
-========================= */
+.products{
 
+grid-template-columns:1fr;
 
-#shop{
-
-    width:90%;
-
-    margin:100px auto;
+gap:60px;
 
 }
 
@@ -6136,127 +1455,9 @@ SHOP MOBILE
 
 
 
-.section-title h2{
+.product h3{
 
-    font-size:45px;
-
-}
-
-
-
-
-
-.shop-category{
-
-    overflow-x:auto;
-
-    flex-wrap:nowrap;
-
-}
-
-
-
-.shop-category button{
-
-    white-space:nowrap;
-
-    padding:12px 22px;
-
-}
-
-
-
-
-
-
-
-.product-grid{
-
-    grid-template-columns:1fr;
-
-    gap:40px;
-
-}
-
-
-
-
-
-.product-hover{
-
-    display:none;
-
-}
-
-
-
-
-
-
-
-.mobile-product-list{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:25px;
-
-}
-
-
-
-
-
-.mobile-product-card{
-
-    display:flex;
-
-    gap:18px;
-
-    align-items:center;
-
-}
-
-
-
-
-
-.mobile-product-card img{
-
-    width:120px;
-
-    height:150px;
-
-    object-fit:cover;
-
-}
-
-
-
-
-
-.mobile-product-card h3{
-
-    font-size:15px;
-
-}
-
-
-
-
-
-.mobile-product-card button{
-
-    margin-left:auto;
-
-    width:45px;
-
-    height:45px;
-
-    border:1px solid #fff;
-
-    border-radius:50%;
+font-size:16px;
 
 }
 
@@ -6268,20 +1469,59 @@ SHOP MOBILE
 
 
 
-/* =========================
-FLOAT CART
-========================= */
+/* LOOKBOOK */
 
 
-#floatingCart{
+.lookbook{
 
-    width:60px;
+width:90%;
 
-    height:60px;
+margin:100px auto;
 
-    right:20px;
+}
 
-    bottom:90px;
+
+
+.look-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+
+
+/* ABOUT */
+
+
+.about{
+
+width:90%;
+
+margin:100px auto;
+
+min-height:350px;
+
+}
+
+
+
+
+
+.about h2{
+
+font-size:45px;
+
+}
+
+
+
+
+
+.about p{
+
+font-size:16px;
 
 }
 
@@ -6293,331 +1533,21 @@ FLOAT CART
 
 
 
-/* =========================
-CART MOBILE
-========================= */
-
-
-#cartPanel{
-
-    width:100%;
-
-    right:-100%;
-
-}
-
-
-
-
-
-#cartPanel.active{
-
-    right:0;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-DETAIL MOBILE
-========================= */
-
-
-#productDetail{
-
-    width:92%;
-
-    margin-top:100px;
-
-}
-
-
-
-
-
-.detail-container{
-
-    display:block;
-
-}
-
-
-
-
-
-.detail-gallery{
-
-    width:100%;
-
-}
-
-
-
-
-
-.thumbnail-list{
-
-    overflow-x:auto;
-
-}
-
-
-
-
-
-.thumbnail-list img{
-
-    width:70px;
-
-    height:90px;
-
-}
-
-
-
-
-
-.detail-info{
-
-    width:100%;
-
-    margin-top:40px;
-
-}
-
-
-
-
-
-.detail-info h1{
-
-    font-size:30px;
-
-}
-
-
-
-
-
-.purchase-buttons{
-
-    flex-direction:column;
-
-}
-
-
-
-
-
-.purchase-buttons button{
-
-    width:100%;
-
-}
-
-
-
-
-
-
-
-
-#sizeGuide{
-
-    width:92%;
-
-    overflow-x:auto;
-
-}
-
-
-
-
-
-
-
-#sizeGuide table{
-
-    min-width:600px;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-LOOKBOOK MOBILE
-========================= */
-
-
-#lookbook{
-
-    width:92%;
-
-    margin:100px auto;
-
-}
-
-
-
-
-
-.lookbook-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-
-
-.look-info h3{
-
-    font-size:20px;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-BRAND FILM MOBILE
-========================= */
-
-
-#brandFilm{
-
-    height:60vh;
-
-}
-
-
-
-
-
-.film-content h2{
-
-    font-size:45px;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-ABOUT MOBILE
-========================= */
-
-
-#about{
-
-    width:92%;
-
-    display:block;
-
-    margin:100px auto;
-
-}
-
-
-
-
-
-.about-title,
-.about-text{
-
-    width:100%;
-
-}
-
-
-
-
-
-.about-title h2{
-
-    font-size:55px;
-
-}
-
-
-
-
-
-.about-text{
-
-    margin-top:50px;
-
-}
-
-
-
-
-
-.about-text p{
-
-    font-size:16px;
-
-}
-
-
-
-
-
-
-
-
-/* =========================
-INSTAGRAM MOBILE
-========================= */
-
-
-.instagram-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:10px;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-FOOTER MOBILE
-========================= */
+/* FOOTER */
 
 
 footer{
 
-    padding:50px 25px 100px;
+padding:50px 25px 100px;
+
+}
+
+
+
+
+footer h3{
+
+font-size:18px;
 
 }
 
@@ -6625,112 +1555,28 @@ footer{
 
 
 
-.footer-container{
-
-    grid-template-columns:1fr;
-
-    gap:40px;
-
 }
-
-
-
-
-
-.footer-bottom{
-
-    display:block;
-
-}
-
-
-
-
-
-.language-select{
-
-    margin-top:25px;
-
-}
-
-
-
-
-
-
-
-
-/* =========================
-BOTTOM NAV
-========================= */
-
-
-.mobile-bottom-nav{
-
-    position:fixed;
-
-    bottom:0;
-
-    left:0;
-
-    width:100%;
-
-    height:65px;
-
-    background:#050505;
-
-    border-top:1px solid #222;
-
-    display:flex;
-
-    justify-content:space-around;
-
-    align-items:center;
-
-    z-index:2000;
-
-}
-
-
-
-
-
-.mobile-bottom-nav button{
-
-    font-size:12px;
-
-    letter-spacing:1px;
-
-}
-
-
-
-}
- // =====================================================
-// EMERGENCY HAMMER
-// SCRIPT.JS
-// =====================================================
-
-
-
-// =========================
+// =====================
 // LOADING
-// =========================
+// =====================
 
 
 window.addEventListener("load",()=>{
 
 
-const loading = document.getElementById("loading");
+const loading =
+document.getElementById("loading");
 
-const intro = document.getElementById("intro");
 
+
+if(loading){
 
 
 setTimeout(()=>{
 
 
 loading.style.opacity="0";
+
 
 loading.style.transition=".6s";
 
@@ -6739,70 +1585,21 @@ loading.style.transition=".6s";
 setTimeout(()=>{
 
 
-loading.style.display="none";
+loading.remove();
 
 
 },600);
 
 
 
-},1800);
+},1200);
 
-
-
-});
-
-
-
-
-
-
-
-
-
-// =========================
-// ENTER BUTTON
-// =========================
-
-
-const enterBtn =
-document.getElementById("enterBtn");
-
-
-
-if(enterBtn){
-
-
-enterBtn.addEventListener("click",()=>{
-
-
-document
-.getElementById("intro")
-.style.display="none";
-
-
-
-document
-.getElementById("site")
-.style.display="block";
-
-
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-
-});
 
 
 }
 
 
+});
 
 
 
@@ -6810,26 +1607,33 @@ behavior:"smooth"
 
 
 
-// =========================
+
+
+// =====================
 // MOBILE MENU
-// =========================
+// =====================
+
 
 
 const hamburger =
 document.getElementById("hamburger");
 
+
+
 const mobileMenu =
 document.getElementById("mobileMenu");
 
 
-const menuClose =
-document.getElementById("menuClose");
+
+const closeMenu =
+document.getElementById("closeMenu");
 
 
 
 
 
-if(hamburger){
+if(hamburger && mobileMenu){
+
 
 
 hamburger.addEventListener("click",()=>{
@@ -6847,10 +1651,11 @@ mobileMenu.classList.add("active");
 
 
 
-if(menuClose){
+if(closeMenu && mobileMenu){
 
 
-menuClose.addEventListener("click",()=>{
+
+closeMenu.addEventListener("click",()=>{
 
 
 mobileMenu.classList.remove("active");
@@ -6869,20 +1674,27 @@ mobileMenu.classList.remove("active");
 
 
 
-// MOBILE MENU LINK CLICK CLOSE
+// 메뉴 클릭하면 닫기
 
 
 document
-.querySelectorAll("#mobileMenu a")
-.forEach(link=>{
+.querySelectorAll(".mobile-menu a")
+.forEach((menu)=>{
 
 
-link.addEventListener("click",()=>{
+menu.addEventListener("click",()=>{
+
+
+if(mobileMenu){
 
 
 mobileMenu.classList.remove("active");
 
 
+}
+
+
+
 });
 
 
@@ -6896,9 +1708,9 @@ mobileMenu.classList.remove("active");
 
 
 
-// =========================
-// CART SYSTEM
-// =========================
+// =====================
+// CART
+// =====================
 
 
 
@@ -6911,173 +1723,52 @@ document.querySelectorAll(".add-cart");
 
 
 
-const cartPanel =
-document.getElementById("cartPanel");
 
 
 
-const cartBtn =
-document.getElementById("cartBtn");
+cartButtons.forEach((button)=>{
 
 
-const floatingCart =
-document.getElementById("floatingCart");
 
+button.addEventListener("click",()=>{
 
-const cartClose =
-document.getElementById("cartClose");
 
 
-
-const cartItems =
-document.getElementById("cartItems");
-
-
-const cartNumber =
-document.getElementById("cartNumber");
-
-
-const totalPrice =
-document.getElementById("totalPrice");
-
-
-
-
-
-
-
-
-function updateCart(){
-
-
-
-cartItems.innerHTML="";
-
-
-
-let total=0;
-
-
-
-cart.forEach((item,index)=>{
-
-
-
-total += item.price;
-
-
-
-const div =
-document.createElement("div");
-
-
-
-div.className="cart-item";
-
-
-
-div.innerHTML=`
-
-
-
-<div>
-
-<h3>${item.name}</h3>
-
-<p>₩${item.price.toLocaleString()}</p>
-
-</div>
-
-
-
-<button class="remove"
-data-index="${index}">
-
-×
-
-</button>
-
-
-
-`;
-
-
-
-cartItems.appendChild(div);
-
-
-
-});
-
-
-
-
-
-cartNumber.innerText =
-cart.length;
-
-
-
-totalPrice.innerText =
-"₩"+total.toLocaleString();
-
-
-
-
-
-document
-.querySelectorAll(".remove")
-.forEach(btn=>{
-
-
-btn.addEventListener("click",()=>{
-
-
-cart.splice(
-btn.dataset.index,
-1
-);
-
-
-updateCart();
-
-
-
-});
-
-
-});
-
-
-
-}
-
-
-
-
-
-
-
-
-cartButtons.forEach(btn=>{
-
-
-
-btn.addEventListener("click",()=>{
-
-
-
-cart.push({
-
+const item={
 
 
 name:
-btn.dataset.name,
-
+button.dataset.name,
 
 
 price:
-Number(btn.dataset.price)
+Number(button.dataset.price)
+
+
+
+};
+
+
+
+cart.push(item);
+
+
+
+button.innerText="ADDED";
+
+
+
+setTimeout(()=>{
+
+
+button.innerText="ADD CART";
+
+
+},1000);
+
+
+
+console.log(cart);
 
 
 
@@ -7085,8 +1776,35 @@ Number(btn.dataset.price)
 
 
 
-updateCart();
+});
 
+
+
+
+
+
+
+
+
+// =====================
+// BUTTON HOVER EFFECT
+// =====================
+
+
+
+const buttons =
+document.querySelectorAll("button");
+
+
+
+buttons.forEach((btn)=>{
+
+
+
+btn.addEventListener("mouseenter",()=>{
+
+
+btn.style.transition=".3s";
 
 
 });
@@ -7102,265 +1820,17 @@ updateCart();
 
 
 
-function openCart(){
 
-
-cartPanel.classList.add("active");
-
-
-}
+// =====================
+// SCROLL FADE
+// =====================
 
 
 
-function closeCart(){
-
-
-cartPanel.classList.remove("active");
-
-
-}
-
-
-
-
-
-
-
-if(cartBtn){
-
-
-cartBtn.addEventListener(
-"click",
-openCart
-);
-
-
-}
-
-
-
-if(floatingCart){
-
-
-floatingCart.addEventListener(
-"click",
-openCart
-);
-
-
-}
-
-
-
-if(cartClose){
-
-
-cartClose.addEventListener(
-"click",
-closeCart
-);
-
-
-}
-
-
-
-
-
-
-
-
-
-// =========================
-// IMAGE THUMBNAIL CHANGE
-// =========================
-
-
-
-const mainImage =
-document.getElementById(
-"mainProductImage"
-);
-
-
-
-const thumbnails =
+const targets =
 document.querySelectorAll(
-".thumbnail-list img"
+".product,.look-grid img,.about"
 );
-
-
-
-thumbnails.forEach(img=>{
-
-
-
-img.addEventListener("click",()=>{
-
-
-
-if(mainImage){
-
-
-mainImage.src =
-img.src;
-
-
-}
-
-
-
-thumbnails.forEach(t=>{
-
-
-t.classList.remove("active");
-
-
-});
-
-
-
-img.classList.add("active");
-
-
-
-});
-
-
-
-});
-
-
-
-
-
-
-
-
-
-// =========================
-// QUANTITY
-// =========================
-
-
-
-const plus =
-document.querySelector(".quantity-box button:last-child");
-
-
-
-const minus =
-document.querySelector(".quantity-box button:first-child");
-
-
-
-const quantity =
-document.querySelector(
-".quantity-box input"
-);
-
-
-
-
-
-if(plus){
-
-
-plus.addEventListener("click",()=>{
-
-
-quantity.value =
-Number(quantity.value)+1;
-
-
-
-});
-
-
-}
-
-
-
-
-if(minus){
-
-
-minus.addEventListener("click",()=>{
-
-
-
-if(quantity.value>1){
-
-
-quantity.value =
-Number(quantity.value)-1;
-
-
-
-}
-
-
-
-});
-
-
-}
-
-
-
-
-
-
-
-
-
-// =========================
-// SIZE BUTTON
-// =========================
-
-
-document
-.querySelectorAll(".size-buttons button")
-.forEach(btn=>{
-
-
-btn.addEventListener("click",()=>{
-
-
-
-document
-.querySelectorAll(".size-buttons button")
-.forEach(b=>{
-
-
-b.classList.remove("active");
-
-
-});
-
-
-
-btn.classList.add("active");
-
-
-
-});
-
-
-
-});
-
-
-
-
-
-
-
-
-
-// =========================
-// SCROLL ANIMATION
-// =========================
 
 
 
@@ -7368,18 +1838,16 @@ const observer =
 new IntersectionObserver((entries)=>{
 
 
-
 entries.forEach(entry=>{
+
 
 
 if(entry.isIntersecting){
 
 
+entry.target.style.opacity="1";
 
-entry.target.classList.add(
-"active"
-);
-
+entry.target.style.transform="translateY(0)";
 
 
 }
@@ -7389,133 +1857,75 @@ entry.target.classList.add(
 });
 
 
+
 });
 
 
 
+
+
+
+
+
+targets.forEach((target)=>{
+
+
+
+target.style.opacity="0";
+
+target.style.transform=
+"translateY(40px)";
+
+target.style.transition=
+"1s";
+
+
+
+observer.observe(target);
+
+
+
+});
+
+
+
+
+
+
+
+
+
+// =====================
+// SMOOTH MOBILE MENU
+// =====================
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+if(window.scrollY>100){
 
 
 document
-.querySelectorAll(".fade-up")
-.forEach(el=>{
-
-
-observer.observe(el);
-
-
-});
+.querySelector(".header")
+.style.background=
+"rgba(0,0,0,.85)";
 
 
 
-
-
-
-
-
-
-// =========================
-// BACK BUTTON
-// =========================
-
-
-
-const backButton =
-document.getElementById(
-"backButton"
-);
-
-
-
-if(backButton){
-
-
-backButton.addEventListener("click",()=>{
-
-
-
-history.back();
-
-
-
-});
-
-
-}
-
-
-
-
-
-
-
-
-
-// =========================
-// LANGUAGE
-// =========================
-
+}else{
 
 
 document
-.querySelectorAll(".language-select button, .mobile-language button")
-.forEach(btn=>{
+.querySelector(".header")
+.style.background=
+"rgba(0,0,0,.6)";
 
-
-btn.addEventListener("click",()=>{
-
-
-alert(
-
-btn.innerText+
-" LANGUAGE SELECTED"
-
-);
-
-
-
-});
-
-
-});
-
-
-
-
-
-
-
-
-
-// =========================
-// QUICK VIEW
-// =========================
-
-
-
-const quickModal =
-document.getElementById(
-"quickViewModal"
-);
-
-
-
-const quickClose =
-document.getElementById(
-"quickClose"
-);
-
-
-
-if(quickClose){
-
-
-quickClose.addEventListener("click",()=>{
-
-
-quickModal.style.display="none";
-
-
-});
 
 
 }
+
+
+
+});
