@@ -1753,17 +1753,42 @@ cards[currentIndex].classList.add("active");
 }
 function prevProduct(){
 
-currentIndex--;
 
-if(currentIndex<0){
+let cards=document.querySelectorAll(".product-card");
 
-currentIndex=currentProducts.length-1;
+
+if(cards.length===0){
+
+return;
 
 }
 
-openDetail(currentIndex);
 
-} 
+
+cards.forEach(function(card){
+
+card.classList.remove("active");
+
+});
+
+
+
+currentIndex--;
+
+
+
+if(currentIndex<0){
+
+currentIndex=cards.length-1;
+
+}
+
+
+
+cards[currentIndex].classList.add("active");
+
+
+}
 // =====================
 // DETAIL
 // =====================
