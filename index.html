@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>EMERGENCY HAMMER</title>
@@ -26,7 +25,6 @@ box-sizing:border-box;
 body{
 
 background:#000;
-
 color:#fff;
 
 font-family:
@@ -44,7 +42,6 @@ height:100vh;
 
 
 
-
 /* =====================
 GLOBAL
 ===================== */
@@ -53,13 +50,11 @@ GLOBAL
 .page{
 
 height:100vh;
-
 width:100%;
 
 display:none;
 
 align-items:center;
-
 justify-content:center;
 
 position:relative;
@@ -67,8 +62,6 @@ position:relative;
 animation:pageIn .6s ease;
 
 }
-
-
 
 
 
@@ -82,7 +75,6 @@ LOADING
 position:fixed;
 
 width:100%;
-
 height:100vh;
 
 background:#000;
@@ -124,6 +116,25 @@ letter-spacing:8px;
 opacity:.5;
 
 }
+
+
+
+
+
+
+
+/* =====================
+TRANSITION 제거
+===================== */
+
+#transition{
+
+display:none;
+
+}
+
+
+
 
 
 
@@ -214,6 +225,8 @@ opacity:.5;
 
 
 
+
+
 /* =====================
 MENU
 ===================== */
@@ -281,6 +294,8 @@ animation-delay:.7s;
 
 
 
+
+
 /* =====================
 BACK
 ===================== */
@@ -309,11 +324,14 @@ transition:.3s;
 transform:translateX(-8px);
 
 }
-/* PART 1-2 */
 
 
- 
-/* =====================
+
+
+
+
+/* 다음 파트에서 CSS 이어짐 */
+ /* =====================
 SHOP
 ===================== */
 
@@ -355,6 +373,8 @@ transition:.4s;
 letter-spacing:18px;
 
 }
+
+
 
 
 
@@ -444,6 +464,98 @@ opacity:.6;
 
 
 /* =====================
+MOBILE SHOP
+===================== */
+
+
+.mobile-next{
+
+display:none;
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+.product-list{
+
+
+width:90vw;
+
+height:65vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
+
+
+}
+
+
+
+.product-card{
+
+
+display:none;
+
+width:85vw;
+
+
+}
+
+
+
+.product-card.active{
+
+
+display:block;
+
+
+}
+
+
+
+.product-thumb{
+
+
+height:55vh;
+
+
+}
+
+
+
+.mobile-next{
+
+
+display:block;
+
+margin-top:30px;
+
+text-align:center;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
 DETAIL
 ===================== */
 
@@ -510,13 +622,6 @@ letter-spacing:5px;
 
 
 
-
-
-/* =====================
-BUTTON
-===================== */
-
-
 .button{
 
 border:1px solid white;
@@ -546,9 +651,6 @@ background:white;
 color:black;
 
 }
-
-
-
 
 
 
@@ -640,247 +742,44 @@ font-size:22px;
 cursor:pointer;
 
 }
-
-
-
-
-
-
-
 /* =====================
-LOOKBOOK
+BODY START
 ===================== */
-
-
-.look-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:10px;
-
-width:500px;
-
-}
-
-
-
-.look-item{
-
-aspect-ratio:1;
-
-border:1px solid #222;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:9px;
-
-letter-spacing:3px;
-
-transition:.4s;
-
-}
-
-
-
-.look-item:hover{
-
-transform:scale(1.05);
-
-}
-
-
-
-
-
-
-
-/* =====================
-ABOUT
-===================== */
-
-
-.about-wrap{
-
-width:600px;
-
-text-align:center;
-
-height:80vh;
-
-overflow:auto;
-
-}
-
-
-
-.about-section{
-
-margin-top:60px;
-
-}
-
-
-
-.about-title{
-
-font-size:11px;
-
-letter-spacing:8px;
-
-opacity:.5;
-
-margin-bottom:25px;
-
-}
-
-
-
-.about-section p{
-
-font-size:11px;
-
-line-height:2.2;
-
-letter-spacing:3px;
-
-}
-
-
-
-
-
-
-
-/* =====================
-ANIMATION
-===================== */
-
-
-@keyframes fadeIn{
-
-
-from{
-
-opacity:0;
-
-}
-
-
-to{
-
-opacity:1;
-
-}
-
-
-}
-
-
-
-@keyframes logoIn{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-}
-
-
-
-@keyframes pageIn{
-
-
-from{
-
-opacity:0;
-
-}
-
-
-to{
-
-opacity:1;
-
-}
-
-
-}
-
-
-
-@keyframes menuIn{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-}
-
-
-
-@keyframes zoomIn{
-
-
-from{
-
-opacity:0;
-
-transform:scale(.9);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-
-}
-/* PART 2-1 */
-
 
 
 <body>
+
+
+
+
+
+<!-- LOADING -->
+
+
+<div id="loading">
+
+
+<div class="loading-logo">
+
+EMERGENCY HAMMER
+
+</div>
+
+
+
+<div class="loading-sub">
+
+EST. 2026
+
+</div>
+
+
+
+</div>
+
+
+
+
 
 
 
@@ -889,9 +788,14 @@ transform:scale(1);
 
 <div id="cartIcon" onclick="openCart()">
 
+
 CART (0)
 
+
 </div>
+
+
+
 
 
 
@@ -922,11 +826,15 @@ BREAK YOUR FIT.
 
 
 
+
 <div class="enter" onclick="openMenu()">
+
 
 ENTER
 
+
 </div>
+
 
 
 
@@ -938,10 +846,12 @@ EST. 2026
 
 
 
+
 </div>
 
 
 </div>
+
 
 
 
@@ -958,36 +868,49 @@ EST. 2026
 
 <div class="back" onclick="openIntro()">
 
+
 ←
 
+
 </div>
+
+
 
 
 
 <div>
 
 
+
 <div class="menu-item" onclick="openShop()">
+
 
 01 SHOP
 
+
 </div>
+
 
 
 
 
 <div class="menu-item" onclick="openLookbook()">
 
+
 02 LOOKBOOK
+
 
 </div>
 
 
 
 
+
 <div class="menu-item" onclick="openAbout()">
 
+
 03 ABOUT
+
 
 </div>
 
@@ -1013,12 +936,12 @@ style="color:white;text-decoration:none;">
 
 
 
-</div>
 
 
 </div>
 
 
+</div>
 
 
 
@@ -1026,63 +949,87 @@ style="color:white;text-decoration:none;">
 
 
 
-<!-- SHOP CATEGORY -->
+
+
+<!-- SHOP -->
 
 
 <div class="page" id="shop">
 
 
+
 <div class="back" onclick="openMenu()">
+
 
 ←
 
+
 </div>
+
+
+
 
 
 
 <div>
 
 
+
 <div class="category-title">
+
 
 SHOP
 
+
 </div>
+
 
 
 
 
 <div class="category-item" onclick="openList('new')">
 
+
 NEW ARRIVAL
 
+
 </div>
+
 
 
 
 
 <div class="category-item" onclick="openList('top')">
 
+
 TOP
 
+
 </div>
+
 
 
 
 
 <div class="category-item" onclick="openList('bottom')">
 
+
 BOTTOM
 
-</div>
-
-
-
 
 </div>
 
 
+
+
+
+
 </div>
+
+
+
+</div>
+
 
 
 
@@ -1099,39 +1046,52 @@ BOTTOM
 
 <div class="back" onclick="openShop()">
 
+
+
 ←
 
+
+
 </div>
+
+
+
 
 
 
 <div>
 
 
+
+
 <div class="category-title" id="listTitle">
+
 
 TOP
 
+
 </div>
+
+
 
 
 
 <div class="product-list" id="productsBox">
 
+
 </div>
+
+
 
 
 
 
 <div class="mobile-next" onclick="nextProduct()">
 
+
+
 NEXT →
 
-</div>
-
-
-
-</div>
 
 
 </div>
@@ -1142,8 +1102,21 @@ NEXT →
 
 
 
+</div>
 
-<!-- PRODUCT DETAIL -->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- DETAIL -->
 
 
 <div class="page" id="detail">
@@ -1151,36 +1124,56 @@ NEXT →
 
 <div class="back" onclick="backList()">
 
+
+
 ←
 
+
+
 </div>
+
+
+
 
 
 
 <div>
 
 
+
+
 <div class="product-image" id="detailImage">
+
 
 FRONT
 
+
 </div>
+
+
 
 
 
 <div class="product-name" id="detailName">
 
+
 TEE
 
+
 </div>
+
+
 
 
 
 <div class="product-price" id="detailPrice">
 
+
 ₩49,000
 
+
 </div>
+
 
 
 
@@ -1197,14 +1190,17 @@ DESCRIPTION
 
 <br>
 
+
 SLIM STREET SILHOUETTE
 
 <br>
+
 
 EST. 2026
 
 
 </div>
+
 
 
 
@@ -1220,42 +1216,64 @@ SIZE
 
 
 
+
 <button onclick="selectSize(this)">
+
 
 S
 
+
 </button>
 
 
 
 
+
 <button onclick="selectSize(this)">
+
+
 
 M
 
+
+
 </button>
 
 
 
 
+
 <button onclick="selectSize(this)">
+
+
 
 L
 
+
+
 </button>
+
 
 
 
 
 <button onclick="selectSize(this)">
 
+
+
 XL
 
+
+
 </button>
+
+
 
 
 
 </div>
+
+
 
 
 
@@ -1266,31 +1284,49 @@ XL
 
 <button onclick="changeQty(-1)">
 
+
+
 -
 
+
+
 </button>
+
 
 
 
 
 <span id="qty">
 
+
+
 1
+
+
 
 </span>
 
 
 
 
+
 <button onclick="changeQty(1)">
 
+
+
 +
+
+
 
 </button>
 
 
 
+
+
+
 </div>
+
 
 
 
@@ -1299,10 +1335,14 @@ XL
 <div class="button" onclick="addDetailCart()">
 
 
+
 ADD TO CART
 
 
+
 </div>
+
+
 
 
 
@@ -1311,26 +1351,32 @@ ADD TO CART
 
 
 
+
+
 <div class="button" onclick="buyDetail()">
+
 
 
 BUY NOW
 
 
-</div>
-
-
-
 
 </div>
 
 
+
+
+
+
+
 </div>
-/* PART 2-2 */
 
 
 
-<!-- CART -->
+</div>
+ /* =====================
+CART
+===================== */
 
 
 <div class="page" id="cart">
@@ -1338,9 +1384,14 @@ BUY NOW
 
 <div class="back" onclick="openMenu()">
 
+
+
 ←
 
+
+
 </div>
+
 
 
 
@@ -1348,27 +1399,41 @@ BUY NOW
 <div>
 
 
+
+
 <div class="category-title">
+
 
 CART
 
+
 </div>
+
 
 
 
 
 <div id="cartList">
 
+
+
 </div>
+
 
 
 
 
 <div id="total">
 
+
+
 TOTAL ₩0
 
+
+
 </div>
+
+
 
 
 
@@ -1376,9 +1441,14 @@ TOTAL ₩0
 
 <div class="button" onclick="openShop()">
 
+
+
 CONTINUE SHOPPING
 
+
+
 </div>
+
 
 
 
@@ -1386,14 +1456,21 @@ CONTINUE SHOPPING
 
 <div class="button" onclick="checkout()">
 
+
+
 CHECK OUT
 
-</div>
-
-
 
 
 </div>
+
+
+
+
+
+
+</div>
+
 
 
 </div>
@@ -1412,11 +1489,17 @@ CHECK OUT
 <div class="page" id="order">
 
 
+
 <div class="back" onclick="openCart()">
+
+
 
 ←
 
+
+
 </div>
+
 
 
 
@@ -1425,11 +1508,18 @@ CHECK OUT
 <div>
 
 
+
+
 <div class="category-title">
+
+
 
 ORDER
 
+
+
 </div>
+
 
 
 
@@ -1440,48 +1530,76 @@ ORDER
 
 NAME
 
+
 <br>
+
 
 ____________
 
 
 
+
+
 <br><br>
+
 
 
 ADDRESS
 
+
+
 <br>
 
+
 ____________
+
+
 
 
 
 <br><br>
 
 
+
 PHONE
 
+
+
 <br>
+
 
 ____________
 
 
+
+
+
 </div>
+
+
+
 
 
 
 
 <div class="button">
 
+
 PLACE ORDER
 
+
+</div>
+
+
+
+
+
+
+
+
 </div>
 
 
-
-
-</div>
 
 
 </div>
@@ -1500,11 +1618,18 @@ PLACE ORDER
 <div class="page" id="lookbook">
 
 
+
 <div class="back" onclick="openMenu()">
+
+
 
 ←
 
+
+
 </div>
+
+
 
 
 
@@ -1513,11 +1638,19 @@ PLACE ORDER
 <div>
 
 
+
+
+
 <div class="category-title">
+
+
 
 LOOKBOOK
 
+
+
 </div>
+
 
 
 
@@ -1525,7 +1658,10 @@ LOOKBOOK
 
 <div class="look-grid" id="lookGrid">
 
+
+
 </div>
+
 
 
 
@@ -1534,9 +1670,16 @@ LOOKBOOK
 
 <div class="button" onclick="mobileNextLook()">
 
+
+
 NEXT →
 
+
+
 </div>
+
+
+
 
 
 
@@ -1544,15 +1687,23 @@ NEXT →
 
 <div class="button" onclick="prevLook()">
 
+
+
 ← PREV
 
-</div>
-
-
-
 
 
 </div>
+
+
+
+
+
+
+
+</div>
+
+
 
 
 </div>
@@ -1571,11 +1722,18 @@ NEXT →
 <div class="page" id="about">
 
 
+
 <div class="back" onclick="openMenu()">
+
+
 
 ←
 
+
+
 </div>
+
+
 
 
 
@@ -1585,11 +1743,19 @@ NEXT →
 
 
 
+
+
 <div class="logo">
+
+
 
 EMERGENCY HAMMER
 
+
+
 </div>
+
+
 
 
 
@@ -1599,30 +1765,48 @@ EMERGENCY HAMMER
 <div class="about-section">
 
 
+
+
+
 <div class="about-title">
 
+
+
 ABOUT
+
+
 
 </div>
 
 
 
 
+
+
+
 <p>
+
 
 
 EMERGENCY HAMMER IS A STREETWEAR BRAND BUILT ON THE IDEA OF BREAKING LIMITS.
 
 
+
 <br><br>
 
 
+
 WE COMBINE INTELLIGENCE,
+
 PRECISION AND STREET CULTURE
+
 TO CREATE A NEW STANDARD OF FIT.
 
 
+
 </p>
+
+
 
 
 
@@ -1638,38 +1822,58 @@ TO CREATE A NEW STANDARD OF FIT.
 <div class="about-section">
 
 
+
+
+
 <div class="about-title">
 
+
+
 PHILOSOPHY
+
+
 
 </div>
 
 
 
 
+
+
+
 <p>
+
 
 
 BREAK YOUR FIT.
 
 
+
 <br><br>
+
 
 
 NOT FOLLOWING THE SHAPE.
 
 
+
 <br>
 
 
+
 CREATING YOUR OWN FORM.
+
 
 
 </p>
 
 
 
+
+
+
 </div>
+
 
 
 
@@ -1681,11 +1885,21 @@ CREATING YOUR OWN FORM.
 <div class="about-section">
 
 
+
+
+
 <div class="about-title">
+
+
 
 DESIGN
 
+
+
 </div>
+
+
+
 
 
 
@@ -1694,26 +1908,37 @@ DESIGN
 <p>
 
 
+
 CLEAN SILHOUETTES.
 
 
+
 <br>
+
 
 
 STRONG DETAILS.
 
 
+
 <br>
 
 
+
 STREET AND INTELLIGENCE.
+
 
 
 </p>
 
 
 
+
+
+
+
 </div>
+
 
 
 
@@ -1727,6 +1952,7 @@ STREET AND INTELLIGENCE.
 
 ESTABLISHED
 
+
 <br>
 
 
@@ -1739,18 +1965,22 @@ ESTABLISHED
 SEOUL, KOREA
 
 
-</div>
-
-
-
-
-
 
 </div>
 
 
+
+
+
+
+
+
+
 </div>
 
+
+
+</div>
 
 
 
@@ -1759,13 +1989,9 @@ SEOUL, KOREA
 
 
 <script>
-/* PART 3-1 */
-
-
-
-// =====================
-// PRODUCT DATA
-// =====================
+/* =====================
+PRODUCT DATA
+===================== */
 
 
 const products = {
@@ -1858,9 +2084,9 @@ let lookPage=0;
 
 
 
-// =====================
-// PAGE CONTROL
-// =====================
+/* =====================
+PAGE CONTROL
+===================== */
 
 
 function hideAll(){
@@ -1912,11 +2138,9 @@ target.style.display="flex";
 
 
 
-
-
-// =====================
-// INTRO MENU
-// =====================
+/* =====================
+INTRO MENU
+===================== */
 
 
 function openMenu(){
@@ -1943,10 +2167,9 @@ movePage("intro");
 
 
 
-
-// =====================
-// SHOP
-// =====================
+/* =====================
+SHOP
+===================== */
 
 
 function openShop(){
@@ -1956,6 +2179,7 @@ movePage("shop");
 
 
 }
+
 
 
 
@@ -1983,7 +2207,6 @@ type.toUpperCase();
 let box=document.getElementById("productsBox");
 
 
-
 let html="";
 
 
@@ -1997,30 +2220,36 @@ currentProducts.forEach(function(item,index){
 html+=`
 
 
-<div class="product-card ${index===0?"active":""}"
-
-onclick="openDetail(${index})">
+<div class="product-card ${index===0?"active":""}" onclick="openDetail(${index})">
 
 
 <div class="product-thumb">
 
+
 IMAGE
 
+
 </div>
+
 
 
 
 <div class="product-card-name">
 
+
 ${item.name}
+
 
 </div>
 
 
 
+
 <div class="product-card-price">
 
+
 ₩${item.price}
+
 
 </div>
 
@@ -2053,8 +2282,9 @@ movePage("productList");
 
 
 
-
-// 모바일 SHOP NEXT
+/* =====================
+MOBILE SHOP NEXT
+===================== */
 
 
 function nextProduct(){
@@ -2104,13 +2334,9 @@ movePage("productList");
 
 
 }
-/* PART 3-2 */
-
-
-
-// =====================
-// DETAIL
-// =====================
+/* =====================
+DETAIL
+===================== */
 
 
 function openDetail(index){
@@ -2208,11 +2434,9 @@ document.getElementById("qty").innerHTML=quantity;
 
 
 
-
-
-// =====================
-// CART
-// =====================
+/* =====================
+CART
+===================== */
 
 
 function addDetailCart(){
@@ -2334,9 +2558,7 @@ movePage("cart");
 let box=document.getElementById("cartList");
 
 
-
 let html="";
-
 
 
 let total=0;
@@ -2361,9 +2583,12 @@ html+=`
 
 <div class="cart-image">
 
+
 IMAGE
 
+
 </div>
+
 
 
 
@@ -2372,26 +2597,52 @@ IMAGE
 
 ${item.name}
 
+
 <br>
+
 
 SIZE ${item.size}
 
+
 <br>
 
+
 ₩${item.price}
+
 
 
 
 <div class="qty">
 
 
-<button onclick="changeCartQty(${index},-1)">-</button>
+
+<button onclick="changeCartQty(${index},-1)">
+
+
+-
+
+
+</button>
+
+
+
 
 
 ${item.qty}
 
 
-<button onclick="changeCartQty(${index},1)">+</button>
+
+
+
+<button onclick="changeCartQty(${index},1)">
+
+
+
++
+
+
+
+</button>
 
 
 
@@ -2400,6 +2651,7 @@ ${item.qty}
 
 
 </div>
+
 
 
 
@@ -2407,10 +2659,13 @@ ${item.qty}
 <div class="remove" onclick="removeCart(${index})">
 
 
+
 ×
 
 
+
 </div>
+
 
 
 
@@ -2444,6 +2699,7 @@ box.innerHTML=html;
 document.getElementById("total").innerHTML=
 
 "TOTAL ₩"+total;
+
 
 
 }
@@ -2542,9 +2798,9 @@ movePage("order");
 
 
 
-// =====================
-// LOOKBOOK 9
-// =====================
+/* =====================
+LOOKBOOK 9
+===================== */
 
 
 let looks=[
@@ -2576,6 +2832,7 @@ let looks=[
 
 
 
+
 function openLookbook(){
 
 
@@ -2600,7 +2857,6 @@ movePage("lookbook");
 function renderLookbook(){
 
 
-
 let grid=document.getElementById("lookGrid");
 
 
@@ -2618,13 +2874,18 @@ if(index===lookPage){
 
 html+=`
 
+
 <div class="look-item active">
+
 
 ${item}
 
+
 </div>
 
+
 `;
+
 
 
 }else{
@@ -2632,13 +2893,18 @@ ${item}
 
 html+=`
 
+
 <div class="look-item">
+
 
 ${item}
 
+
 </div>
 
+
 `;
+
 
 
 }
@@ -2650,6 +2916,7 @@ ${item}
 
 
 grid.innerHTML=html;
+
 
 
 }
@@ -2731,10 +2998,9 @@ nextLook();
 
 
 
-
-// =====================
-// ABOUT
-// =====================
+/* =====================
+ABOUT
+===================== */
 
 
 function openAbout(){
@@ -2752,10 +3018,9 @@ movePage("about");
 
 
 
-
-// =====================
-// START
-// =====================
+/* =====================
+START
+===================== */
 
 
 window.addEventListener("load",function(){
