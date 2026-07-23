@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html lang="ko">
+/* PART 1-1 */
 
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>EMERGENCY HAMMER</title>
-
-<style>
+/* =====================
+GLOBAL
+===================== */
 
 *{
 
 margin:0;
 padding:0;
+
 box-sizing:border-box;
 
 }
 
+
 body{
 
 background:#000;
+
 color:#fff;
 
 font-family:
@@ -35,18 +32,17 @@ height:100vh;
 }
 
 
-/* =====================
-GLOBAL
-===================== */
 
 .page{
 
 height:100vh;
+
 width:100%;
 
 display:none;
 
 align-items:center;
+
 justify-content:center;
 
 position:relative;
@@ -56,11 +52,13 @@ animation:pageIn .6s ease;
 }
 
 
+
 #transition{
 
 position:fixed;
 
 width:100%;
+
 height:100vh;
 
 background:#fff;
@@ -75,8 +73,6 @@ transform-origin:bottom;
 
 
 
-
-
 /* =====================
 LOADING
 ===================== */
@@ -87,6 +83,7 @@ LOADING
 position:fixed;
 
 width:100%;
+
 height:100vh;
 
 background:#000;
@@ -132,8 +129,6 @@ opacity:.5;
 
 
 
-
-
 /* =====================
 INTRO
 ===================== */
@@ -164,7 +159,6 @@ animation:fadeIn 1.5s forwards;
 animation-delay:.5s;
 
 }
-
 
 
 
@@ -202,7 +196,6 @@ letter-spacing:15px;
 
 
 
-
 .year{
 
 position:absolute;
@@ -216,9 +209,6 @@ letter-spacing:7px;
 opacity:.5;
 
 }
-
-
-
 
 
 
@@ -263,11 +253,13 @@ animation-delay:.1s;
 }
 
 
+
 .menu-item:nth-child(2){
 
 animation-delay:.3s;
 
 }
+
 
 
 .menu-item:nth-child(3){
@@ -277,14 +269,12 @@ animation-delay:.5s;
 }
 
 
+
 .menu-item:nth-child(4){
 
 animation-delay:.7s;
 
 }
-
-
-
 
 
 
@@ -311,6 +301,7 @@ transition:.3s;
 }
 
 
+
 .back:hover{
 
 transform:translateX(-8px);
@@ -320,11 +311,8 @@ transform:translateX(-8px);
 
 
 
-
-
-
 /* =====================
-SHOP
+SHOP CATEGORY
 ===================== */
 
 
@@ -365,8 +353,6 @@ transition:.4s;
 letter-spacing:18px;
 
 }
-
-
 
 
 
@@ -447,9 +433,13 @@ font-size:10px;
 opacity:.6;
 
 }
- /* =====================
+/* PART 1-2 */
+
+
+/* =====================
 DETAIL
 ===================== */
+
 
 .product-image{
 
@@ -512,7 +502,6 @@ letter-spacing:5px;
 
 
 
-
 .button{
 
 border:1px solid white;
@@ -547,7 +536,6 @@ color:black;
 
 
 
-
 /* =====================
 CART
 ===================== */
@@ -573,8 +561,6 @@ z-index:5;
 
 
 
-
-
 .cart-item{
 
 width:350px;
@@ -590,8 +576,6 @@ padding:20px 0;
 border-bottom:1px solid #222;
 
 }
-
-
 
 
 
@@ -615,8 +599,6 @@ font-size:8px;
 
 
 
-
-
 .qty button{
 
 background:none;
@@ -633,8 +615,6 @@ cursor:pointer;
 
 
 
-
-
 .remove{
 
 font-size:22px;
@@ -642,9 +622,6 @@ font-size:22px;
 cursor:pointer;
 
 }
-
-
-
 
 
 
@@ -665,7 +642,6 @@ gap:10px;
 width:500px;
 
 }
-
 
 
 
@@ -691,8 +667,6 @@ transition:.4s;
 
 
 
-
-
 .look-item:hover{
 
 transform:scale(1.05);
@@ -700,6 +674,59 @@ transform:scale(1.05);
 }
 
 
+
+
+/* =====================
+MOBILE SHOP NEXT
+===================== */
+
+
+.mobile-next{
+
+display:none;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+/* SHOP */
+
+.product-list + .mobile-next{
+
+display:block;
+
+}
+
+
+
+/* LOOKBOOK */
+
+.look-grid{
+
+width:90vw;
+
+grid-template-columns:1fr;
+
+gap:15px;
+
+}
+
+
+
+.look-item{
+
+width:100%;
+
+aspect-ratio:1;
+
+}
+
+
+
+}
 
 
 
@@ -724,15 +751,11 @@ overflow:auto;
 
 
 
-
-
 .about-section{
 
 margin-top:60px;
 
 }
-
-
 
 
 
@@ -750,8 +773,6 @@ margin-bottom:25px;
 
 
 
-
-
 .about-section p{
 
 font-size:11px;
@@ -761,39 +782,6 @@ line-height:2.2;
 letter-spacing:3px;
 
 }
-
-
-
-
-
-
-
-/* =====================
-MOBILE NEXT BUTTON
-===================== */
-
-
-.mobile-next{
-
-display:none;
-
-}
-
-
-
-@media(max-width:768px){
-
-
-.mobile-next{
-
-display:block;
-
-}
-
-
-}
-
-
 
 
 
@@ -822,7 +810,6 @@ opacity:1;
 
 
 
-
 @keyframes logoIn{
 
 from{
@@ -845,8 +832,6 @@ transform:translateY(0);
 
 
 
-
-
 @keyframes pageIn{
 
 from{
@@ -862,8 +847,6 @@ opacity:1;
 }
 
 }
-
-
 
 
 
@@ -889,7 +872,6 @@ transform:translateY(0);
 
 
 
-
 @keyframes zoomIn{
 
 from{
@@ -911,15 +893,20 @@ transform:scale(1);
 }
 
 
-
 </style>
 
 </head>
 
 <body>
-<!-- TRANSITION -->
+ /* PART 2-1 */
+
+
+/* =====================
+TRANSITION
+===================== */
 
 <div id="transition"></div>
+
 
 
 
@@ -954,7 +941,6 @@ EST. 2026
 CART (0)
 
 </div>
-
 
 
 
@@ -1094,7 +1080,6 @@ style="color:white;text-decoration:none;">
 
 
 
-
 <div>
 
 
@@ -1114,13 +1099,11 @@ NEW ARRIVAL
 
 
 
-
 <div class="category-item" onclick="openList('top')">
 
 TOP
 
 </div>
-
 
 
 
@@ -1159,8 +1142,6 @@ BOTTOM
 
 
 
-
-
 <div>
 
 
@@ -1182,7 +1163,7 @@ TOP
 
 
 
-<!-- MOBILE PRODUCT NEXT -->
+<!-- MOBILE ONLY NEXT -->
 
 <div class="mobile-next" onclick="nextProduct()">
 
@@ -1221,8 +1202,6 @@ NEXT →
 
 
 
-
-
 <div>
 
 
@@ -1234,14 +1213,11 @@ FRONT
 
 
 
-
 <div class="product-name" id="detailName">
 
 TEE
 
 </div>
-
-
 
 
 
@@ -1254,14 +1230,11 @@ TEE
 
 
 
-
 <div class="product-info">
-
 
 DESCRIPTION
 
 <br><br>
-
 
 240G HEAVY COTTON
 
@@ -1273,10 +1246,7 @@ SLIM STREET SILHOUETTE
 
 EST. 2026
 
-
-
 </div>
-
 
 
 
@@ -1295,9 +1265,11 @@ S
 </button>
 
 
+
 <button onclick="selectSize(this)">
 M
 </button>
+
 
 
 <button onclick="selectSize(this)">
@@ -1305,9 +1277,11 @@ L
 </button>
 
 
+
 <button onclick="selectSize(this)">
 XL
 </button>
+
 
 
 </div>
@@ -1337,12 +1311,12 @@ XL
 
 
 
-
 <button onclick="changeQty(1)">
 
 +
 
 </button>
+
 
 
 
@@ -1377,7 +1351,12 @@ BUY NOW
 
 
 </div>
-<!-- CART -->
+/* PART 2-2 */
+
+
+/* =====================
+CART
+===================== */
 
 
 <div class="page" id="cart">
@@ -1402,11 +1381,9 @@ CART
 
 
 
-
 <div id="cartList">
 
 </div>
-
 
 
 
@@ -1418,13 +1395,11 @@ TOTAL ₩0
 
 
 
-
 <div class="button" onclick="openShop()">
 
 CONTINUE SHOPPING
 
 </div>
-
 
 
 
@@ -1440,6 +1415,7 @@ CHECK OUT
 
 
 </div>
+
 
 
 
@@ -1470,7 +1446,6 @@ CHECK OUT
 ORDER
 
 </div>
-
 
 
 
@@ -1505,7 +1480,6 @@ ____________
 
 
 </div>
-
 
 
 
@@ -1564,10 +1538,9 @@ LOOKBOOK
 
 
 
-<!-- MOBILE LOOKBOOK NEXT -->
+<!-- PC + MOBILE LOOKBOOK NEXT -->
 
-
-<div class="button mobile-next" onclick="mobileNextLook()">
+<div class="button" onclick="mobileNextLook()">
 
 NEXT →
 
@@ -1612,7 +1585,6 @@ NEXT →
 
 
 
-
 <div class="about-wrap">
 
 
@@ -1622,7 +1594,6 @@ NEXT →
 EMERGENCY HAMMER
 
 </div>
-
 
 
 
@@ -1652,6 +1623,7 @@ TO CREATE A NEW STANDARD OF FIT.
 </p>
 
 
+
 </div>
 
 
@@ -1668,7 +1640,6 @@ TO CREATE A NEW STANDARD OF FIT.
 PHILOSOPHY
 
 </div>
-
 
 
 
@@ -1703,8 +1674,6 @@ CREATING YOUR OWN FORM.
 DESIGN
 
 </div>
-
-
 
 
 
@@ -1757,7 +1726,8 @@ SEOUL, KOREA
 
 
 </div>
- <script>
+// PART 3-1
+
 
 // =====================
 // PRODUCT DATA
@@ -1787,6 +1757,7 @@ price:55000
 ],
 
 
+
 top:[
 
 {
@@ -1805,6 +1776,7 @@ price:55000
 }
 
 ],
+
 
 
 bottom:[
@@ -1831,6 +1803,8 @@ price:89000
 
 
 
+
+
 let currentProducts=[];
 
 let currentIndex=0;
@@ -1845,14 +1819,6 @@ let lookPage=1;
 
 
 
-// MOBILE INDEX
-
-
-let mobileProductIndex=0;
-
-let mobileLookIndex=0;
-
-
 
 
 
@@ -1862,9 +1828,7 @@ let mobileLookIndex=0;
 // =====================
 
 
-
 function hideAll(){
-
 
 document.querySelectorAll(".page")
 
@@ -1874,9 +1838,7 @@ page.style.display="none";
 
 });
 
-
 }
-
 
 
 
@@ -1903,6 +1865,7 @@ document.getElementById(id).style.display="flex";
 transition.style.animation="none";
 
 
+
 },350);
 
 
@@ -1915,10 +1878,10 @@ transition.style.animation="none";
 
 
 
+
 // =====================
 // INTRO / MENU
 // =====================
-
 
 
 function openMenu(){
@@ -1941,11 +1904,9 @@ movePage("intro");
 
 
 
-
 // =====================
 // SHOP
 // =====================
-
 
 
 function openShop(){
@@ -1963,14 +1924,10 @@ movePage("shop");
 function openList(type){
 
 
-
 currentProducts=products[type];
 
 
 currentIndex=0;
-
-
-mobileProductIndex=0;
 
 
 
@@ -1982,8 +1939,8 @@ type.toUpperCase();
 
 let box=document.getElementById("productsBox");
 
-let html="";
 
+let html="";
 
 
 
@@ -1991,9 +1948,7 @@ currentProducts.forEach(function(item,index){
 
 
 
-html +=
-
-`
+html+=`
 
 <div class="product-card"
 
@@ -2025,7 +1980,6 @@ ${item.name}
 
 </div>
 
-
 `;
 
 
@@ -2034,18 +1988,7 @@ ${item.name}
 
 
 
-
 box.innerHTML=html;
-
-
-
-if(window.innerWidth <= 768){
-
-
-showMobileProduct();
-
-
-}
 
 
 
@@ -2054,75 +1997,6 @@ movePage("productList");
 
 
 }
-
-
-
-
-
-
-function showMobileProduct(){
-
-
-let cards=document.querySelectorAll(".product-card");
-
-
-
-cards.forEach(function(card){
-
-card.style.display="none";
-
-});
-
-
-
-if(cards[mobileProductIndex]){
-
-cards[mobileProductIndex].style.display="block";
-
-}
-
-
-}
-
-
-
-
-
-
-
-function nextProduct(){
-
-
-let cards=document.querySelectorAll(".product-card");
-
-
-
-if(cards.length===0){
-
-return;
-
-}
-
-
-
-mobileProductIndex++;
-
-
-
-if(mobileProductIndex>=cards.length){
-
-mobileProductIndex=0;
-
-}
-
-
-
-showMobileProduct();
-
-
-}
-
-
 
 
 
@@ -2131,9 +2005,7 @@ showMobileProduct();
 
 function backList(){
 
-
 movePage("productList");
-
 
 }
 
@@ -2143,17 +2015,44 @@ movePage("productList");
 
 
 
+
+// =====================
+// MOBILE PRODUCT NEXT
+// =====================
+
+
+function nextProduct(){
+
+
+currentIndex++;
+
+
+
+if(currentIndex >= currentProducts.length){
+
+currentIndex=0;
+
+}
+
+
+
+openDetail(currentIndex);
+
+
+
+}
+ // PART 3-2
+
+
 // =====================
 // DETAIL
 // =====================
-
 
 
 function openDetail(index){
 
 
 currentIndex=index;
-
 
 
 let item=currentProducts[index];
@@ -2163,7 +2062,6 @@ let item=currentProducts[index];
 document.getElementById("detailName").innerHTML=item.name;
 
 
-
 document.getElementById("detailPrice").innerHTML=
 
 "₩"+item.price;
@@ -2171,7 +2069,6 @@ document.getElementById("detailPrice").innerHTML=
 
 
 quantity=1;
-
 
 
 document.getElementById("qty").innerHTML=quantity;
@@ -2192,7 +2089,6 @@ movePage("detail");
 
 
 
-
 function selectSize(btn){
 
 
@@ -2200,7 +2096,6 @@ selectedSize=btn.innerHTML;
 
 
 }
-
 
 
 
@@ -2224,7 +2119,16 @@ quantity=1;
 document.getElementById("qty").innerHTML=quantity;
 
 
+
 }
+
+
+
+
+
+
+
+
 // =====================
 // CART
 // =====================
@@ -2238,10 +2142,12 @@ if(selectedSize===""){
 
 alert("SELECT SIZE");
 
+
 return;
 
 
 }
+
 
 
 
@@ -2290,7 +2196,10 @@ qty:quantity
 updateCart();
 
 
+
 }
+
+
 
 
 
@@ -2301,6 +2210,7 @@ function updateCart(){
 
 
 let count=0;
+
 
 
 cart.forEach(function(item){
@@ -2318,7 +2228,9 @@ document.getElementById("cartIcon").innerHTML=
 "CART ("+count+")";
 
 
+
 }
+
 
 
 
@@ -2346,14 +2258,11 @@ let total=0;
 cart.forEach(function(item,index){
 
 
-
-total += item.price*item.qty;
-
+total+=item.price*item.qty;
 
 
-html+=
 
-`
+html+=`
 
 <div class="cart-item">
 
@@ -2367,6 +2276,7 @@ IMAGE
 
 
 <div>
+
 
 ${item.name}
 
@@ -2405,7 +2315,6 @@ ${item.qty}
 </div>
 
 
-
 </div>
 
 
@@ -2422,12 +2331,12 @@ onclick="removeCart(${index})">
 
 </div>
 
-
 `;
 
 
 
 });
+
 
 
 
@@ -2460,6 +2369,7 @@ document.getElementById("total").innerHTML=
 
 
 
+
 function changeCartQty(index,num){
 
 
@@ -2483,7 +2393,10 @@ updateCart();
 openCart();
 
 
+
 }
+
+
 
 
 
@@ -2496,14 +2409,16 @@ function removeCart(index){
 cart.splice(index,1);
 
 
+
 updateCart();
+
 
 
 openCart();
 
 
-}
 
+}
 
 
 
@@ -2538,11 +2453,9 @@ movePage("order");
 
 
 
-
 // =====================
 // LOOKBOOK
 // =====================
-
 
 
 let looks=[
@@ -2550,21 +2463,13 @@ let looks=[
 [
 
 "LOOK 01",
-
 "LOOK 02",
-
 "LOOK 03",
-
 "LOOK 04",
-
 "LOOK 05",
-
 "LOOK 06",
-
 "LOOK 07",
-
 "LOOK 08",
-
 "LOOK 09"
 
 ],
@@ -2573,21 +2478,13 @@ let looks=[
 [
 
 "LOOK 10",
-
 "LOOK 11",
-
 "LOOK 12",
-
 "LOOK 13",
-
 "LOOK 14",
-
 "LOOK 15",
-
 "LOOK 16",
-
 "LOOK 17",
-
 "LOOK 18"
 
 ],
@@ -2596,29 +2493,18 @@ let looks=[
 [
 
 "LOOK 19",
-
 "LOOK 20",
-
 "LOOK 21",
-
 "LOOK 22",
-
 "LOOK 23",
-
 "LOOK 24",
-
 "LOOK 25",
-
 "LOOK 26",
-
 "LOOK 27"
 
 ]
 
-
 ];
-
-
 
 
 
@@ -2629,9 +2515,6 @@ function openLookbook(){
 
 
 lookPage=1;
-
-
-mobileLookIndex=0;
 
 
 renderLookbook();
@@ -2654,20 +2537,17 @@ function renderLookbook(){
 let html="";
 
 
+
 looks[lookPage-1].forEach(function(item){
 
 
-
-html+=
-
-`
+html+=`
 
 <div class="look-item">
 
 ${item}
 
 </div>
-
 
 `;
 
@@ -2679,91 +2559,6 @@ ${item}
 
 document.getElementById("lookGrid").innerHTML=html;
 
-
-
-if(window.innerWidth<=768){
-
-
-showMobileLook();
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-function showMobileLook(){
-
-
-let items=document.querySelectorAll(".look-item");
-
-
-
-items.forEach(function(item){
-
-
-item.style.display="none";
-
-
-});
-
-
-
-if(items[mobileLookIndex]){
-
-
-items[mobileLookIndex].style.display="flex";
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-function mobileNextLook(){
-
-
-let items=document.querySelectorAll(".look-item");
-
-
-
-if(items.length===0){
-
-return;
-
-}
-
-
-
-mobileLookIndex++;
-
-
-
-if(mobileLookIndex>=items.length){
-
-
-mobileLookIndex=0;
-
-
-}
-
-
-
-showMobileLook();
 
 
 }
@@ -2793,6 +2588,7 @@ lookPage=1;
 renderLookbook();
 
 
+
 }
 
 
@@ -2819,79 +2615,6 @@ lookPage=3;
 renderLookbook();
 
 
-}
-
-
-
-
-
-
-
-
-// =====================
-// ABOUT
-// =====================
-
-
-
-function openAbout(){
-
-
-movePage("about");
-
-
-}
-
-
-
-
-
-
-
-// =====================
-// START
-// =====================
-
-
-
-window.onload=function(){
-
-
-setTimeout(function(){
-
-
-document.getElementById("loading").style.display="none";
-
-
-document.getElementById("intro").style.display="flex";
-
-
-},2500);
-
-
-
-};
-
-
-// =====================
-// MOBILE PRODUCT / LOOKBOOK
-// =====================
-
-
-function nextProduct(){
-
-currentIndex++;
-
-
-if(currentIndex >= currentProducts.length){
-
-currentIndex=0;
-
-}
-
-
-openDetail(currentIndex);
-
 
 }
 
@@ -2900,40 +2623,8 @@ openDetail(currentIndex);
 
 function mobileNextLook(){
 
+
 nextLook();
 
 
 }
-
-
-
-
-
-// =====================
-// START
-// =====================
-
-
-window.onload=function(){
-
-
-setTimeout(function(){
-
-
-document.getElementById("loading").style.display="none";
-
-
-document.getElementById("intro").style.display="flex";
-
-
-},2500);
-
-
-
-};
-</script>
-
-
-</body>
-
-</html>  
