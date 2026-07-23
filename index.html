@@ -336,8 +336,7 @@ transition:.3s;
 transform:translateX(-8px);
 
 }
-/* PART 1-2 */
-
+ /* PART 1-2 수정본 */
 
 
 /* =====================
@@ -468,6 +467,7 @@ opacity:.6;
 
 
 
+
 /* =====================
 DETAIL
 ===================== */
@@ -534,6 +534,7 @@ letter-spacing:5px;
 
 
 
+
 .button{
 
 border:1px solid white;
@@ -563,6 +564,7 @@ background:white;
 color:black;
 
 }
+
 
 
 
@@ -659,8 +661,9 @@ cursor:pointer;
 
 
 
+
 /* =====================
-LOOKBOOK
+LOOKBOOK FIX
 ===================== */
 
 
@@ -700,37 +703,24 @@ transition:.4s;
 
 
 
-.look-item:hover{
-
-transform:scale(1.05);
-
-}
 
 
-
-
-
-
-/* =====================
-MOBILE FIX
-===================== */
-
-
-.mobile-next{
-
-display:none;
-
-}
-
-
-
+/* MOBILE LOOKBOOK */
 
 @media(max-width:768px){
 
 
-.product-list{
+.look-grid{
+
+display:flex;
 
 width:90vw;
+
+height:65vh;
+
+align-items:center;
+
+justify-content:center;
 
 overflow:hidden;
 
@@ -738,33 +728,35 @@ overflow:hidden;
 
 
 
-.mobile-next{
+.look-item{
+
+display:none;
+
+width:85vw;
+
+height:55vh;
+
+aspect-ratio:auto;
+
+}
+
+
+
+.look-item.active{
+
+display:flex;
+
+}
+
+
+
+.look-grid + .button{
 
 display:block;
 
 margin-top:30px;
 
 }
-
-
-
-
-.look-grid{
-
-width:90vw;
-
-grid-template-columns:1fr;
-
-}
-
-
-
-.look-item{
-
-width:100%;
-
-}
-
 
 
 }
@@ -830,8 +822,9 @@ letter-spacing:3px;
 
 
 
+
 /* =====================
-ANIMATION
+ANIMATION 유지
 ===================== */
 
 
@@ -853,7 +846,6 @@ opacity:1;
 
 
 }
-
 
 
 
@@ -882,8 +874,6 @@ transform:translateY(0);
 
 
 
-
-
 @keyframes pageIn{
 
 
@@ -902,8 +892,6 @@ opacity:1;
 
 
 }
-
-
 
 
 
@@ -932,8 +920,6 @@ transform:translateY(0);
 
 
 
-
-
 @keyframes zoomIn{
 
 
@@ -957,37 +943,6 @@ transform:scale(1);
 
 }
 
-
-
-
-
-@keyframes transitionMove{
-
-
-0%{
-
-transform:scaleY(0);
-
-}
-
-
-50%{
-
-transform:scaleY(1);
-
-}
-
-
-100%{
-
-transform:scaleY(0);
-
-}
-
-
-}
-
-
 </style>
 
 
@@ -995,7 +950,7 @@ transform:scaleY(0);
 
 
 <body>
-<!-- PART 2-1 -->
+ <!-- PART 2-1 -->
 
 
 <!-- TRANSITION -->
@@ -1457,7 +1412,7 @@ BUY NOW
 
 
 </div>
- <!-- PART 2-2 -->
+<!-- PART 2-2 -->
 
 
 
@@ -1878,7 +1833,7 @@ SEOUL, KOREA
 
 
 <script>
-// PART 3-1
+// PART 3-1 수정본
 
 
 
@@ -1969,7 +1924,8 @@ let selectedSize="";
 
 let quantity=1;
 
-let lookPage=1;
+let lookPage=0;
+
 
 
 
@@ -1978,7 +1934,7 @@ let lookPage=1;
 
 
 // =====================
-// PAGE CONTROL
+// PAGE CONTROL FIX
 // =====================
 
 
@@ -2002,25 +1958,10 @@ page.style.display="none";
 
 
 
+
+
 function movePage(id){
 
-
-
-let transition=document.getElementById("transition");
-
-
-
-if(transition){
-
-
-transition.style.animation="transitionMove .7s";
-
-
-}
-
-
-
-setTimeout(function(){
 
 
 hideAll();
@@ -2041,22 +1982,7 @@ target.style.display="flex";
 
 
 
-if(transition){
-
-
-transition.style.animation="none";
-
-
 }
-
-
-
-},350);
-
-
-
-}
-
 
 
 
@@ -2071,21 +1997,16 @@ transition.style.animation="none";
 
 function openMenu(){
 
-
 movePage("menu");
-
 
 }
 
 
 
 
-
 function openIntro(){
 
-
 movePage("intro");
-
 
 }
 
@@ -2103,9 +2024,7 @@ movePage("intro");
 
 function openShop(){
 
-
 movePage("shop");
-
 
 }
 
@@ -2137,7 +2056,6 @@ type.toUpperCase();
 let box=document.getElementById("productsBox");
 
 
-
 let html="";
 
 
@@ -2147,9 +2065,7 @@ let html="";
 currentProducts.forEach(function(item,index){
 
 
-
 html+=`
-
 
 
 <div class="product-card"
@@ -2166,13 +2082,11 @@ IMAGE
 
 
 
-
 <div class="product-card-name">
 
 ${item.name}
 
 </div>
-
 
 
 
@@ -2187,13 +2101,11 @@ ${item.name}
 </div>
 
 
-
 `;
 
 
 
 });
-
 
 
 
@@ -2238,11 +2150,12 @@ movePage("productList");
 function nextProduct(){
 
 
+
 currentIndex++;
 
 
 
-if(currentIndex >= currentProducts.length){
+if(currentIndex>=currentProducts.length){
 
 
 currentIndex=0;
@@ -2257,7 +2170,7 @@ openDetail(currentIndex);
 
 
 }
-  // PART 3-2
+// PART 3-2 수정본
 
 
 
@@ -2481,7 +2394,6 @@ document.getElementById("cartIcon").innerHTML=
 "CART ("+count+")";
 
 
-
 }
 
 
@@ -2491,8 +2403,8 @@ document.getElementById("cartIcon").innerHTML=
 
 
 
-function openCart(){
 
+function openCart(){
 
 
 movePage("cart");
@@ -2525,9 +2437,7 @@ total+=item.price*item.qty;
 html+=`
 
 
-
 <div class="cart-item">
-
 
 
 <div class="cart-image">
@@ -2552,7 +2462,6 @@ SIZE ${item.size}
 <br>
 
 ₩${item.price}
-
 
 
 
@@ -2604,9 +2513,7 @@ onclick="removeCart(${index})">
 
 
 
-
 </div>
-
 
 
 `;
@@ -2614,7 +2521,6 @@ onclick="removeCart(${index})">
 
 
 });
-
 
 
 
@@ -2643,7 +2549,6 @@ document.getElementById("total").innerHTML=
 
 
 }
-
 
 
 
@@ -2718,9 +2623,7 @@ addDetailCart();
 checkout();
 
 
-
 }
-
 
 
 
@@ -2744,14 +2647,12 @@ movePage("order");
 
 
 // =====================
-// LOOKBOOK
+// LOOKBOOK MOBILE FIX
 // =====================
 
 
 let looks=[
 
-
-[
 
 "LOOK 01",
 "LOOK 02",
@@ -2761,45 +2662,11 @@ let looks=[
 "LOOK 06",
 "LOOK 07",
 "LOOK 08",
-"LOOK 09"
+"LOOK 09",
+"LOOK 10"
 
-],
-
-
-
-[
-
-"LOOK 10",
-"LOOK 11",
-"LOOK 12",
-"LOOK 13",
-"LOOK 14",
-"LOOK 15",
-"LOOK 16",
-"LOOK 17",
-"LOOK 18"
-
-],
-
-
-
-[
-
-"LOOK 19",
-"LOOK 20",
-"LOOK 21",
-"LOOK 22",
-"LOOK 23",
-"LOOK 24",
-"LOOK 25",
-"LOOK 26",
-"LOOK 27"
-
-]
 
 ];
-
-
 
 
 
@@ -2809,7 +2676,7 @@ let looks=[
 function openLookbook(){
 
 
-lookPage=1;
+lookPage=0;
 
 
 renderLookbook();
@@ -2827,20 +2694,40 @@ movePage("lookbook");
 
 
 
-
 function renderLookbook(){
+
+
+let grid=document.getElementById("lookGrid");
+
 
 
 let html="";
 
 
 
-looks[lookPage-1].forEach(function(item){
+looks.forEach(function(item,index){
 
+
+
+if(index===lookPage){
 
 
 html+=`
 
+<div class="look-item active">
+
+${item}
+
+</div>
+
+`;
+
+
+
+}else{
+
+
+html+=`
 
 <div class="look-item">
 
@@ -2848,8 +2735,10 @@ ${item}
 
 </div>
 
-
 `;
+
+
+}
 
 
 
@@ -2857,14 +2746,11 @@ ${item}
 
 
 
-
-document.getElementById("lookGrid").innerHTML=html;
+grid.innerHTML=html;
 
 
 
 }
-
-
 
 
 
@@ -2879,10 +2765,10 @@ lookPage++;
 
 
 
-if(lookPage>3){
+if(lookPage>=looks.length){
 
 
-lookPage=1;
+lookPage=0;
 
 
 }
@@ -2908,10 +2794,10 @@ lookPage--;
 
 
 
-if(lookPage<1){
+if(lookPage<0){
 
 
-lookPage=3;
+lookPage=looks.length-1;
 
 
 }
@@ -2929,16 +2815,13 @@ renderLookbook();
 
 
 
-
 function mobileNextLook(){
 
 
 nextLook();
 
 
-
 }
-
 
 
 
@@ -2958,6 +2841,7 @@ movePage("about");
 
 
 }
+
 
 
 
@@ -3000,4 +2884,4 @@ document.getElementById("intro").style.display="flex";
 </body>
 
 
-</html>
+</html> 
