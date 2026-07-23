@@ -1,14 +1,21 @@
-/* PART 1-1 */
+<!DOCTYPE html>
+<html lang="ko">
 
-/* =====================
-GLOBAL
-===================== */
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EMERGENCY HAMMER</title>
+
+
+<style>
+
 
 *{
 
 margin:0;
 padding:0;
-
 box-sizing:border-box;
 
 }
@@ -17,7 +24,6 @@ box-sizing:border-box;
 body{
 
 background:#000;
-
 color:#fff;
 
 font-family:
@@ -32,17 +38,19 @@ height:100vh;
 }
 
 
+/* =====================
+GLOBAL
+===================== */
+
 
 .page{
 
 height:100vh;
-
 width:100%;
 
 display:none;
 
 align-items:center;
-
 justify-content:center;
 
 position:relative;
@@ -58,7 +66,6 @@ animation:pageIn .6s ease;
 position:fixed;
 
 width:100%;
-
 height:100vh;
 
 background:#fff;
@@ -73,6 +80,7 @@ transform-origin:bottom;
 
 
 
+
 /* =====================
 LOADING
 ===================== */
@@ -83,7 +91,6 @@ LOADING
 position:fixed;
 
 width:100%;
-
 height:100vh;
 
 background:#000;
@@ -129,6 +136,7 @@ opacity:.5;
 
 
 
+
 /* =====================
 INTRO
 ===================== */
@@ -159,6 +167,7 @@ animation:fadeIn 1.5s forwards;
 animation-delay:.5s;
 
 }
+
 
 
 
@@ -196,6 +205,7 @@ letter-spacing:15px;
 
 
 
+
 .year{
 
 position:absolute;
@@ -209,10 +219,6 @@ letter-spacing:7px;
 opacity:.5;
 
 }
-
-
-
-
 /* =====================
 MENU
 ===================== */
@@ -311,8 +317,9 @@ transform:translateX(-8px);
 
 
 
+
 /* =====================
-SHOP CATEGORY
+SHOP
 ===================== */
 
 
@@ -353,6 +360,7 @@ transition:.4s;
 letter-spacing:18px;
 
 }
+
 
 
 
@@ -433,7 +441,9 @@ font-size:10px;
 opacity:.6;
 
 }
-/* PART 1-2 */
+
+
+
 
 
 /* =====================
@@ -622,290 +632,24 @@ font-size:22px;
 cursor:pointer;
 
 }
-
-
-
-
-/* =====================
-LOOKBOOK
-===================== */
-
-
-.look-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:10px;
-
-width:500px;
-
-}
-
-
-
-.look-item{
-
-aspect-ratio:1;
-
-border:1px solid #222;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:9px;
-
-letter-spacing:3px;
-
-transition:.4s;
-
-}
-
-
-
-.look-item:hover{
-
-transform:scale(1.05);
-
-}
-
-
-
-
-/* =====================
-MOBILE SHOP NEXT
-===================== */
-
-
-.mobile-next{
-
-display:none;
-
-}
-
-
-
-@media(max-width:768px){
-
-
-/* SHOP */
-
-.product-list + .mobile-next{
-
-display:block;
-
-}
-
-
-
-/* LOOKBOOK */
-
-.look-grid{
-
-width:90vw;
-
-grid-template-columns:1fr;
-
-gap:15px;
-
-}
-
-
-
-.look-item{
-
-width:100%;
-
-aspect-ratio:1;
-
-}
-
-
-
-}
-
-
-
-
-
-/* =====================
-ABOUT
-===================== */
-
-
-.about-wrap{
-
-width:600px;
-
-text-align:center;
-
-height:80vh;
-
-overflow:auto;
-
-}
-
-
-
-.about-section{
-
-margin-top:60px;
-
-}
-
-
-
-.about-title{
-
-font-size:11px;
-
-letter-spacing:8px;
-
-opacity:.5;
-
-margin-bottom:25px;
-
-}
-
-
-
-.about-section p{
-
-font-size:11px;
-
-line-height:2.2;
-
-letter-spacing:3px;
-
-}
-
-
-
-
-
-/* =====================
-ANIMATION
-===================== */
-
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-
-
-@keyframes logoIn{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
-
-@keyframes pageIn{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-
-
-@keyframes menuIn{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
-
-@keyframes zoomIn{
-
-from{
-
-opacity:0;
-
-transform:scale(.9);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
+<!-- PART 2-1 -->
 
 
 </style>
 
 </head>
 
+
 <body>
- /* PART 2-1 */
 
 
-/* =====================
-TRANSITION
-===================== */
+
+
+
+<!-- TRANSITION -->
 
 <div id="transition"></div>
+
 
 
 
@@ -934,6 +678,8 @@ EST. 2026
 
 
 
+
+
 <!-- CART ICON -->
 
 <div id="cartIcon" onclick="openCart()">
@@ -941,6 +687,7 @@ EST. 2026
 CART (0)
 
 </div>
+
 
 
 
@@ -992,6 +739,7 @@ EST. 2026
 
 
 </div>
+
 
 
 
@@ -1066,8 +814,8 @@ style="color:white;text-decoration:none;">
 
 
 
-<!-- SHOP CATEGORY -->
 
+<!-- SHOP -->
 
 <div class="page" id="shop">
 
@@ -1130,7 +878,6 @@ BOTTOM
 
 <!-- PRODUCT LIST -->
 
-
 <div class="page" id="productList">
 
 
@@ -1154,7 +901,6 @@ TOP
 
 
 
-
 <div class="product-list" id="productsBox">
 
 </div>
@@ -1162,8 +908,6 @@ TOP
 
 
 
-
-<!-- MOBILE ONLY NEXT -->
 
 <div class="mobile-next" onclick="nextProduct()">
 
@@ -1174,12 +918,10 @@ NEXT →
 
 
 
-
 </div>
 
 
 </div>
-
 
 
 
@@ -1189,7 +931,6 @@ NEXT →
 
 
 <!-- PRODUCT DETAIL -->
-
 
 <div class="page" id="detail">
 
@@ -1213,6 +954,7 @@ FRONT
 
 
 
+
 <div class="product-name" id="detailName">
 
 TEE
@@ -1221,11 +963,13 @@ TEE
 
 
 
+
 <div class="product-price" id="detailPrice">
 
 ₩49,000
 
 </div>
+
 
 
 
@@ -1252,7 +996,6 @@ EST. 2026
 
 
 <div>
-
 
 SIZE
 
@@ -1289,7 +1032,6 @@ XL
 
 
 
-
 <div>
 
 
@@ -1319,9 +1061,7 @@ XL
 
 
 
-
 </div>
-
 
 
 
@@ -1351,13 +1091,11 @@ BUY NOW
 
 
 </div>
-/* PART 2-2 */
+<!-- PART 2-2 -->
 
 
-/* =====================
-CART
-===================== */
 
+<!-- CART -->
 
 <div class="page" id="cart">
 
@@ -1381,9 +1119,11 @@ CART
 
 
 
+
 <div id="cartList">
 
 </div>
+
 
 
 
@@ -1392,6 +1132,7 @@ CART
 TOTAL ₩0
 
 </div>
+
 
 
 
@@ -1411,6 +1152,7 @@ CHECK OUT
 
 
 
+
 </div>
 
 
@@ -1426,7 +1168,6 @@ CHECK OUT
 
 <!-- ORDER -->
 
-
 <div class="page" id="order">
 
 
@@ -1435,6 +1176,7 @@ CHECK OUT
 ←
 
 </div>
+
 
 
 
@@ -1449,6 +1191,7 @@ ORDER
 
 
 
+
 <div class="product-info">
 
 
@@ -1457,6 +1200,7 @@ NAME
 <br>
 
 ____________
+
 
 
 <br><br>
@@ -1469,6 +1213,7 @@ ADDRESS
 ____________
 
 
+
 <br><br>
 
 
@@ -1479,7 +1224,9 @@ PHONE
 ____________
 
 
+
 </div>
+
 
 
 
@@ -1506,7 +1253,6 @@ PLACE ORDER
 
 <!-- LOOKBOOK -->
 
-
 <div class="page" id="lookbook">
 
 
@@ -1515,6 +1261,7 @@ PLACE ORDER
 ←
 
 </div>
+
 
 
 
@@ -1530,6 +1277,7 @@ LOOKBOOK
 
 
 
+
 <div class="look-grid" id="lookGrid">
 
 </div>
@@ -1538,7 +1286,6 @@ LOOKBOOK
 
 
 
-<!-- PC + MOBILE LOOKBOOK NEXT -->
 
 <div class="button" onclick="mobileNextLook()">
 
@@ -1570,8 +1317,8 @@ NEXT →
 
 
 
-<!-- ABOUT -->
 
+<!-- ABOUT -->
 
 <div class="page" id="about">
 
@@ -1585,6 +1332,7 @@ NEXT →
 
 
 
+
 <div class="about-wrap">
 
 
@@ -1594,6 +1342,7 @@ NEXT →
 EMERGENCY HAMMER
 
 </div>
+
 
 
 
@@ -1643,6 +1392,7 @@ PHILOSOPHY
 
 
 
+
 <p>
 
 BREAK YOUR FIT.
@@ -1677,6 +1427,7 @@ DESIGN
 
 
 
+
 <p>
 
 CLEAN SILHOUETTES.
@@ -1688,6 +1439,7 @@ STRONG DETAILS.
 STREET AND INTELLIGENCE.
 
 </p>
+
 
 
 
@@ -1724,8 +1476,15 @@ SEOUL, KOREA
 </div>
 
 
-
 </div>
+
+
+
+
+
+<!-- SCRIPT START -->
+
+<script>
 // PART 3-1
 
 
@@ -1805,6 +1564,7 @@ price:89000
 
 
 
+
 let currentProducts=[];
 
 let currentIndex=0;
@@ -1830,13 +1590,17 @@ let lookPage=1;
 
 function hideAll(){
 
+
 document.querySelectorAll(".page")
 
 .forEach(function(page){
 
+
 page.style.display="none";
 
+
 });
+
 
 }
 
@@ -1849,7 +1613,11 @@ function movePage(id){
 let transition=document.getElementById("transition");
 
 
+if(transition){
+
 transition.style.animation="transitionMove .7s";
+
+}
 
 
 
@@ -1862,12 +1630,16 @@ hideAll();
 document.getElementById(id).style.display="flex";
 
 
+
+if(transition){
+
 transition.style.animation="none";
+
+}
 
 
 
 },350);
-
 
 
 }
@@ -1897,6 +1669,7 @@ function openIntro(){
 movePage("intro");
 
 }
+
 
 
 
@@ -1937,6 +1710,7 @@ type.toUpperCase();
 
 
 
+
 let box=document.getElementById("productsBox");
 
 
@@ -1944,11 +1718,12 @@ let html="";
 
 
 
+
 currentProducts.forEach(function(item,index){
 
 
-
 html+=`
+
 
 <div class="product-card"
 
@@ -1978,10 +1753,12 @@ ${item.name}
 </div>
 
 
+
 </div>
 
-`;
 
+
+`;
 
 
 });
@@ -1997,7 +1774,6 @@ movePage("productList");
 
 
 }
-
 
 
 
@@ -2030,7 +1806,9 @@ currentIndex++;
 
 if(currentIndex >= currentProducts.length){
 
+
 currentIndex=0;
+
 
 }
 
@@ -2041,7 +1819,7 @@ openDetail(currentIndex);
 
 
 }
- // PART 3-2
+// PART 3-2
 
 
 // =====================
@@ -2082,7 +1860,6 @@ selectedSize="";
 movePage("detail");
 
 
-
 }
 
 
@@ -2092,10 +1869,27 @@ movePage("detail");
 function selectSize(btn){
 
 
+document.querySelectorAll("#detail button")
+
+.forEach(function(b){
+
+
+b.classList.remove("active");
+
+
+});
+
+
+
+btn.classList.add("active");
+
+
 selectedSize=btn.innerHTML;
 
 
+
 }
+
 
 
 
@@ -2110,7 +1904,9 @@ quantity+=num;
 
 if(quantity<1){
 
+
 quantity=1;
+
 
 }
 
@@ -2167,6 +1963,7 @@ c.size===selectedSize;
 
 
 
+
 if(exist){
 
 
@@ -2196,9 +1993,7 @@ qty:quantity
 updateCart();
 
 
-
 }
-
 
 
 
@@ -2228,8 +2023,8 @@ document.getElementById("cartIcon").innerHTML=
 "CART ("+count+")";
 
 
-
 }
+
 
 
 
@@ -2255,6 +2050,7 @@ let total=0;
 
 
 
+
 cart.forEach(function(item,index){
 
 
@@ -2263,6 +2059,7 @@ total+=item.price*item.qty;
 
 
 html+=`
+
 
 <div class="cart-item">
 
@@ -2290,6 +2087,7 @@ SIZE ${item.size}
 
 
 
+
 <div class="qty">
 
 
@@ -2301,7 +2099,9 @@ SIZE ${item.size}
 
 
 
+
 ${item.qty}
+
 
 
 
@@ -2312,7 +2112,9 @@ ${item.qty}
 </button>
 
 
+
 </div>
+
 
 
 </div>
@@ -2331,8 +2133,9 @@ onclick="removeCart(${index})">
 
 </div>
 
-`;
 
+
+`;
 
 
 });
@@ -2348,6 +2151,7 @@ html="CART IS EMPTY";
 
 
 }
+
 
 
 
@@ -2393,9 +2197,7 @@ updateCart();
 openCart();
 
 
-
 }
-
 
 
 
@@ -2417,8 +2219,8 @@ updateCart();
 openCart();
 
 
-
 }
+
 
 
 
@@ -2511,6 +2313,8 @@ let looks=[
 
 
 
+
+
 function openLookbook(){
 
 
@@ -2531,6 +2335,7 @@ movePage("lookbook");
 
 
 
+
 function renderLookbook(){
 
 
@@ -2543,14 +2348,15 @@ looks[lookPage-1].forEach(function(item){
 
 html+=`
 
+
 <div class="look-item">
 
 ${item}
 
 </div>
 
-`;
 
+`;
 
 
 });
@@ -2562,6 +2368,7 @@ document.getElementById("lookGrid").innerHTML=html;
 
 
 }
+
 
 
 
@@ -2621,6 +2428,8 @@ renderLookbook();
 
 
 
+
+
 function mobileNextLook(){
 
 
@@ -2628,3 +2437,63 @@ nextLook();
 
 
 }
+
+
+
+
+
+
+
+
+// =====================
+// ABOUT
+// =====================
+
+
+function openAbout(){
+
+
+movePage("about");
+
+
+}
+
+
+
+
+
+
+
+
+// =====================
+// START
+// =====================
+
+
+window.onload=function(){
+
+
+setTimeout(function(){
+
+
+document.getElementById("loading").style.display="none";
+
+
+document.getElementById("intro").style.display="flex";
+
+
+
+},2500);
+
+
+
+};
+
+
+
+</script>
+
+
+</body>
+
+</html> 
