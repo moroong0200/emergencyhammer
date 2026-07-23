@@ -1942,7 +1942,8 @@ movePage("productList");
 
 
 }
-// PART 3-2 수정본
+// PART 3-2 정상 수정본
+// (script 태그 없음 / html 닫기 없음)
 
 
 
@@ -1964,10 +1965,7 @@ let item=currentProducts[index];
 document.getElementById("detailName").innerHTML=item.name;
 
 
-
-document.getElementById("detailPrice").innerHTML=
-
-"₩"+item.price;
+document.getElementById("detailPrice").innerHTML="₩"+item.price;
 
 
 
@@ -1977,17 +1975,13 @@ quantity=1;
 document.getElementById("qty").innerHTML=quantity;
 
 
-
 selectedSize="";
-
 
 
 movePage("detail");
 
 
 }
-
-
 
 
 
@@ -2011,9 +2005,7 @@ button.classList.remove("active");
 btn.classList.add("active");
 
 
-
 selectedSize=btn.innerHTML;
-
 
 
 }
@@ -2042,7 +2034,6 @@ quantity=1;
 
 
 document.getElementById("qty").innerHTML=quantity;
-
 
 
 }
@@ -2077,10 +2068,7 @@ return;
 
 
 
-
-
 let item=currentProducts[currentIndex];
-
 
 
 
@@ -2110,9 +2098,12 @@ cart.push({
 
 name:item.name,
 
+
 price:item.price,
 
+
 size:selectedSize,
+
 
 qty:quantity
 
@@ -2167,7 +2158,9 @@ document.getElementById("cartIcon").innerHTML=
 
 
 
+
 function openCart(){
+
 
 
 movePage("cart");
@@ -2177,9 +2170,7 @@ movePage("cart");
 let box=document.getElementById("cartList");
 
 
-
 let html="";
-
 
 
 let total=0;
@@ -2193,7 +2184,6 @@ cart.forEach(function(item,index){
 
 
 total+=item.price*item.qty;
-
 
 
 
@@ -2229,24 +2219,13 @@ SIZE ${item.size}
 <div class="qty">
 
 
-<button onclick="changeCartQty(${index},-1)">
-
--
-
-</button>
-
+<button onclick="changeCartQty(${index},-1)">-</button>
 
 
 ${item.qty}
 
 
-
-<button onclick="changeCartQty(${index},1)">
-
-+
-
-</button>
-
+<button onclick="changeCartQty(${index},1)">+</button>
 
 
 </div>
@@ -2258,9 +2237,7 @@ ${item.qty}
 
 
 
-<div class="remove"
-
-onclick="removeCart(${index})">
+<div class="remove" onclick="removeCart(${index})">
 
 
 ×
@@ -2293,16 +2270,10 @@ html="CART IS EMPTY";
 
 
 
-
-
 box.innerHTML=html;
 
 
-
-document.getElementById("total").innerHTML=
-
-"TOTAL ₩"+total;
-
+document.getElementById("total").innerHTML="TOTAL ₩"+total;
 
 
 }
@@ -2337,7 +2308,6 @@ updateCart();
 openCart();
 
 
-
 }
 
 
@@ -2360,7 +2330,6 @@ updateCart();
 openCart();
 
 
-
 }
 
 
@@ -2380,6 +2349,7 @@ checkout();
 
 
 }
+
 
 
 
@@ -2437,6 +2407,7 @@ let looks=[
 
 
 
+
 function openLookbook(){
 
 
@@ -2463,7 +2434,6 @@ function renderLookbook(){
 let grid=document.getElementById("lookGrid");
 
 
-
 let html="";
 
 
@@ -2488,7 +2458,6 @@ ${item}
 `;
 
 
-
 }else{
 
 
@@ -2505,7 +2474,6 @@ ${item}
 `;
 
 
-
 }
 
 
@@ -2514,9 +2482,7 @@ ${item}
 
 
 
-
 grid.innerHTML=html;
-
 
 
 }
@@ -2547,7 +2513,6 @@ lookPage=0;
 renderLookbook();
 
 
-
 }
 
 
@@ -2576,7 +2541,6 @@ lookPage=looks.length-1;
 renderLookbook();
 
 
-
 }
 
 
@@ -2592,7 +2556,6 @@ nextLook();
 
 
 }
-
 
 
 
@@ -2620,8 +2583,9 @@ movePage("about");
 
 
 
+
 // =====================
-// START FIX
+// START
 // =====================
 
 
@@ -2641,13 +2605,3 @@ document.getElementById("intro").style.display="flex";
 
 
 });
-
-
-
-</script>
-
-
-</body>
-
-
-</html>
