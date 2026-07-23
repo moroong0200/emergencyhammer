@@ -715,333 +715,17 @@ transform:scale(1);
 }
 
 }
-/* =====================
-MOBILE RESPONSIVE
-EMERGENCY HAMMER 1.0
-===================== */
 
-
-@media screen and (max-width:768px){
-
-
-body{
-
-height:100svh;
-
-overflow:hidden;
-
-}
-
-
-
-.page{
-
-height:100svh;
-
-padding:20px;
-
-}
-
-
-
-/* LOADING */
-
-.loading-logo{
-
-font-size:22px;
-
-letter-spacing:8px;
-
-text-align:center;
-
-}
-
-
-.loading-sub{
-
-font-size:9px;
-
-letter-spacing:5px;
-
-}
-
-
-
-/* INTRO */
-
-.logo{
-
-font-size:24px;
-
-letter-spacing:7px;
-
-text-align:center;
-
-}
-
-
-.tagline{
-
-font-size:10px;
-
-letter-spacing:5px;
-
-margin-top:25px;
-
-}
-
-
-.enter{
-
-margin-top:50px;
-
-font-size:10px;
-
-letter-spacing:5px;
-
-}
-
-
-
-.year{
-
-bottom:25px;
-
-}
-
-
-
-/* MENU */
-
-
-.menu-item{
-
-font-size:14px;
-
-letter-spacing:5px;
-
-margin:20px;
-
-}
-
-
-
-/* BACK */
-
-
-.back{
-
-top:20px;
-
-left:20px;
-
-font-size:24px;
-
-}
-
-
-
-/* CART ICON */
-
-
-#cartIcon{
-
-right:20px;
-
-top:20px;
-
-font-size:9px;
-
-}
-
-
-
-/* SHOP */
-
-
-.category-title{
-
-top:35px;
-
-font-size:10px;
-
-}
-
-
-.category-item{
-
-font-size:14px;
-
-letter-spacing:6px;
-
-margin:25px;
-
-}
-
-
-
-/* PRODUCT LIST */
-
-
-.product-list{
-
-flex-direction:column;
-
-width:90vw;
-
-gap:30px;
-
-overflow-y:auto;
-
-}
-
-
-
-.product-card{
-
-width:100%;
-
-}
-
-
-
-.product-thumb{
-
-height:55vh;
-
-min-height:250px;
-
-}
-
-
-
-/* DETAIL */
-
-
-.product-image{
-
-width:85vw;
-
-height:55vh;
-
-}
-
-
-
-.product-name{
-
-font-size:15px;
-
-}
-
-
-
-.product-info{
-
-font-size:10px;
-
-}
-
-
-
-.button{
-
-padding:18px 35px;
-
-}
-
-
-
-/* CART */
-
-
-.cart-item{
-
-width:90vw;
-
-}
-
-
-
-/* LOOKBOOK */
-
-
-.look-grid{
-
-width:90vw;
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-
-
-/* ABOUT */
-
-
-.about-wrap{
-
-width:90vw;
-
-}
-
-
-
-.about-wrap .logo{
-
-font-size:20px;
-
-letter-spacing:5px;
-
-}
-
-
-
-.about-section p{
-
-font-size:10px;
-
-}
-
-
-
-}
-
-
-
-@media screen and (max-width:390px){
-
-
-.logo{
-
-font-size:20px;
-
-}
-
-
-.menu-item{
-
-font-size:13px;
-
-}
-
-
-.look-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-}
 </style>
 
 </head>
 
 <body>
-<!-- TRANSITION -->
+ <!-- TRANSITION -->
 
 <div id="transition"></div>
+
+
 
 <!-- LOADING -->
 
@@ -1053,6 +737,7 @@ EMERGENCY HAMMER
 
 </div>
 
+
 <div class="loading-sub">
 
 EST. 2026
@@ -1060,6 +745,9 @@ EST. 2026
 </div>
 
 </div>
+
+
+
 
 <!-- CART ICON -->
 
@@ -1069,11 +757,17 @@ CART (0)
 
 </div>
 
+
+
+
+
 <!-- INTRO -->
 
 <div class="page" id="intro">
 
+
 <div>
+
 
 <div class="logo">
 
@@ -1081,11 +775,15 @@ EMERGENCY HAMMER
 
 </div>
 
+
+
 <div class="tagline">
 
 BREAK YOUR FIT.
 
 </div>
+
+
 
 <div class="enter" onclick="openMenu()">
 
@@ -1093,19 +791,30 @@ ENTER
 
 </div>
 
+
+
 <div class="year">
 
 EST. 2026
 
 </div>
 
-</div>
+
 
 </div>
+
+
+</div>
+
+
+
+
+
 
 <!-- MENU -->
 
 <div class="page" id="menu">
+
 
 <div class="back" onclick="openIntro()">
 
@@ -1113,7 +822,10 @@ EST. 2026
 
 </div>
 
+
+
 <div>
+
 
 <div class="menu-item" onclick="openShop()">
 
@@ -1121,17 +833,23 @@ EST. 2026
 
 </div>
 
+
+
 <div class="menu-item" onclick="openLookbook()">
 
 02 LOOKBOOK
 
 </div>
 
+
+
 <div class="menu-item" onclick="openAbout()">
 
 03 ABOUT
 
 </div>
+
+
 
 <div class="menu-item">
 
@@ -1145,13 +863,23 @@ style="color:white;text-decoration:none;">
 
 </div>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+
+
+
+
 
 <!-- SHOP CATEGORY -->
 
+
 <div class="page" id="shop">
+
 
 <div class="back" onclick="openMenu()">
 
@@ -1159,7 +887,10 @@ style="color:white;text-decoration:none;">
 
 </div>
 
+
+
 <div>
+
 
 <div class="category-title">
 
@@ -1167,11 +898,15 @@ SHOP
 
 </div>
 
+
+
 <div class="category-item" onclick="openList('new')">
 
 NEW ARRIVAL
 
 </div>
+
+
 
 <div class="category-item" onclick="openList('top')">
 
@@ -1179,19 +914,31 @@ TOP
 
 </div>
 
+
+
 <div class="category-item" onclick="openList('bottom')">
 
 BOTTOM
 
 </div>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+
+
+
+
 
 <!-- PRODUCT LIST -->
 
+
 <div class="page" id="productList">
+
 
 <div class="back" onclick="openShop()">
 
@@ -1199,7 +946,10 @@ BOTTOM
 
 </div>
 
+
+
 <div>
+
 
 <div class="category-title" id="listTitle">
 
@@ -1207,17 +957,39 @@ TOP
 
 </div>
 
+
+
 <div class="product-list" id="productsBox">
 
 </div>
 
-</div>
+
+
+<!-- MOBILE PRODUCT NEXT -->
+
+<div class="mobile-next" onclick="nextProduct()">
+
+NEXT →
 
 </div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
 
 <!-- PRODUCT DETAIL -->
 
+
 <div class="page" id="detail">
+
 
 <div class="back" onclick="backList()">
 
@@ -1225,7 +997,10 @@ TOP
 
 </div>
 
+
+
 <div>
+
 
 <div class="product-image" id="detailImage">
 
@@ -1233,17 +1008,22 @@ FRONT
 
 </div>
 
+
+
 <div class="product-name" id="detailName">
 
 TEE
 
 </div>
 
+
+
 <div class="product-price" id="detailPrice">
 
 ₩49,000
 
 </div>
+
 
 <div class="product-info">
 
@@ -1263,36 +1043,50 @@ EST. 2026
 
 </div>
 
+
+
 <div>
+
 
 SIZE
 
 <br>
 
+
 <button onclick="selectSize(this)">
 S
 </button>
+
 
 <button onclick="selectSize(this)">
 M
 </button>
 
+
 <button onclick="selectSize(this)">
 L
 </button>
+
 
 <button onclick="selectSize(this)">
 XL
 </button>
 
+
 </div>
+
+
 
 <div>
 
+
 <button onclick="changeQty(-1)">
+
 -
 
 </button>
+
+
 
 <span id="qty">
 
@@ -1300,12 +1094,18 @@ XL
 
 </span>
 
+
+
 <button onclick="changeQty(1)">
+
 +
 
 </button>
 
+
 </div>
+
+
 
 <div class="button" onclick="addDetailCart()">
 
@@ -1313,7 +1113,9 @@ ADD TO CART
 
 </div>
 
+
 <br>
+
 
 <div class="button" onclick="buyDetail()">
 
@@ -1321,13 +1123,17 @@ BUY NOW
 
 </div>
 
-</div>
+
 
 </div>
 
+
+</div>
 <!-- CART -->
 
+
 <div class="page" id="cart">
+
 
 <div class="back" onclick="openMenu()">
 
@@ -1335,7 +1141,10 @@ BUY NOW
 
 </div>
 
+
+
 <div>
+
 
 <div class="category-title">
 
@@ -1343,9 +1152,14 @@ CART
 
 </div>
 
+
+
+
 <div id="cartList">
 
 </div>
+
+
 
 <div id="total">
 
@@ -1353,11 +1167,15 @@ TOTAL ₩0
 
 </div>
 
+
+
 <div class="button" onclick="openShop()">
 
 CONTINUE SHOPPING
 
 </div>
+
+
 
 <div class="button" onclick="checkout()">
 
@@ -1365,13 +1183,25 @@ CHECK OUT
 
 </div>
 
-</div>
+
 
 </div>
+
+
+</div>
+
+
+
+
+
+
+
 
 <!-- ORDER -->
 
+
 <div class="page" id="order">
+
 
 <div class="back" onclick="openCart()">
 
@@ -1379,7 +1209,10 @@ CHECK OUT
 
 </div>
 
+
+
 <div>
+
 
 <div class="category-title">
 
@@ -1387,7 +1220,11 @@ ORDER
 
 </div>
 
+
+
+
 <div class="product-info">
+
 
 NAME
 
@@ -1395,7 +1232,9 @@ NAME
 
 ____________
 
+
 <br><br>
+
 
 ADDRESS
 
@@ -1403,7 +1242,9 @@ ADDRESS
 
 ____________
 
+
 <br><br>
+
 
 PHONE
 
@@ -1411,7 +1252,10 @@ PHONE
 
 ____________
 
+
 </div>
+
+
 
 <div class="button">
 
@@ -1419,13 +1263,26 @@ PLACE ORDER
 
 </div>
 
-</div>
+
 
 </div>
+
+
+</div>
+
+
+
+
+
+
+
+
 
 <!-- LOOKBOOK -->
 
+
 <div class="page" id="lookbook">
+
 
 <div class="back" onclick="openMenu()">
 
@@ -1433,7 +1290,10 @@ PLACE ORDER
 
 </div>
 
+
+
 <div>
+
 
 <div class="category-title">
 
@@ -1441,15 +1301,27 @@ LOOKBOOK
 
 </div>
 
+
+
+
 <div class="look-grid" id="lookGrid">
+
 
 </div>
 
-<div class="button" onclick="nextLook()">
+
+
+
+<!-- MOBILE LOOK NEXT -->
+
+
+<div class="button" onclick="mobileNextLook()">
 
 NEXT →
 
 </div>
+
+
 
 <div class="button" onclick="prevLook()">
 
@@ -1457,13 +1329,25 @@ NEXT →
 
 </div>
 
-</div>
+
 
 </div>
+
+
+</div>
+
+
+
+
+
+
+
 
 <!-- ABOUT -->
 
+
 <div class="page" id="about">
+
 
 <div class="back" onclick="openMenu()">
 
@@ -1471,7 +1355,12 @@ NEXT →
 
 </div>
 
+
+
+
 <div class="about-wrap">
+
+
 
 <div class="logo">
 
@@ -1479,13 +1368,20 @@ EMERGENCY HAMMER
 
 </div>
 
+
+
+
+
 <div class="about-section">
+
 
 <div class="about-title">
 
 ABOUT
 
 </div>
+
+
 
 <p>
 
@@ -1499,15 +1395,24 @@ TO CREATE A NEW STANDARD OF FIT.
 
 </p>
 
+
 </div>
 
+
+
+
+
+
 <div class="about-section">
+
 
 <div class="about-title">
 
 PHILOSOPHY
 
 </div>
+
+
 
 <p>
 
@@ -1522,15 +1427,24 @@ CREATING YOUR OWN FORM.
 
 </p>
 
+
+
 </div>
 
+
+
+
+
 <div class="about-section">
+
 
 <div class="about-title">
 
 DESIGN
 
 </div>
+
+
 
 <p>
 
@@ -1544,9 +1458,16 @@ STREET AND INTELLIGENCE.
 
 </p>
 
+
 </div>
 
+
+
+
+
+
 <div class="about-section">
+
 
 ESTABLISHED
 
@@ -1558,18 +1479,27 @@ ESTABLISHED
 
 SEOUL, KOREA
 
-</div>
 
 </div>
 
+
+
+
+
 </div>
- <script>
+
+
+
+</div>
+<script>
 
 // =====================
 // PRODUCT DATA
 // =====================
 
+
 const products = {
+
 
 new:[
 
@@ -1590,6 +1520,7 @@ price:55000
 
 ],
 
+
 top:[
 
 {
@@ -1608,6 +1539,7 @@ price:55000
 }
 
 ],
+
 
 bottom:[
 
@@ -1628,7 +1560,10 @@ price:89000
 
 ]
 
+
 };
+
+
 
 let currentProducts=[];
 
@@ -1642,11 +1577,28 @@ let quantity=1;
 
 let lookPage=1;
 
+
+
+// MOBILE INDEX
+
+
+let mobileProductIndex=0;
+
+let mobileLookIndex=0;
+
+
+
+
+
+
 // =====================
 // PAGE CONTROL
 // =====================
 
+
+
 function hideAll(){
+
 
 document.querySelectorAll(".page")
 
@@ -1656,29 +1608,52 @@ page.style.display="none";
 
 });
 
+
 }
+
+
+
+
 
 function movePage(id){
 
+
 let transition=document.getElementById("transition");
+
 
 transition.style.animation="transitionMove .7s";
 
+
+
 setTimeout(function(){
+
 
 hideAll();
 
+
 document.getElementById(id).style.display="flex";
+
 
 transition.style.animation="none";
 
+
 },350);
 
+
+
 }
+
+
+
+
+
+
 
 // =====================
 // INTRO / MENU
 // =====================
+
+
 
 function openMenu(){
 
@@ -1686,15 +1661,26 @@ movePage("menu");
 
 }
 
+
+
 function openIntro(){
 
 movePage("intro");
 
 }
 
+
+
+
+
+
+
+
 // =====================
 // SHOP
 // =====================
+
+
 
 function openShop(){
 
@@ -1702,21 +1688,42 @@ movePage("shop");
 
 }
 
+
+
+
+
+
+
 function openList(type){
+
+
 
 currentProducts=products[type];
 
+
 currentIndex=0;
+
+
+mobileProductIndex=0;
+
+
 
 document.getElementById("listTitle").innerHTML=
 
 type.toUpperCase();
 
+
+
 let box=document.getElementById("productsBox");
 
 let html="";
 
+
+
+
 currentProducts.forEach(function(item,index){
+
+
 
 html +=
 
@@ -1726,11 +1733,14 @@ html +=
 
 onclick="openDetail(${index})">
 
+
 <div class="product-thumb">
 
 IMAGE
 
 </div>
+
+
 
 <div class="product-card-name">
 
@@ -1738,73 +1748,204 @@ ${item.name}
 
 </div>
 
+
+
 <div class="product-card-price">
 
 ₩${item.price}
 
 </div>
 
+
 </div>
+
 
 `;
 
+
+
 });
+
+
+
 
 box.innerHTML=html;
 
-movePage("productList");
+
+
+if(window.innerWidth <= 768){
+
+
+showMobileProduct();
+
 
 }
+
+
+
+movePage("productList");
+
+
+
+}
+
+
+
+
+
+
+function showMobileProduct(){
+
+
+let cards=document.querySelectorAll(".product-card");
+
+
+
+cards.forEach(function(card){
+
+card.style.display="none";
+
+});
+
+
+
+if(cards[mobileProductIndex]){
+
+cards[mobileProductIndex].style.display="block";
+
+}
+
+
+}
+
+
+
+
+
+
+
+function nextProduct(){
+
+
+let cards=document.querySelectorAll(".product-card");
+
+
+
+if(cards.length===0){
+
+return;
+
+}
+
+
+
+mobileProductIndex++;
+
+
+
+if(mobileProductIndex>=cards.length){
+
+mobileProductIndex=0;
+
+}
+
+
+
+showMobileProduct();
+
+
+}
+
+
+
+
+
+
+
 
 function backList(){
 
+
 movePage("productList");
 
+
 }
+
+
+
+
+
+
 
 // =====================
 // DETAIL
 // =====================
 
+
+
 function openDetail(index){
+
 
 currentIndex=index;
 
+
+
 let item=currentProducts[index];
 
+
+
 document.getElementById("detailName").innerHTML=item.name;
+
+
 
 document.getElementById("detailPrice").innerHTML=
 
 "₩"+item.price;
 
+
+
 quantity=1;
+
+
 
 document.getElementById("qty").innerHTML=quantity;
 
+
+
 selectedSize="";
+
+
 
 movePage("detail");
 
+
+
 }
+
+
+
+
+
 
 function selectSize(btn){
 
-document.querySelectorAll(".detail button")
-
-.forEach(function(b){
-
-b.classList.remove("active");
-
-});
 
 selectedSize=btn.innerHTML;
 
+
 }
+
+
+
+
+
 
 function changeQty(num){
 
+
 quantity+=num;
+
+
 
 if(quantity<1){
 
@@ -1812,38 +1953,56 @@ quantity=1;
 
 }
 
+
+
 document.getElementById("qty").innerHTML=quantity;
 
-}
 
+}
 // =====================
 // CART
 // =====================
 
+
 function addDetailCart(){
 
+
 if(selectedSize===""){
+
 
 alert("SELECT SIZE");
 
 return;
 
+
 }
+
+
 
 let item=currentProducts[currentIndex];
 
+
+
 let exist=cart.find(function(c){
 
+
 return c.name===item.name &&
+
 c.size===selectedSize;
+
 
 });
 
+
+
 if(exist){
+
 
 exist.qty+=quantity;
 
+
 }else{
+
 
 cart.push({
 
@@ -1857,41 +2016,74 @@ qty:quantity
 
 });
 
+
 }
+
+
 
 updateCart();
 
+
 }
+
+
+
+
+
 
 function updateCart(){
 
+
 let count=0;
+
 
 cart.forEach(function(item){
 
+
 count+=item.qty;
 
+
 });
+
+
 
 document.getElementById("cartIcon").innerHTML=
 
 "CART ("+count+")";
 
+
 }
+
+
+
+
+
+
 
 function openCart(){
 
+
 movePage("cart");
+
+
 
 let box=document.getElementById("cartList");
 
+
 let html="";
+
 
 let total=0;
 
+
+
 cart.forEach(function(item,index){
 
+
+
 total += item.price*item.qty;
+
+
 
 html+=
 
@@ -1899,11 +2091,14 @@ html+=
 
 <div class="cart-item">
 
+
 <div class="cart-image">
 
 IMAGE
 
 </div>
+
+
 
 <div>
 
@@ -1917,21 +2112,37 @@ SIZE ${item.size}
 
 ₩${item.price}
 
+
+
 <div class="qty">
 
+
 <button onclick="changeCartQty(${index},-1)">
+
 -
+
 </button>
+
+
 
 ${item.qty}
 
+
+
 <button onclick="changeCartQty(${index},1)">
+
 +
+
 </button>
 
-</div>
 
 </div>
+
+
+
+</div>
+
+
 
 <div class="remove"
 
@@ -1941,125 +2152,245 @@ onclick="removeCart(${index})">
 
 </div>
 
+
+
 </div>
+
 
 `;
 
+
+
 });
+
+
+
 
 if(cart.length===0){
 
+
 html="CART IS EMPTY";
+
 
 }
 
+
+
 box.innerHTML=html;
+
+
 
 document.getElementById("total").innerHTML=
 
 "TOTAL ₩"+total;
 
+
+
 }
+
+
+
+
+
+
 
 function changeCartQty(index,num){
 
+
 cart[index].qty+=num;
+
+
 
 if(cart[index].qty<=0){
 
+
 cart.splice(index,1);
 
+
 }
+
+
 
 updateCart();
 
+
 openCart();
 
+
 }
+
+
+
+
+
 
 function removeCart(index){
 
+
 cart.splice(index,1);
+
 
 updateCart();
 
+
 openCart();
 
+
 }
+
+
+
+
+
 
 function buyDetail(){
 
+
 addDetailCart();
+
 
 checkout();
 
+
 }
+
+
+
 
 function checkout(){
 
+
 movePage("order");
 
+
 }
+
+
+
+
+
+
+
+
 
 // =====================
 // LOOKBOOK
 // =====================
 
+
+
 let looks=[
 
 [
+
 "LOOK 01",
+
 "LOOK 02",
+
 "LOOK 03",
+
 "LOOK 04",
+
 "LOOK 05",
+
 "LOOK 06",
+
 "LOOK 07",
+
 "LOOK 08",
+
 "LOOK 09"
+
 ],
 
+
 [
+
 "LOOK 10",
+
 "LOOK 11",
+
 "LOOK 12",
+
 "LOOK 13",
+
 "LOOK 14",
+
 "LOOK 15",
+
 "LOOK 16",
+
 "LOOK 17",
+
 "LOOK 18"
+
 ],
 
+
 [
+
 "LOOK 19",
+
 "LOOK 20",
+
 "LOOK 21",
+
 "LOOK 22",
+
 "LOOK 23",
+
 "LOOK 24",
+
 "LOOK 25",
+
 "LOOK 26",
+
 "LOOK 27"
+
 ]
+
 
 ];
 
+
+
+
+
+
+
+
 function openLookbook(){
+
 
 lookPage=1;
 
+
+mobileLookIndex=0;
+
+
 renderLookbook();
+
 
 movePage("lookbook");
 
+
 }
+
+
+
+
+
+
 
 function renderLookbook(){
 
+
 let html="";
 
+
 looks[lookPage-1].forEach(function(item){
+
+
 
 html+=
 
@@ -2071,69 +2402,214 @@ ${item}
 
 </div>
 
+
 `;
+
+
 
 });
 
+
+
 document.getElementById("lookGrid").innerHTML=html;
 
+
+
+if(window.innerWidth<=768){
+
+
+showMobileLook();
+
+
 }
+
+
+
+}
+
+
+
+
+
+
+
+function showMobileLook(){
+
+
+let items=document.querySelectorAll(".look-item");
+
+
+
+items.forEach(function(item){
+
+
+item.style.display="none";
+
+
+});
+
+
+
+if(items[mobileLookIndex]){
+
+
+items[mobileLookIndex].style.display="flex";
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+function mobileNextLook(){
+
+
+let items=document.querySelectorAll(".look-item");
+
+
+
+if(items.length===0){
+
+return;
+
+}
+
+
+
+mobileLookIndex++;
+
+
+
+if(mobileLookIndex>=items.length){
+
+
+mobileLookIndex=0;
+
+
+}
+
+
+
+showMobileLook();
+
+
+}
+
+
+
+
+
 
 function nextLook(){
 
+
 lookPage++;
+
+
 
 if(lookPage>3){
 
+
 lookPage=1;
 
+
 }
+
+
 
 renderLookbook();
 
+
 }
+
+
+
+
 
 function prevLook(){
 
+
 lookPage--;
+
+
 
 if(lookPage<1){
 
+
 lookPage=3;
 
+
 }
+
+
 
 renderLookbook();
 
+
 }
+
+
+
+
+
+
+
 
 // =====================
 // ABOUT
 // =====================
 
+
+
 function openAbout(){
+
 
 movePage("about");
 
+
 }
+
+
+
+
+
+
 
 // =====================
 // START
 // =====================
 
+
+
 window.onload=function(){
+
 
 setTimeout(function(){
 
+
 document.getElementById("loading").style.display="none";
+
 
 document.getElementById("intro").style.display="flex";
 
+
 },2500);
+
+
 
 };
 
+
+
 </script>
+
 
 </body>
 
