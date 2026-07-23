@@ -8,9 +8,7 @@
 
 <title>EMERGENCY HAMMER</title>
 
-
 <style>
-
 
 *{
 
@@ -19,8 +17,6 @@ padding:0;
 box-sizing:border-box;
 
 }
-
-
 
 body{
 
@@ -39,14 +35,9 @@ height:100vh;
 
 }
 
-
-
-
-
 /* =====================
 GLOBAL
 ===================== */
-
 
 .page{
 
@@ -66,15 +57,9 @@ animation:pageIn .6s ease;
 
 }
 
-
-
-
-
-
 /* =====================
 LOADING
 ===================== */
-
 
 #loading{
 
@@ -98,8 +83,6 @@ justify-content:center;
 
 }
 
-
-
 .loading-logo{
 
 font-size:36px;
@@ -109,8 +92,6 @@ letter-spacing:15px;
 animation:logoIn 1.5s ease;
 
 }
-
-
 
 .loading-sub{
 
@@ -124,17 +105,9 @@ opacity:.5;
 
 }
 
-
-
-
-
-
-
-
 /* =====================
 INTRO
 ===================== */
-
 
 .logo{
 
@@ -143,8 +116,6 @@ font-size:42px;
 letter-spacing:14px;
 
 }
-
-
 
 .tagline{
 
@@ -161,8 +132,6 @@ animation:fadeIn 1.5s forwards;
 animation-delay:.5s;
 
 }
-
-
 
 .enter{
 
@@ -188,15 +157,11 @@ transition:.4s;
 
 }
 
-
-
 .enter:hover{
 
 letter-spacing:15px;
 
 }
-
-
 
 .year{
 
@@ -212,17 +177,9 @@ opacity:.5;
 
 }
 
-
-
-
-
-
-
-
 /* =====================
 MENU
 ===================== */
-
 
 .menu-item{
 
@@ -242,15 +199,11 @@ transition:.4s;
 
 }
 
-
-
 .menu-item:hover{
 
 letter-spacing:15px;
 
 }
-
-
 
 .menu-item:nth-child(1){
 
@@ -258,15 +211,11 @@ animation-delay:.1s;
 
 }
 
-
-
 .menu-item:nth-child(2){
 
 animation-delay:.3s;
 
 }
-
-
 
 .menu-item:nth-child(3){
 
@@ -274,25 +223,15 @@ animation-delay:.5s;
 
 }
 
-
-
 .menu-item:nth-child(4){
 
 animation-delay:.7s;
 
 }
 
-
-
-
-
-
-
-
 /* =====================
 BACK
 ===================== */
-
 
 .back{
 
@@ -309,8 +248,6 @@ cursor:pointer;
 transition:.3s;
 
 }
-
-
 
 .back:hover{
 
@@ -809,17 +746,26 @@ transform:scale(1);
 
 }
 /* =====================
-MOBILE SHOP STYLE
+MOBILE SHOP FIX
 ===================== */
+
+.mobile-next{
+
+display:none;
+
+}
+
 
 @media(max-width:768px){
 
+
 #productList .product-list{
 
-width:90vw;
-height:65vh;
-
 display:flex;
+
+width:90vw;
+
+height:65vh;
 
 align-items:center;
 
@@ -828,6 +774,7 @@ justify-content:center;
 overflow:hidden;
 
 }
+
 
 
 #productList .product-card{
@@ -841,11 +788,13 @@ text-align:center;
 }
 
 
+
 #productList .product-card.active{
 
 display:block;
 
 }
+
 
 
 #productList .product-thumb{
@@ -857,13 +806,33 @@ height:55vh;
 }
 
 
+
 #productList .product-card:hover{
 
 transform:none;
 
 }
 
-} 
+
+
+.mobile-next{
+
+display:block;
+
+margin-top:30px;
+
+font-size:10px;
+
+letter-spacing:5px;
+
+cursor:pointer;
+
+text-align:center;
+
+}
+
+
+}
 </style>
 
 </head>
@@ -1172,7 +1141,7 @@ BUY NOW
 </div>
 
 </div>
-<!-- PART 2-2 -->
+ <!-- PART 2-2 -->
 
 <!-- CART -->
 
@@ -1416,9 +1385,8 @@ SEOUL, KOREA
 
 </div>
 
-<script> 
- // PART 3-1 수정본
-
+<script>
+// PART 3-1 수정본
 
 
 // =====================
@@ -1427,7 +1395,6 @@ SEOUL, KOREA
 
 
 const products = {
-
 
 new:[
 
@@ -1447,7 +1414,6 @@ price:55000
 }
 
 ],
-
 
 
 top:[
@@ -1470,7 +1436,6 @@ price:55000
 ],
 
 
-
 bottom:[
 
 {
@@ -1490,11 +1455,7 @@ price:89000
 
 ]
 
-
 };
-
-
-
 
 
 
@@ -1508,10 +1469,6 @@ let selectedSize="";
 
 let quantity=1;
 
-let lookPage=0;
-
-
-
 
 
 
@@ -1523,50 +1480,30 @@ let lookPage=0;
 
 function hideAll(){
 
-
 document.querySelectorAll(".page")
-
 .forEach(function(page){
-
 
 page.style.display="none";
 
-
 });
 
-
 }
-
-
-
-
 
 
 
 function movePage(id){
 
-
 hideAll();
-
-
 
 let target=document.getElementById(id);
 
-
-
 if(target){
-
 
 target.style.display="flex";
 
-
 }
 
-
-
 }
-
-
 
 
 
@@ -1585,14 +1522,11 @@ movePage("menu");
 
 
 
-
 function openIntro(){
 
 movePage("intro");
 
 }
-
-
 
 
 
@@ -1613,25 +1547,17 @@ movePage("shop");
 
 
 
-
-
-
 function openList(type){
 
 
 currentProducts=products[type];
 
-
 currentIndex=0;
 
 
 
-
 document.getElementById("listTitle").innerHTML=
-
 type.toUpperCase();
-
-
 
 
 
@@ -1642,18 +1568,14 @@ let html="";
 
 
 
-
-
 currentProducts.forEach(function(item,index){
 
 
 html+=`
 
-
-<div class="product-card ${index===0 ? "active" : ""}"
-
+<div class="product-card ${index===0 ? "active":""}"
+data-index="${index}"
 onclick="openDetail(${index})">
-
 
 
 <div class="product-thumb">
@@ -1663,13 +1585,11 @@ IMAGE
 </div>
 
 
-
 <div class="product-card-name">
 
 ${item.name}
 
 </div>
-
 
 
 <div class="product-card-price">
@@ -1679,16 +1599,12 @@ ${item.name}
 </div>
 
 
-
 </div>
-
 
 `;
 
 
-
 });
-
 
 
 
@@ -1699,9 +1615,7 @@ box.innerHTML=html;
 movePage("productList");
 
 
-
 }
-
 
 
 
@@ -1711,9 +1625,7 @@ movePage("productList");
 
 function backList(){
 
-
 movePage("productList");
-
 
 }
 
@@ -1721,11 +1633,8 @@ movePage("productList");
 
 
 
-
-
-
 // =====================
-// MOBILE PRODUCT NEXT FIX
+// MOBILE PRODUCT NEXT
 // =====================
 
 
@@ -1735,11 +1644,20 @@ function nextProduct(){
 let cards=document.querySelectorAll(".product-card");
 
 
-if(cards.length===0) return;
+
+if(cards.length===0){
+
+return;
+
+}
 
 
 
-cards[currentIndex].classList.remove("active");
+cards.forEach(function(card){
+
+card.classList.remove("active");
+
+});
 
 
 
@@ -1756,32 +1674,6 @@ currentIndex=0;
 
 
 cards[currentIndex].classList.add("active");
-
-
-}
-
-
-
-cards[currentIndex].classList.remove("active");
-
-
-
-currentIndex++;
-
-
-
-if(currentIndex>=cards.length){
-
-
-currentIndex=0;
-
-
-}
-
-
-
-cards[currentIndex].classList.add("active");
-
 
 
 }
@@ -1789,294 +1681,157 @@ cards[currentIndex].classList.add("active");
 // DETAIL
 // =====================
 
-
 function openDetail(index){
-
 
 currentIndex=index;
 
-
 let item=currentProducts[index];
 
-
-
 document.getElementById("detailName").innerHTML=item.name;
-
-
 
 document.getElementById("detailPrice").innerHTML=
 
 "₩"+item.price;
 
-
-
 quantity=1;
-
 
 document.getElementById("qty").innerHTML=quantity;
 
-
-
 selectedSize="";
-
-
 
 movePage("detail");
 
-
 }
 
-
-
-
-
-
-
-
 function selectSize(btn){
-
-
 
 document.querySelectorAll("#detail button")
 
 .forEach(function(button){
 
-
 button.classList.remove("active");
-
 
 });
 
-
-
 btn.classList.add("active");
-
-
 
 selectedSize=btn.innerHTML;
 
-
 }
-
-
-
-
-
-
-
 
 function changeQty(num){
 
-
 quantity+=num;
-
-
 
 if(quantity<1){
 
-
 quantity=1;
 
-
 }
-
-
 
 document.getElementById("qty").innerHTML=quantity;
 
-
 }
-
-
-
-
-
-
-
-
 
 // =====================
 // CART
 // =====================
 
-
 function addDetailCart(){
-
 
 if(selectedSize===""){
 
-
 alert("SELECT SIZE");
-
 
 return;
 
-
 }
-
-
-
-
 
 let item=currentProducts[currentIndex];
 
-
-
 let exist=cart.find(function(c){
-
 
 return c.name===item.name && c.size===selectedSize;
 
-
 });
-
-
-
-
 
 if(exist){
 
-
 exist.qty+=quantity;
-
 
 }else{
 
-
 cart.push({
-
 
 name:item.name,
 
-
 price:item.price,
-
 
 size:selectedSize,
 
-
 qty:quantity
-
 
 });
 
-
 }
-
-
 
 updateCart();
 
-
 }
-
-
-
-
-
-
-
 
 function updateCart(){
 
-
 let count=0;
-
-
 
 cart.forEach(function(item){
 
-
 count+=item.qty;
 
-
 });
-
-
 
 document.getElementById("cartIcon").innerHTML=
 
 "CART ("+count+")";
 
-
 }
-
-
-
-
-
-
-
 
 function openCart(){
 
-
 movePage("cart");
-
-
 
 let box=document.getElementById("cartList");
 
-
-
 let html="";
-
-
 
 let total=0;
 
-
-
-
-
 cart.forEach(function(item,index){
-
-
 
 total+=item.price*item.qty;
 
-
-
 html+=`
-
 
 <div class="cart-item">
 
-
 <div class="cart-image">
-
 
 IMAGE
 
-
 </div>
-
-
-
 
 <div>
 
-
 ${item.name}
 
-
 <br>
-
 
 SIZE ${item.size}
 
-
 <br>
-
 
 ₩${item.price}
 
-
-
-
 <div class="qty">
-
-
 
 <button onclick="changeCartQty(${index},-1)">
 
@@ -2084,13 +1839,7 @@ SIZE ${item.size}
 
 </button>
 
-
-
-
 ${item.qty}
-
-
-
 
 <button onclick="changeCartQty(${index},1)">
 
@@ -2098,167 +1847,81 @@ ${item.qty}
 
 </button>
 
-
-
 </div>
 
-
-
 </div>
-
-
-
 
 <div class="remove" onclick="removeCart(${index})">
 
-
 ×
 
-
 </div>
 
-
-
 </div>
-
 
 `;
 
-
-
 });
-
-
-
-
-
 
 if(cart.length===0){
 
-
 html="CART IS EMPTY";
-
 
 }
 
-
-
-
 box.innerHTML=html;
-
-
 
 document.getElementById("total").innerHTML=
 
 "TOTAL ₩"+total;
 
-
-
 }
-
-
-
-
-
-
-
 
 function changeCartQty(index,num){
 
-
 cart[index].qty+=num;
-
-
 
 if(cart[index].qty<=0){
 
-
 cart.splice(index,1);
 
-
 }
-
-
 
 updateCart();
 
-
 openCart();
 
-
 }
-
-
-
-
-
-
-
 
 function removeCart(index){
 
-
 cart.splice(index,1);
-
-
 
 updateCart();
 
-
-
 openCart();
 
-
 }
-
-
-
-
-
-
-
 
 function buyDetail(){
 
-
 addDetailCart();
-
 
 checkout();
 
-
 }
-
-
-
-
-
-
-
 
 function checkout(){
 
-
 movePage("order");
 
-
 }
-
-
-
-
-
-
-
-
 
 // =====================
 // LOOKBOOK FIX (9)
 // =====================
 
-
 let looks=[
-
 
 "LOOK 01",
 
@@ -2278,206 +1941,106 @@ let looks=[
 
 "LOOK 09"
 
-
 ];
-
-
 
 let lookIndex=0;
 
-
-
-
-
-
-
 function openLookbook(){
-
 
 lookIndex=0;
 
-
 renderLookbook();
-
 
 movePage("lookbook");
 
-
 }
-
-
-
-
-
-
-
 
 function renderLookbook(){
 
-
 let grid=document.getElementById("lookGrid");
-
 
 let html="";
 
-
-
 looks.forEach(function(item,index){
-
 
 html+=`
 
-
 <div class="look-item ${index===lookIndex ? "active":""}">
-
 
 ${item}
 
-
 </div>
-
 
 `;
 
-
 });
-
-
 
 grid.innerHTML=html;
 
-
 }
-
-
-
-
-
-
-
 
 function nextLook(){
 
-
 lookIndex++;
-
-
 
 if(lookIndex>=looks.length){
 
-
 lookIndex=0;
 
-
 }
-
-
 
 renderLookbook();
 
-
 }
-
-
-
-
-
-
 
 function prevLook(){
 
-
 lookIndex--;
-
-
 
 if(lookIndex<0){
 
-
 lookIndex=looks.length-1;
 
-
 }
-
-
 
 renderLookbook();
 
-
 }
-
-
-
-
-
-
-
 
 function mobileNextLook(){
 
-
 nextLook();
 
-
 }
-
-
-
-
-
-
-
 
 // =====================
 // ABOUT
 // =====================
 
-
 function openAbout(){
-
 
 movePage("about");
 
-
 }
-
-
-
-
-
-
-
 
 // =====================
 // START
 // =====================
 
-
 window.onload=function(){
-
-
 
 setTimeout(function(){
 
-
 document.getElementById("loading").style.display="none";
-
 
 document.getElementById("intro").style.display="flex";
 
-
-
 },2500);
-
-
 
 };
 
-
 </script>
 
-
 </body>
-
 
 </html> 
