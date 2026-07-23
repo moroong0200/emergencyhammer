@@ -2203,7 +2203,6 @@ html+=`
 <div class="cart-item">
 
 
-
 <div class="cart-image">
 
 IMAGE
@@ -2212,9 +2211,7 @@ IMAGE
 
 
 
-
 <div>
-
 
 
 ${item.name}
@@ -2232,7 +2229,6 @@ SIZE ${item.size}
 <div class="qty">
 
 
-
 <button onclick="changeCartQty(${index},-1)">
 
 -
@@ -2241,9 +2237,7 @@ SIZE ${item.size}
 
 
 
-
 ${item.qty}
-
 
 
 
@@ -2300,6 +2294,7 @@ html="CART IS EMPTY";
 
 
 
+
 box.innerHTML=html;
 
 
@@ -2339,12 +2334,12 @@ cart.splice(index,1);
 updateCart();
 
 
-
 openCart();
 
 
 
 }
+
 
 
 
@@ -2360,7 +2355,6 @@ cart.splice(index,1);
 
 
 updateCart();
-
 
 
 openCart();
@@ -2443,7 +2437,6 @@ let looks=[
 
 
 
-
 function openLookbook(){
 
 
@@ -2467,7 +2460,6 @@ movePage("lookbook");
 function renderLookbook(){
 
 
-
 let grid=document.getElementById("lookGrid");
 
 
@@ -2476,14 +2468,11 @@ let html="";
 
 
 
-
-
 looks.forEach(function(item,index){
 
 
 
 if(index===lookPage){
-
 
 
 html+=`
@@ -2501,7 +2490,6 @@ ${item}
 
 
 }else{
-
 
 
 html+=`
@@ -2523,7 +2511,6 @@ ${item}
 
 
 });
-
 
 
 
@@ -2634,32 +2621,26 @@ movePage("about");
 
 
 // =====================
-// START
+// START FIX
 // =====================
 
 
-window.onload=function(){
-
+window.addEventListener("load",function(){
 
 
 setTimeout(function(){
 
 
-
 document.getElementById("loading").style.display="none";
-
 
 
 document.getElementById("intro").style.display="flex";
 
 
-
 },2500);
 
 
-
-};
-
+});
 
 
 
@@ -2669,4 +2650,4 @@ document.getElementById("intro").style.display="flex";
 </body>
 
 
-</html> 
+</html>
