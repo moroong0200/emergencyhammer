@@ -21,9 +21,11 @@ box-sizing:border-box;
 }
 
 
+
 body{
 
 background:#000;
+
 color:#fff;
 
 font-family:
@@ -38,6 +40,9 @@ height:100vh;
 }
 
 
+
+
+
 /* =====================
 GLOBAL
 ===================== */
@@ -46,11 +51,13 @@ GLOBAL
 .page{
 
 height:100vh;
+
 width:100%;
 
 display:none;
 
 align-items:center;
+
 justify-content:center;
 
 position:relative;
@@ -66,6 +73,7 @@ animation:pageIn .6s ease;
 position:fixed;
 
 width:100%;
+
 height:100vh;
 
 background:#fff;
@@ -81,6 +89,9 @@ transform-origin:bottom;
 
 
 
+
+
+
 /* =====================
 LOADING
 ===================== */
@@ -91,6 +102,7 @@ LOADING
 position:fixed;
 
 width:100%;
+
 height:100vh;
 
 background:#000;
@@ -137,6 +149,9 @@ opacity:.5;
 
 
 
+
+
+
 /* =====================
 INTRO
 ===================== */
@@ -167,7 +182,6 @@ animation:fadeIn 1.5s forwards;
 animation-delay:.5s;
 
 }
-
 
 
 
@@ -205,7 +219,6 @@ letter-spacing:15px;
 
 
 
-
 .year{
 
 position:absolute;
@@ -219,6 +232,13 @@ letter-spacing:7px;
 opacity:.5;
 
 }
+
+
+
+
+
+
+
 /* =====================
 MENU
 ===================== */
@@ -285,6 +305,9 @@ animation-delay:.7s;
 
 
 
+
+
+
 /* =====================
 BACK
 ===================== */
@@ -313,8 +336,7 @@ transition:.3s;
 transform:translateX(-8px);
 
 }
-
-
+/* PART 1-2 */
 
 
 
@@ -632,18 +654,348 @@ font-size:22px;
 cursor:pointer;
 
 }
-<!-- PART 2-1 -->
+
+
+
+
+
+/* =====================
+LOOKBOOK
+===================== */
+
+
+.look-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:10px;
+
+width:500px;
+
+}
+
+
+
+.look-item{
+
+aspect-ratio:1;
+
+border:1px solid #222;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:9px;
+
+letter-spacing:3px;
+
+transition:.4s;
+
+}
+
+
+
+.look-item:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+
+
+
+/* =====================
+MOBILE FIX
+===================== */
+
+
+.mobile-next{
+
+display:none;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.product-list{
+
+width:90vw;
+
+overflow:hidden;
+
+}
+
+
+
+.mobile-next{
+
+display:block;
+
+margin-top:30px;
+
+}
+
+
+
+
+.look-grid{
+
+width:90vw;
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.look-item{
+
+width:100%;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+ABOUT
+===================== */
+
+
+.about-wrap{
+
+width:600px;
+
+text-align:center;
+
+height:80vh;
+
+overflow:auto;
+
+}
+
+
+
+.about-section{
+
+margin-top:60px;
+
+}
+
+
+
+.about-title{
+
+font-size:11px;
+
+letter-spacing:8px;
+
+opacity:.5;
+
+margin-bottom:25px;
+
+}
+
+
+
+.about-section p{
+
+font-size:11px;
+
+line-height:2.2;
+
+letter-spacing:3px;
+
+}
+
+
+
+
+
+/* =====================
+ANIMATION
+===================== */
+
+
+@keyframes fadeIn{
+
+
+from{
+
+opacity:0;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+@keyframes logoIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes pageIn{
+
+
+from{
+
+opacity:0;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+
+@keyframes menuIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes zoomIn{
+
+
+from{
+
+opacity:0;
+
+transform:scale(.9);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes transitionMove{
+
+
+0%{
+
+transform:scaleY(0);
+
+}
+
+
+50%{
+
+transform:scaleY(1);
+
+}
+
+
+100%{
+
+transform:scaleY(0);
+
+}
+
+
+}
 
 
 </style>
+
 
 </head>
 
 
 <body>
-
-
-
+<!-- PART 2-1 -->
 
 
 <!-- TRANSITION -->
@@ -672,8 +1024,6 @@ EST. 2026
 </div>
 
 </div>
-
-
 
 
 
@@ -739,7 +1089,6 @@ EST. 2026
 
 
 </div>
-
 
 
 
@@ -815,7 +1164,7 @@ style="color:white;text-decoration:none;">
 
 
 
-<!-- SHOP -->
+<!-- SHOP CATEGORY -->
 
 <div class="page" id="shop">
 
@@ -908,7 +1257,6 @@ TOP
 
 
 
-
 <div class="mobile-next" onclick="nextProduct()">
 
 NEXT →
@@ -974,6 +1322,7 @@ TEE
 
 
 
+
 <div class="product-info">
 
 DESCRIPTION
@@ -995,7 +1344,9 @@ EST. 2026
 
 
 
+
 <div>
+
 
 SIZE
 
@@ -1004,30 +1355,40 @@ SIZE
 
 
 <button onclick="selectSize(this)">
+
 S
+
 </button>
 
 
 
 <button onclick="selectSize(this)">
+
 M
+
 </button>
 
 
 
 <button onclick="selectSize(this)">
+
 L
+
 </button>
 
 
 
 <button onclick="selectSize(this)">
+
 XL
+
 </button>
 
 
 
 </div>
+
+
 
 
 
@@ -1061,7 +1422,10 @@ XL
 
 
 
+
 </div>
+
+
 
 
 
@@ -1087,15 +1451,18 @@ BUY NOW
 
 
 
+
+
 </div>
 
 
 </div>
-<!-- PART 2-2 -->
+ <!-- PART 2-2 -->
 
 
 
 <!-- CART -->
+
 
 <div class="page" id="cart">
 
@@ -1120,6 +1487,7 @@ CART
 
 
 
+
 <div id="cartList">
 
 </div>
@@ -1136,6 +1504,7 @@ TOTAL ₩0
 
 
 
+
 <div class="button" onclick="openShop()">
 
 CONTINUE SHOPPING
@@ -1144,12 +1513,12 @@ CONTINUE SHOPPING
 
 
 
+
 <div class="button" onclick="checkout()">
 
 CHECK OUT
 
 </div>
-
 
 
 
@@ -1168,6 +1537,7 @@ CHECK OUT
 
 <!-- ORDER -->
 
+
 <div class="page" id="order">
 
 
@@ -1179,7 +1549,6 @@ CHECK OUT
 
 
 
-
 <div>
 
 
@@ -1188,6 +1557,7 @@ CHECK OUT
 ORDER
 
 </div>
+
 
 
 
@@ -1230,6 +1600,7 @@ ____________
 
 
 
+
 <div class="button">
 
 PLACE ORDER
@@ -1253,6 +1624,7 @@ PLACE ORDER
 
 <!-- LOOKBOOK -->
 
+
 <div class="page" id="lookbook">
 
 
@@ -1261,6 +1633,7 @@ PLACE ORDER
 ←
 
 </div>
+
 
 
 
@@ -1287,6 +1660,7 @@ LOOKBOOK
 
 
 
+
 <div class="button" onclick="mobileNextLook()">
 
 NEXT →
@@ -1296,11 +1670,13 @@ NEXT →
 
 
 
+
 <div class="button" onclick="prevLook()">
 
 ← PREV
 
 </div>
+
 
 
 
@@ -1320,6 +1696,7 @@ NEXT →
 
 <!-- ABOUT -->
 
+
 <div class="page" id="about">
 
 
@@ -1328,6 +1705,7 @@ NEXT →
 ←
 
 </div>
+
 
 
 
@@ -1347,6 +1725,7 @@ EMERGENCY HAMMER
 
 
 
+
 <div class="about-section">
 
 
@@ -1355,6 +1734,7 @@ EMERGENCY HAMMER
 ABOUT
 
 </div>
+
 
 
 
@@ -1373,7 +1753,9 @@ TO CREATE A NEW STANDARD OF FIT.
 
 
 
+
 </div>
+
 
 
 
@@ -1393,6 +1775,7 @@ PHILOSOPHY
 
 
 
+
 <p>
 
 BREAK YOUR FIT.
@@ -1400,6 +1783,7 @@ BREAK YOUR FIT.
 <br><br>
 
 NOT FOLLOWING THE SHAPE.
+
 <br>
 
 CREATING YOUR OWN FORM.
@@ -1408,7 +1792,10 @@ CREATING YOUR OWN FORM.
 
 
 
+
+
 </div>
+
 
 
 
@@ -1428,12 +1815,15 @@ DESIGN
 
 
 
+
 <p>
 
 CLEAN SILHOUETTES.
+
 <br>
 
 STRONG DETAILS.
+
 <br>
 
 STREET AND INTELLIGENCE.
@@ -1443,7 +1833,9 @@ STREET AND INTELLIGENCE.
 
 
 
+
 </div>
+
 
 
 
@@ -1482,10 +1874,12 @@ SEOUL, KOREA
 
 
 
-<!-- SCRIPT START -->
+
+
 
 <script>
 // PART 3-1
+
 
 
 // =====================
@@ -1607,15 +2001,20 @@ page.style.display="none";
 
 
 
+
 function movePage(id){
+
 
 
 let transition=document.getElementById("transition");
 
 
+
 if(transition){
 
+
 transition.style.animation="transitionMove .7s";
+
 
 }
 
@@ -1627,19 +2026,33 @@ setTimeout(function(){
 hideAll();
 
 
-document.getElementById(id).style.display="flex";
+
+let target=document.getElementById(id);
+
+
+
+if(target){
+
+
+target.style.display="flex";
+
+
+}
 
 
 
 if(transition){
 
+
 transition.style.animation="none";
+
 
 }
 
 
 
 },350);
+
 
 
 }
@@ -1658,15 +2071,21 @@ transition.style.animation="none";
 
 function openMenu(){
 
+
 movePage("menu");
+
 
 }
 
 
 
+
+
 function openIntro(){
 
+
 movePage("intro");
+
 
 }
 
@@ -1684,7 +2103,9 @@ movePage("intro");
 
 function openShop(){
 
+
 movePage("shop");
+
 
 }
 
@@ -1704,6 +2125,7 @@ currentIndex=0;
 
 
 
+
 document.getElementById("listTitle").innerHTML=
 
 type.toUpperCase();
@@ -1711,7 +2133,9 @@ type.toUpperCase();
 
 
 
+
 let box=document.getElementById("productsBox");
+
 
 
 let html="";
@@ -1719,15 +2143,19 @@ let html="";
 
 
 
+
 currentProducts.forEach(function(item,index){
+
 
 
 html+=`
 
 
+
 <div class="product-card"
 
 onclick="openDetail(${index})">
+
 
 
 <div class="product-thumb">
@@ -1738,11 +2166,13 @@ IMAGE
 
 
 
+
 <div class="product-card-name">
 
 ${item.name}
 
 </div>
+
 
 
 
@@ -1761,7 +2191,10 @@ ${item.name}
 `;
 
 
+
 });
+
+
 
 
 
@@ -1779,9 +2212,14 @@ movePage("productList");
 
 
 
+
+
+
 function backList(){
 
+
 movePage("productList");
+
 
 }
 
@@ -1819,7 +2257,8 @@ openDetail(currentIndex);
 
 
 }
-// PART 3-2
+  // PART 3-2
+
 
 
 // =====================
@@ -1838,6 +2277,7 @@ let item=currentProducts[index];
 
 
 document.getElementById("detailName").innerHTML=item.name;
+
 
 
 document.getElementById("detailPrice").innerHTML=
@@ -1860,7 +2300,10 @@ selectedSize="";
 movePage("detail");
 
 
+
 }
+
+
 
 
 
@@ -1869,12 +2312,13 @@ movePage("detail");
 function selectSize(btn){
 
 
+
 document.querySelectorAll("#detail button")
 
-.forEach(function(b){
+.forEach(function(button){
 
 
-b.classList.remove("active");
+button.classList.remove("active");
 
 
 });
@@ -1884,11 +2328,14 @@ b.classList.remove("active");
 btn.classList.add("active");
 
 
+
 selectedSize=btn.innerHTML;
 
 
 
 }
+
+
 
 
 
@@ -1925,12 +2372,14 @@ document.getElementById("qty").innerHTML=quantity;
 
 
 
+
 // =====================
 // CART
 // =====================
 
 
 function addDetailCart(){
+
 
 
 if(selectedSize===""){
@@ -1947,7 +2396,9 @@ return;
 
 
 
+
 let item=currentProducts[currentIndex];
+
 
 
 
@@ -1964,6 +2415,7 @@ c.size===selectedSize;
 
 
 
+
 if(exist){
 
 
@@ -1975,13 +2427,18 @@ exist.qty+=quantity;
 
 cart.push({
 
+
 name:item.name,
+
 
 price:item.price,
 
+
 size:selectedSize,
 
+
 qty:quantity
+
 
 });
 
@@ -1994,6 +2451,7 @@ updateCart();
 
 
 }
+
 
 
 
@@ -2023,8 +2481,8 @@ document.getElementById("cartIcon").innerHTML=
 "CART ("+count+")";
 
 
-}
 
+}
 
 
 
@@ -2036,6 +2494,7 @@ document.getElementById("cartIcon").innerHTML=
 function openCart(){
 
 
+
 movePage("cart");
 
 
@@ -2043,7 +2502,9 @@ movePage("cart");
 let box=document.getElementById("cartList");
 
 
+
 let html="";
+
 
 
 let total=0;
@@ -2051,17 +2512,22 @@ let total=0;
 
 
 
+
 cart.forEach(function(item,index){
+
 
 
 total+=item.price*item.qty;
 
 
 
+
 html+=`
 
 
+
 <div class="cart-item">
+
 
 
 <div class="cart-image">
@@ -2072,7 +2538,9 @@ IMAGE
 
 
 
+
 <div>
+
 
 
 ${item.name}
@@ -2089,6 +2557,7 @@ SIZE ${item.size}
 
 
 <div class="qty">
+
 
 
 <button onclick="changeCartQty(${index},-1)">
@@ -2121,13 +2590,18 @@ ${item.qty}
 
 
 
+
+
 <div class="remove"
 
 onclick="removeCart(${index})">
 
+
 ×
 
+
 </div>
+
 
 
 
@@ -2138,7 +2612,9 @@ onclick="removeCart(${index})">
 `;
 
 
+
 });
+
 
 
 
@@ -2155,6 +2631,7 @@ html="CART IS EMPTY";
 
 
 
+
 box.innerHTML=html;
 
 
@@ -2166,6 +2643,7 @@ document.getElementById("total").innerHTML=
 
 
 }
+
 
 
 
@@ -2197,7 +2675,9 @@ updateCart();
 openCart();
 
 
+
 }
+
 
 
 
@@ -2219,7 +2699,10 @@ updateCart();
 openCart();
 
 
+
 }
+
+
 
 
 
@@ -2235,7 +2718,11 @@ addDetailCart();
 checkout();
 
 
+
 }
+
+
+
 
 
 
@@ -2255,12 +2742,14 @@ movePage("order");
 
 
 
+
 // =====================
 // LOOKBOOK
 // =====================
 
 
 let looks=[
+
 
 [
 
@@ -2277,6 +2766,7 @@ let looks=[
 ],
 
 
+
 [
 
 "LOOK 10",
@@ -2290,6 +2780,7 @@ let looks=[
 "LOOK 18"
 
 ],
+
 
 
 [
@@ -2327,6 +2818,7 @@ renderLookbook();
 movePage("lookbook");
 
 
+
 }
 
 
@@ -2346,6 +2838,7 @@ let html="";
 looks[lookPage-1].forEach(function(item){
 
 
+
 html+=`
 
 
@@ -2359,7 +2852,9 @@ ${item}
 `;
 
 
+
 });
+
 
 
 
@@ -2368,6 +2863,8 @@ document.getElementById("lookGrid").innerHTML=html;
 
 
 }
+
+
 
 
 
@@ -2402,6 +2899,8 @@ renderLookbook();
 
 
 
+
+
 function prevLook(){
 
 
@@ -2430,10 +2929,12 @@ renderLookbook();
 
 
 
+
 function mobileNextLook(){
 
 
 nextLook();
+
 
 
 }
@@ -2464,7 +2965,6 @@ movePage("about");
 
 
 
-
 // =====================
 // START
 // =====================
@@ -2473,10 +2973,13 @@ movePage("about");
 window.onload=function(){
 
 
+
 setTimeout(function(){
 
 
+
 document.getElementById("loading").style.display="none";
+
 
 
 document.getElementById("intro").style.display="flex";
@@ -2496,4 +2999,5 @@ document.getElementById("intro").style.display="flex";
 
 </body>
 
-</html> 
+
+</html>
